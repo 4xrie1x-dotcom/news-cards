@@ -4,6 +4,7 @@ import sys
 from urllib.parse import quote
 import feedparser
 from filters import filter_entries
+from dedupe import group_duplicates
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
@@ -11,7 +12,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 # 검색할 키워드 목록. 정치 사건 중심으로 고정. 나중에 여기만 고치면 된다
 KEYWORDS = ["국회", "여야", "대통령실", "국무회의", "법안"]
 
-# 키워드당 화면에 출력할 최대 기사 수
+# 키워드당 화면에 출력할 최대 사건(그룹) 수
 MAX_ARTICLES = 5
 
 
@@ -35,8 +36,8 @@ def fetch_feed(url):
         return None
 
 
-def print_titles_and_links(keyword, feed):
-    """필터를 적용한 뒤, 키워드 이름과 함께 상위 기사의 제목과 링크를 출력한다."""
+def print_grouped_articles(keyword, feed):
+    """필터를 적용하고 같은 사건끼리 묶은 뒤, 언론사 수가 많은 순으로 출력한다."""
     if not feed or not feed.entries:
         print(f"[{keyword}] 가져온 기사가 없습니다.")
         return
@@ -47,9 +48,18 @@ def print_titles_and_links(keyword, feed):
         f"사진/멀티미디어 {counts['사진/멀티미디어']}건 제외"
     )
 
-    for entry in filtered_entries[:MAX_ARTICLES]:
-        print(f"[{keyword}] {entry.title}")
-        print(entry.link)
+    groups = group_duplicates(filtered_entries)
+    for group in groups[:MAX_ARTICLES]:
+        items = group["items"]
+        first_headline, first_outlet = items[0]
+        count = len(items)
+
+        if count == 1:
+            print(f"[{keyword}][1곳] {first_headline} - {first_outlet}")
+        else:
+            print(f"[{keyword}][{count}곳] {first_headline} - {first_outlet} 외 {count - 1}곳")
+            for headline, outlet in items[1:]:
+                print(f"      {headline} - {outlet}")
         print("-" * 40)
 
 
@@ -58,7 +68,7 @@ def main():
     for keyword in KEYWORDS:
         url = build_search_url(keyword)
         feed = fetch_feed(url)
-        print_titles_and_links(keyword, feed)
+        print_grouped_articles(keyword, feed)
 
 
 if __name__ == "__main__":
