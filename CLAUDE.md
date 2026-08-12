@@ -48,11 +48,14 @@
 
 ## 기술 스택 (고정)
 - 수집: 구글뉴스 RSS
+- 리다이렉트 해제: googlenewsdecoder (구글뉴스 RSS 링크를 실제 언론사 주소로 변환)
 - 본문 추출: trafilatura
 - 요약: Gemini API Flash-Lite (무료 키)
 - 카드 생성: Pillow
 - 자동 실행: GitHub Actions (public 레포)
 - 저장: JSON 파일. DB 없음
+
+설치: `pip install trafilatura feedparser google-genai pillow googlenewsdecoder`
 
 ## 다시 제안하지 말 것 (검토 후 폐기됨)
 웹 플랫폼·댓글 서비스 / Next.js·Supabase / 데이터베이스 /
