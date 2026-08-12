@@ -9,6 +9,7 @@ import sys
 import trafilatura
 from googlenewsdecoder import gnewsdecoder
 from collect import KEYWORDS, build_search_url, fetch_feed
+from clean import clean_body, has_keyword_match, is_menu_only
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
@@ -33,8 +34,9 @@ def resolve_real_url(google_news_link):
         return None
 
 
-def extract_preview(real_url):
-    """실제 기사 주소에서 본문을 뽑아 앞부분만 반환한다. 본문 전체는 메모리에서만 쓰고 버린다."""
+def extract_preview(real_url, title):
+    """실제 기사 주소에서 본문을 뽑아 정리한 뒤 앞부분만 반환한다.
+    메뉴만 뽑혔거나 제목과 안 맞으면 걸러내고, 본문 전체는 메모리에서만 쓰고 버린다."""
     try:
         downloaded = trafilatura.fetch_url(real_url)
         if not downloaded:
@@ -44,7 +46,16 @@ def extract_preview(real_url):
         if not text:
             print("본문 추출 실패")
             return None
-        return text[:PREVIEW_LENGTH]
+        if is_menu_only(text):
+            print("본문 추출 실패 (메뉴만 뽑힘)")
+            return None
+        if not has_keyword_match(title, text):
+            print("제목과 본문이 일치하지 않음")
+            return None
+
+        cleaned, original_length, cleaned_length = clean_body(text, title)
+        print(f"정리 전 {original_length}자 → 정리 후 {cleaned_length}자")
+        return cleaned[:PREVIEW_LENGTH]
     except Exception as error:
         print(f"본문 추출 중 오류: {error}")
         return None
@@ -64,7 +75,7 @@ def main():
             print("-" * 40)
             continue
         print(f"실제 주소: {real_url}")
-        preview = extract_preview(real_url)
+        preview = extract_preview(real_url, entry.title)
         if preview:
             print(f"본문 앞부분: {preview}")
         print("-" * 40)
