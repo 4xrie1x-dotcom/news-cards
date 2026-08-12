@@ -42,11 +42,13 @@ def print_grouped_articles(keyword, feed):
         print(f"[{keyword}] 가져온 기사가 없습니다.")
         return
 
-    filtered_entries, counts = filter_entries(feed.entries)
+    filtered_entries, counts, excluded = filter_entries(feed.entries)
     print(
         f"[{keyword}] 의견 {counts['의견']}건, 지역 홍보 {counts['지역 홍보']}건, "
         f"사진/멀티미디어 {counts['사진/멀티미디어']}건 제외"
     )
+    for entry, reason in excluded:
+        print(f"[{keyword}][{reason}] {entry.title}")
 
     groups = group_duplicates(filtered_entries)
     for group in groups[:MAX_ARTICLES]:
