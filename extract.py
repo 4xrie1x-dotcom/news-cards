@@ -34,9 +34,9 @@ def resolve_real_url(google_news_link):
         return None
 
 
-def extract_preview(real_url, title):
-    """실제 기사 주소에서 본문을 뽑아 정리한 뒤 앞부분만 반환한다.
-    메뉴만 뽑혔거나 제목과 안 맞으면 걸러내고, 본문 전체는 메모리에서만 쓰고 버린다."""
+def get_article_text(real_url, title):
+    """실제 기사 주소에서 본문 전체를 뽑아 정리해서 반환한다.
+    메뉴만 뽑혔거나 제목과 안 맞으면 걸러내고, 실패 사유는 화면에 출력한다."""
     try:
         downloaded = trafilatura.fetch_url(real_url)
         if not downloaded:
@@ -55,10 +55,16 @@ def extract_preview(real_url, title):
 
         cleaned, original_length, cleaned_length = clean_body(text, title)
         print(f"정리 전 {original_length}자 → 정리 후 {cleaned_length}자")
-        return cleaned[:PREVIEW_LENGTH]
+        return cleaned
     except Exception as error:
         print(f"본문 추출 중 오류: {error}")
         return None
+
+
+def extract_preview(real_url, title):
+    """본문 전체를 가져와 화면에 보여줄 앞부분만 잘라서 반환한다. 확인용이라 본문 전체는 다루지 않는다."""
+    text = get_article_text(real_url, title)
+    return text[:PREVIEW_LENGTH] if text else None
 
 
 def main():
