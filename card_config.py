@@ -11,6 +11,7 @@ BODY_COLOR = "#16181C"
 MUTED_COLOR = "#8B9099"
 DIVIDER_COLOR = "#E5E5E5"
 TITLE_COLOR = "#FFFFFF"
+EMPHASIS_COLOR = "#E03A2F"  # 문장 내 핵심 구절 강조색 (최대 1곳)
 FALLBACK_BG_COLOR = "#16181C"  # 사진이 없을 때 hook 카드에 쓰는 배경
 
 LABEL_FONT_SIZE = 26
