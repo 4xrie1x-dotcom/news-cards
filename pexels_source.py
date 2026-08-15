@@ -12,6 +12,7 @@ import requests
 from PIL import Image
 from io import BytesIO
 from dotenv import load_dotenv
+from photo_quality import check_resolution
 
 load_dotenv()
 
@@ -45,12 +46,16 @@ def fetch_pexels_photo(keywords):
                 print(f"'{keyword}'로 검색했지만 사진을 찾지 못했습니다.")
                 continue
 
-            image_response = requests.get(photo["src"]["large"], timeout=10)
+            # large(가로 940px)는 카드 캔버스(1080px)보다 작아서 original로 요청한다
+            image_response = requests.get(photo["src"]["original"], timeout=10)
             image_response.raise_for_status()
+
+            image = Image.open(BytesIO(image_response.content)).convert("RGB")
+            if not check_resolution(image, f"'{keyword}' Pexels 사진"):
+                continue
 
             os.makedirs(TEMP_DIR, exist_ok=True)
             image_path = f"{TEMP_DIR}/pexels_{photo['id']}.png"
-            image = Image.open(BytesIO(image_response.content)).convert("RGB")
             image.save(image_path, "PNG")
 
             photographer = photo.get("photographer", "정보 없음")
