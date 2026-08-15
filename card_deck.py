@@ -6,8 +6,9 @@ from hook_card import draw_hook_card
 from watermark_card import draw_watermark_card
 
 MAX_SENTENCES_PER_CARD = 2  # 한 카드당 문장 1개가 기본, 짧으면 2개까지 허용
-WHAT_MAX_SECTION_CARDS = 4  # what이 최우선. 양측 입장이 다 들어가도록 넉넉히 둔다
-WHY_MAX_SECTION_CARDS = 3  # why는 그다음 순위. 지면이 허락하는 한도 내에서 배경을 담는다
+WHAT_MAX_SECTION_CARDS = 3  # what 상한. "무슨 일인가"에 치우치지 않게 낮춰뒀다
+WHY_MIN_SECTION_CARDS = 2  # why 최소 보장. "왜 이게 뉴스인가"가 밀려나지 않게 한다
+WHY_MAX_SECTION_CARDS = 3  # why 상한. 지면이 남으면 여기까지 늘어난다
 # 전체 카드 상한 7장(hook 1 + 본문 + 워터마크 1) 기준 본문 상한
 MAX_BODY_CARDS_TOTAL = 5
 
@@ -55,18 +56,23 @@ def build_section_cards(sentences, max_section_cards):
 
 
 def build_body_cards(summary_json):
-    """what을 최우선으로 채우고, why는 남는 지면 안에서 담는다. what/why를
-    합쳐서 MAX_BODY_CARDS_TOTAL을 넘으면 뒤쪽(why 쪽)부터 잘라낸다.
-    terms는 카드로 만들지 않는다."""
-    what_cards = build_section_cards(split_sentences(summary_json["what"]), WHAT_MAX_SECTION_CARDS)
-    why_cards = build_section_cards(split_sentences(summary_json["why"]), WHY_MAX_SECTION_CARDS)
+    """what을 채우되 why 최소 보장분(WHY_MIN_SECTION_CARDS)을 먼저 뗴어두고,
+    남는 지면만큼만 what에 준다. why는 what이 쓰고 남은 지면 안에서
+    최소~최대 장수로 담긴다. terms는 카드로 만들지 않는다."""
+    what_sentences = split_sentences(summary_json["what"])
+    why_sentences = split_sentences(summary_json["why"])
+
+    why_cards_max = build_section_cards(why_sentences, WHY_MAX_SECTION_CARDS)
+    why_reserved = min(WHY_MIN_SECTION_CARDS, len(why_cards_max))
+
+    what_budget = min(WHAT_MAX_SECTION_CARDS, MAX_BODY_CARDS_TOTAL - why_reserved)
+    what_cards = build_section_cards(what_sentences, what_budget)
+
+    why_budget = MAX_BODY_CARDS_TOTAL - len(what_cards)
+    why_cards = why_cards_max[:why_budget]
+
     body_texts = what_cards + why_cards
-
-    if len(body_texts) > MAX_BODY_CARDS_TOTAL:
-        print(f"본문 {len(body_texts)}장이 목표(최대 {MAX_BODY_CARDS_TOTAL}장)를 넘어 why를 먼저 잘라냅니다.")
-        body_texts = body_texts[:MAX_BODY_CARDS_TOTAL]
-
-    print(f"what {len(what_cards)}장, why {min(len(why_cards), max(0, MAX_BODY_CARDS_TOTAL - len(what_cards)))}장 사용")
+    print(f"what {len(what_cards)}장, why {len(why_cards)}장 사용 (본문 합계 {len(body_texts)}장)")
     return body_texts
 
 
