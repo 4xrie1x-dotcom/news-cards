@@ -3,7 +3,8 @@ hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
 """
 
 import re
-from photo_source import fetch_wikimedia_photo
+import random
+from photo_source import fetch_wikimedia_photos
 from pexels_source import fetch_pexels_photo
 
 # assembly_source.py(국회 열린국회정보 프로필 사진)는 저작권 확인 전까지 비활성화.
@@ -67,9 +68,10 @@ def get_hook_background(summary_json):
     person_name = extract_person_name(summary_json)
     if person_name:
         print(f"인물명 추출: {person_name}")
-        photo_path = fetch_wikimedia_photo(person_name)
-        if photo_path:
-            print(f"배경 사진 조달 성공(위키미디어): {photo_path}")
+        photo_paths = fetch_wikimedia_photos(person_name)
+        if photo_paths:
+            photo_path = random.choice(photo_paths)
+            print(f"배경 사진 조달 성공(위키미디어, {len(photo_paths)}장 중 무작위 선택): {photo_path}")
             return photo_path
         print(f"위키미디어에서 '{person_name}' 사진을 못 찾아 Pexels로 넘어갑니다.")
     else:
