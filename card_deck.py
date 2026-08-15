@@ -6,8 +6,8 @@ from hook_card import draw_hook_card
 from watermark_card import draw_watermark_card
 
 MAX_SENTENCES_PER_CARD = 2  # 한 카드당 문장 1개가 기본, 짧으면 2개까지 허용
-MAX_SECTION_CARDS = 2  # what, why 각각 최대 2장
-MAX_BODY_CARDS_TOTAL = 3  # hook(1)+본문+워터마크(1)를 4~5장으로 맞추기 위한 본문 상한
+MAX_SECTION_CARDS = 4  # what, why 각각 최대 4장. 실제 합계는 MAX_BODY_CARDS_TOTAL이 제한한다
+MAX_BODY_CARDS_TOTAL = 6  # CLAUDE.md 원칙(최소 3장~최대 6장). 정보량에 따라 AI가 자연스럽게 정한다
 
 # 본문 76px ExtraBold, 안전폭 900px에서 실측한 평균 글자폭(약 56px)으로
 # 줄당 16자, 최대 4줄(body_card.py의 BODY_MAX_LINES) 기준 편안한 상한을 잡았다
@@ -74,7 +74,7 @@ def render_all_cards(summary_json, source, date):
     body_texts = build_body_cards(summary_json)
 
     total_content_cards = 1 + len(body_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
-    print(f"본문 {len(body_texts)}장, 전체 {total_content_cards + 1}장 (목표 4~5장)")
+    print(f"본문 {len(body_texts)}장, 전체 {total_content_cards + 1}장 (본문 목표 최소 3장~최대 {MAX_BODY_CARDS_TOTAL}장)")
 
     images = [draw_hook_card(summary_json["hook"], date_text=date)]
     for i, text in enumerate(body_texts, start=2):
