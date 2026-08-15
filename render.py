@@ -10,6 +10,7 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 from text_fit import fit_body_text
 from hook_card import draw_hook_card
+from watermark_card import draw_watermark_card
 from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
     BACKGROUND_COLOR, BODY_COLOR, MUTED_COLOR, DIVIDER_COLOR,
@@ -65,10 +66,9 @@ def draw_body_card(text, card_number, total_cards):
 
 
 def main():
-    """hook 카드(1장)를 테스트한다. 배경 이미지가 없으니 텍스트 전용 fallback으로 확인한다."""
-    hook_title = '"아, 고르세요! 날짜 받아갈게요"…재검표 일정 두고 여야 폭발한 이유'
+    """워터마크 카드(마지막 고정 카드)를 테스트한다."""
     try:
-        image = draw_hook_card(hook_title, date_text="2026.08.13")
+        image = draw_watermark_card(outlet="한국경제")
         os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
         image.save(OUTPUT_PATH)
         print(f"카드 저장 완료: {OUTPUT_PATH}")
