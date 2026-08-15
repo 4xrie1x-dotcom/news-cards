@@ -1,13 +1,13 @@
-"""summarize.py가 만든 JSON으로 hook→본문 여러 장→워터마크까지 카드셋 전체를 만드는 기능"""
+"""summarize.py가 만든 JSON으로 hook→본문→질문→워터마크까지 카드셋을 만드는 기능"""
 
 import re
 from body_card import draw_body_card
 from hook_card import draw_hook_card
 from watermark_card import draw_watermark_card
 
-MAX_SENTENCES_PER_CARD = 2
-MIN_BODY_CARDS = 3
-MAX_BODY_CARDS = 6  # CLAUDE.md 카드 규칙(2장~7장 본문)의 상한과 같다
+MAX_SENTENCES_PER_CARD = 2  # 한 카드당 문장 1개가 기본, 짧으면 2개까지 허용
+MAX_SECTION_CARDS = 2  # what, why 각각 최대 2장
+MAX_BODY_CARDS_TOTAL = 3  # hook(1)+본문+질문(1)+워터마크(1)를 5~6장으로 맞추기 위한 본문 상한
 
 # 본문 76px ExtraBold, 안전폭 900px에서 실측한 평균 글자폭(약 56px)으로
 # 줄당 16자, 최대 4줄(body_card.py의 BODY_MAX_LINES) 기준 편안한 상한을 잡았다
@@ -45,36 +45,42 @@ def group_into_cards(sentences, max_per_card, char_limit):
     return cards
 
 
+def build_section_cards(sentences):
+    """한 섹션(what 또는 why)의 문장을 카드로 묶고, 최대 장수를 넘으면
+    뒤쪽(덜 중요한) 문장부터 잘라낸다."""
+    cards = group_into_cards(sentences, MAX_SENTENCES_PER_CARD, BODY_CHAR_LIMIT)
+    return cards[:MAX_SECTION_CARDS]
+
+
 def build_body_cards(summary_json):
-    """what/why는 묶어서 여러 문장 카드로 만들고, terms 각각과 question은
-    다른 카드 종류라 서로 이어붙이지 않고 항상 독립된 카드로 둔다."""
-    narrative = split_sentences(summary_json["what"]) + split_sentences(summary_json["why"])
-    narrative_cards = group_into_cards(narrative, MAX_SENTENCES_PER_CARD, BODY_CHAR_LIMIT)
+    """what/why를 각각 최대 2장으로 만들고, 합쳐서 MAX_BODY_CARDS_TOTAL을
+    넘으면 뒤쪽 카드부터 잘라낸다. terms는 카드로 만들지 않는다."""
+    what_cards = build_section_cards(split_sentences(summary_json["what"]))
+    why_cards = build_section_cards(split_sentences(summary_json["why"]))
+    body_texts = what_cards + why_cards
 
-    term_cards = [
-        f"{term['term']}: {ensure_period(term['definition'])}"
-        for term in summary_json.get("terms", [])
-    ]
+    if len(body_texts) > MAX_BODY_CARDS_TOTAL:
+        print(f"본문 {len(body_texts)}장이 목표(최대 {MAX_BODY_CARDS_TOTAL}장)를 넘어 덜 중요한 문장을 잘라냅니다.")
+        body_texts = body_texts[:MAX_BODY_CARDS_TOTAL]
 
-    question_card = [ensure_period(summary_json["question"])]
-
-    return narrative_cards + term_cards + question_card
+    return body_texts
 
 
 def render_all_cards(summary_json, source, date):
-    """hook 카드 → 본문 카드 여러 장 → 워터마크 카드까지 이미지 리스트로 만들어 반환한다.
-    아직 파일로 저장하지는 않는다."""
+    """hook 카드 → 본문 카드 → 질문 카드 → 워터마크 카드까지 이미지 리스트로 만든다.
+    terms는 카드로 만들지 않고 그대로 반환해서, caption.py의 "알아두기"에 쓸 수 있게 한다.
+    (images, terms) 튜플을 반환하며, 아직 파일로 저장하지는 않는다."""
     body_texts = build_body_cards(summary_json)
-    print(f"본문 {len(body_texts)}장 (글자수 상한 {BODY_CHAR_LIMIT}자, 목표 범위 {MIN_BODY_CARDS}~{MAX_BODY_CARDS}장)")
-    if len(body_texts) > MAX_BODY_CARDS:
-        print(f"목표 최대 {MAX_BODY_CARDS}장을 넘었지만, 문장을 압축하는 대신 장수를 늘렸습니다.")
+    question_text = ensure_period(summary_json["question"])
+    content_texts = body_texts + [question_text]
 
-    # 카드번호는 hook을 1번으로 치고, 워터마크는 카운트에서 뺀다
-    total_content_cards = 1 + len(body_texts)
+    total_content_cards = 1 + len(content_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
+    print(f"본문 {len(body_texts)}장 + 질문 1장, 전체 {total_content_cards + 1}장 (목표 5~6장)")
 
     images = [draw_hook_card(summary_json["hook"], date_text=date)]
-    for i, text in enumerate(body_texts, start=2):
+    for i, text in enumerate(content_texts, start=2):
         images.append(draw_body_card(text, card_number=i, total_cards=total_content_cards))
     images.append(draw_watermark_card(outlet=source))
 
-    return images
+    terms = summary_json.get("terms", [])
+    return images, terms
