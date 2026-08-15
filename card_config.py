@@ -13,6 +13,8 @@ DIVIDER_COLOR = "#E5E5E5"
 TITLE_COLOR = "#FFFFFF"
 EMPHASIS_COLOR = "#E03A2F"  # 문장 내 핵심 구절 강조색 (최대 1곳)
 FALLBACK_BG_COLOR = "#16181C"  # 사진이 없을 때 hook 카드에 쓰는 배경
+HOOK_PHOTO_AREA_HEIGHT = 880  # 캔버스 세로의 약 65%. hook 카드 사진 배경 영역(나머지 470px은 고정 검정 제목 영역).
+# 80:20(검정 270px)과 70:30(검정 405px)은 제목 3줄+최소 폰트(84px) 조합이 안전공간을 넘어 이 비율로 조정함
 
 LABEL_FONT_SIZE = 26
 FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"
