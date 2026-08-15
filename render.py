@@ -1,79 +1,54 @@
-"""4단계: Pillow로 카드를 실제로 그릴 수 있는지 확인하는 스크립트
+"""4-5단계: hook → 본문 여러 장 → 워터마크까지 카드셋 전체를 만드는지 확인하는 스크립트
 
-CLAUDE.md의 v4 디자인 규격 중 본문 카드(2장부터)는 이 파일에서,
-hook 카드(1장)는 hook_card.py에서 그린다.
-사진, 위키미디어, Pexels 자동 조달은 다루지 않는다.
+각 카드 종류는 hook_card.py, body_card.py, watermark_card.py에서 그리고,
+card_deck.py의 render_all_cards()가 이들을 순서대로 묶는다.
 """
 
 import sys
 import os
-from PIL import Image, ImageDraw, ImageFont
-from text_fit import fit_body_text
-from hook_card import draw_hook_card
-from watermark_card import draw_watermark_card
-from card_config import (
-    CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
-    BACKGROUND_COLOR, BODY_COLOR, MUTED_COLOR, DIVIDER_COLOR,
-    LABEL_FONT_SIZE, FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_NAME,
-)
+from card_deck import render_all_cards
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
 
-BODY_FONT_SIZE_STEPS = [76, 68, 60]  # 안전영역을 넘으면 이 순서로 축소
-BODY_LINE_SPACING = 1.35
-# 본문 카드는 1~2문장이 목적이라 잡은 값. CLAUDE.md에 정해진 수치는 없음
-BODY_MAX_LINES = 4
-OUTPUT_PATH = "output/test/card_1.png"
+OUTPUT_DIR = "output/test"
 
-
-def draw_body_card(text, card_number, total_cards):
-    """본문 카드 1장을 그려서 이미지 객체로 반환한다."""
-    image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), BACKGROUND_COLOR)
-    draw = ImageDraw.Draw(image)
-    label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
-
-    safe_width = CANVAS_WIDTH - MARGIN_SIDE * 2
-    body_font, lines, used_size, step = fit_body_text(
-        text, draw, safe_width, BODY_MAX_LINES, BODY_FONT_SIZE_STEPS, FONT_EXTRABOLD_PATH
-    )
-    if step == 0:
-        print(f"폰트 축소 없음: {used_size}px 그대로 사용")
-    else:
-        print(f"폰트 축소 {step}단계: {BODY_FONT_SIZE_STEPS[0]}px → {used_size}px ({len(lines)}줄)")
-
-    # 본문을 안전영역 안에서 세로 중앙 정렬
-    line_height = int(used_size * BODY_LINE_SPACING)
-    block_height = line_height * len(lines)
-    safe_top = MARGIN_TOP
-    safe_bottom = CANVAS_HEIGHT - MARGIN_BOTTOM
-    start_y = safe_top + (safe_bottom - safe_top - block_height) // 2
-
-    for i, line in enumerate(lines):
-        draw.text((MARGIN_SIDE, start_y + i * line_height), line, font=body_font, fill=BODY_COLOR)
-
-    # 카드번호: 우상단
-    card_label = f"{card_number}/{total_cards}"
-    label_width = draw.textlength(card_label, font=label_font)
-    draw.text((CANVAS_WIDTH - MARGIN_SIDE - label_width, 60), card_label, font=label_font, fill=MUTED_COLOR)
-
-    # 구분선과 핸들: 하단
-    divider_y = CANVAS_HEIGHT - 70
-    draw.line((MARGIN_SIDE, divider_y, CANVAS_WIDTH - MARGIN_SIDE, divider_y), fill=DIVIDER_COLOR, width=2)
-    draw.text((MARGIN_SIDE, divider_y + 15), ACCOUNT_NAME, font=label_font, fill=MUTED_COLOR)
-
-    return image
+# 어제 만든 재검표 기사 요약 JSON을 그대로 하드코딩해서 테스트한다
+TEST_SUMMARY = {
+    "hook": '"아, 고르세요! 날짜 받아갈게요"…재검표 일정 두고 여야 폭발한 이유',
+    "what": (
+        "국회 지방선거 투표용지 부족 사태 국정조사특별위원회 3차 청문회에서 여야가 "
+        "잠실 올림픽공원 투표지 재검표 일정과 방식을 두고 정면으로 충돌했다. "
+        "더불어민주당은 18일 재검표를 서둘러 진행하자고 주장했으나, 국민의힘은 출범할 "
+        "선관위 특검과 연계해야 한다고 맞섰다. 결국 합의가 무산되면서 야당은 청문회 "
+        "일정을 단독으로 진행했고, 국민의힘은 투표율 오입력 문제를 집중 질타했다."
+    ),
+    "why": (
+        "6·3 지방선거 당시 발생한 투표용지 부족 사태와 투표자 수 통계 오류의 진상을 "
+        "규명하기 위해 국회에 국정조사권이 부여되었다. 그러나 조사 연장 기간 내에 "
+        "투표지 재검표를 즉각 실시하려는 야당과, 곧 꾸려질 특검 수사와 연계해 신중하게 "
+        "검증해야 한다는 여당의 입장이 부딪히면서 현재 국회 의사일정 전체가 파행을 빚고 있다."
+    ),
+    "terms": [
+        {"term": "현안 질의", "definition": "국회가 소관 상임위원회나 특별위원회에서 주요 현안에 대해 관계자를 출석시켜 질의하고 보고를 받는 활동"},
+        {"term": "오입력", "definition": "데이터를 입력할 때 실수나 잘못된 지침으로 실제 값과 다른 정보가 입력되는 일"},
+    ],
+    "question": "재검표를 서둘러야 한다는 입장과, 특검과 연계해야 한다는 입장 중 어떤 주장이 더 타당하다고 보십니까?",
+}
 
 
 def main():
-    """워터마크 카드(마지막 고정 카드)를 테스트한다."""
+    """카드셋 전체를 만들어 output/test/에 순서대로 저장하고, 장수·카드번호를 확인한다."""
     try:
-        image = draw_watermark_card(outlet="한국경제")
-        os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-        image.save(OUTPUT_PATH)
-        print(f"카드 저장 완료: {OUTPUT_PATH}")
+        images = render_all_cards(TEST_SUMMARY, source="한국경제", date="2026.08.13")
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
+        for i, image in enumerate(images, start=1):
+            path = f"{OUTPUT_DIR}/card_{i}.png"
+            image.save(path)
+            print(f"저장: {path}")
+        print(f"카드 총 {len(images)}장 생성 완료")
     except Exception as error:
-        print(f"카드 생성 실패: {error}")
+        print(f"카드셋 생성 실패: {error}")
 
 
 if __name__ == "__main__":

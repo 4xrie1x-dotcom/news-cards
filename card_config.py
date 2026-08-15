@@ -18,8 +18,10 @@ FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"
 FONT_REGULAR_PATH = "fonts/Pretendard-Regular.otf"
 
 # 워터마크 카드 CTA 크기·색 (확정)
-WATERMARK_MAIN_FONT_SIZE = 48
-WATERMARK_SECONDARY_FONT_SIZE = 28
+WATERMARK_MAIN_FONT_SIZE = 68
+WATERMARK_SECONDARY_FONT_SIZE = 40
 WATERMARK_SECONDARY_COLOR = "#C7CBD1"  # MUTED_COLOR보다 밝게 해서 잘 보이게 함
+WATERMARK_ACCOUNT_FONT_SIZE = 34  # 계정명. 출처보다 살짝 크게
+WATERMARK_SOURCE_FONT_SIZE = 30  # 출처·AI 요약. 보조 요소라 이전 크기 유지
 
 ACCOUNT_NAME = "@placeholder"  # 계정명 미정. 정해지면 이 값만 바꾸면 된다
