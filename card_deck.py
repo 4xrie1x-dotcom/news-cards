@@ -16,14 +16,12 @@ def split_sentences(text):
     return [s for s in sentences if s]
 
 
-def build_body_sentences(summary_json):
-    """summarize.py가 만든 JSON(what/why/terms/question)에서 본문 카드용 문장 목록을 만든다."""
-    sentences = split_sentences(summary_json["what"])
-    sentences += split_sentences(summary_json["why"])
-    for term in summary_json.get("terms", []):
-        sentences.append(f"{term['term']}: {term['definition']}")
-    sentences.append(summary_json["question"])
-    return sentences
+def ensure_period(text):
+    """문장 끝에 마침표·물음표·느낌표가 없으면 마침표를 붙인다."""
+    text = text.strip()
+    if text and text[-1] not in ".!?":
+        text += "."
+    return text
 
 
 def group_into_cards(sentences, max_per_card):
@@ -31,13 +29,28 @@ def group_into_cards(sentences, max_per_card):
     return [" ".join(sentences[i:i + max_per_card]) for i in range(0, len(sentences), max_per_card)]
 
 
+def build_body_cards(summary_json, max_per_card):
+    """what/why는 묶어서 여러 문장 카드로 만들고, terms 각각과 question은
+    다른 카드 종류라 서로 이어붙이지 않고 항상 독립된 카드로 둔다."""
+    narrative = split_sentences(summary_json["what"]) + split_sentences(summary_json["why"])
+    narrative_cards = group_into_cards(narrative, max_per_card)
+
+    term_cards = [
+        f"{term['term']}: {ensure_period(term['definition'])}"
+        for term in summary_json.get("terms", [])
+    ]
+
+    question_card = [ensure_period(summary_json["question"])]
+
+    return narrative_cards + term_cards + question_card
+
+
 def render_all_cards(summary_json, source, date):
     """hook 카드 → 본문 카드 여러 장 → 워터마크 카드까지 이미지 리스트로 만들어 반환한다.
     아직 파일로 저장하지는 않는다."""
-    sentences = build_body_sentences(summary_json)
-    body_texts = group_into_cards(sentences, MAX_SENTENCES_PER_CARD)
+    body_texts = build_body_cards(summary_json, MAX_SENTENCES_PER_CARD)
     if len(body_texts) > MAX_BODY_CARDS:
-        body_texts = group_into_cards(sentences, MAX_SENTENCES_PER_CARD + 1)
+        body_texts = build_body_cards(summary_json, MAX_SENTENCES_PER_CARD + 1)
     print(f"본문 {len(body_texts)}장 (범위: 최소 {MIN_BODY_CARDS}장 ~ 최대 {MAX_BODY_CARDS}장)")
 
     # 카드번호는 hook을 1번으로 치고, 워터마크는 카운트에서 뺀다
