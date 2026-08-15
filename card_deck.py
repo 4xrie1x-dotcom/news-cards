@@ -1,4 +1,4 @@
-"""summarize.py가 만든 JSON으로 hook→본문→질문→워터마크까지 카드셋을 만드는 기능"""
+"""summarize.py가 만든 JSON으로 hook→본문→워터마크까지 카드셋을 만드는 기능"""
 
 import re
 from body_card import draw_body_card
@@ -7,7 +7,7 @@ from watermark_card import draw_watermark_card
 
 MAX_SENTENCES_PER_CARD = 2  # 한 카드당 문장 1개가 기본, 짧으면 2개까지 허용
 MAX_SECTION_CARDS = 2  # what, why 각각 최대 2장
-MAX_BODY_CARDS_TOTAL = 3  # hook(1)+본문+질문(1)+워터마크(1)를 5~6장으로 맞추기 위한 본문 상한
+MAX_BODY_CARDS_TOTAL = 3  # hook(1)+본문+워터마크(1)를 4~5장으로 맞추기 위한 본문 상한
 
 # 본문 76px ExtraBold, 안전폭 900px에서 실측한 평균 글자폭(약 56px)으로
 # 줄당 16자, 최대 4줄(body_card.py의 BODY_MAX_LINES) 기준 편안한 상한을 잡았다
@@ -67,20 +67,22 @@ def build_body_cards(summary_json):
 
 
 def render_all_cards(summary_json, source, date):
-    """hook 카드 → 본문 카드 → 질문 카드 → 워터마크 카드까지 이미지 리스트로 만든다.
-    terms는 카드로 만들지 않고 그대로 반환해서, caption.py의 "알아두기"에 쓸 수 있게 한다.
-    (images, terms) 튜플을 반환하며, 아직 파일로 저장하지는 않는다."""
+    """hook 카드 → 본문 카드 → 워터마크 카드까지 이미지 리스트로 만든다.
+    question은 워터마크 카드의 CTA와 역할이 겹쳐서, terms와 마찬가지로
+    카드로 만들지 않고 그대로 반환한다(둘 다 나중에 caption.py에서 쓴다).
+    {"images", "terms", "question"} 딕셔너리를 반환하며, 아직 파일로 저장하지는 않는다."""
     body_texts = build_body_cards(summary_json)
-    question_text = ensure_period(summary_json["question"])
-    content_texts = body_texts + [question_text]
 
-    total_content_cards = 1 + len(content_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
-    print(f"본문 {len(body_texts)}장 + 질문 1장, 전체 {total_content_cards + 1}장 (목표 5~6장)")
+    total_content_cards = 1 + len(body_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
+    print(f"본문 {len(body_texts)}장, 전체 {total_content_cards + 1}장 (목표 4~5장)")
 
     images = [draw_hook_card(summary_json["hook"], date_text=date)]
-    for i, text in enumerate(content_texts, start=2):
+    for i, text in enumerate(body_texts, start=2):
         images.append(draw_body_card(text, card_number=i, total_cards=total_content_cards))
     images.append(draw_watermark_card(outlet=source))
 
-    terms = summary_json.get("terms", [])
-    return images, terms
+    return {
+        "images": images,
+        "terms": summary_json.get("terms", []),
+        "question": ensure_period(summary_json["question"]),
+    }

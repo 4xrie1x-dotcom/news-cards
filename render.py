@@ -40,14 +40,17 @@ TEST_SUMMARY = {
 def main():
     """카드셋 전체를 만들어 output/test/에 순서대로 저장하고, 장수·카드번호를 확인한다."""
     try:
-        images, terms = render_all_cards(TEST_SUMMARY, source="한국경제", date="2026.08.13")
+        result = render_all_cards(TEST_SUMMARY, source="한국경제", date="2026.08.13")
+        images = result["images"]
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         for i, image in enumerate(images, start=1):
             path = f"{OUTPUT_DIR}/card_{i}.png"
             image.save(path)
             print(f"저장: {path}")
         print(f"카드 총 {len(images)}장 생성 완료")
-        print(f"카드로 만들지 않은 terms {len(terms)}개는 그대로 반환됨 (caption.py용): {terms}")
+        print(f"카드로 만들지 않고 반환된 값 (caption.py용):")
+        print(f"  terms: {result['terms']}")
+        print(f"  question: {result['question']}")
     except Exception as error:
         print(f"카드셋 생성 실패: {error}")
 
