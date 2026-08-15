@@ -17,4 +17,8 @@ LABEL_FONT_SIZE = 26
 FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"
 FONT_REGULAR_PATH = "fonts/Pretendard-Regular.otf"
 
+# 워터마크 카드 CTA 크기 (확정)
+WATERMARK_MAIN_FONT_SIZE = 48
+WATERMARK_SECONDARY_FONT_SIZE = 28
+
 ACCOUNT_NAME = "@placeholder"  # 계정명 미정. 정해지면 이 값만 바꾸면 된다

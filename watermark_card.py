@@ -5,15 +5,12 @@ from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
     TITLE_COLOR, MUTED_COLOR, FALLBACK_BG_COLOR, LABEL_FONT_SIZE,
     FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_NAME,
+    WATERMARK_MAIN_FONT_SIZE, WATERMARK_SECONDARY_FONT_SIZE,
 )
 
-ACCOUNT_FONT_SIZE = 84
-# CLAUDE.md는 핸들을 Light 32px로 정했지만, 보유한 폰트가 ExtraBold·Regular뿐이라
-# 일단 Regular로 대체한다
-HANDLE_FONT_SIZE = 32
-HANDLE_PLACEHOLDER = "@placeholder"  # 핸들도 계정명처럼 미정이라 임시값
-CTA_FONT_SIZE = 36  # 크기가 CLAUDE.md에 없어서 임시로 잡은 값
-CTA_LINES = ["이 사안, 어떻게 보세요?", "저장해두세요", "도움됐다면 팔로우"]
+MAIN_CTA_TEXT = "이 사안, 어떻게 보세요?"
+SECONDARY_LINES = ["저장해두세요", "팔로우해주세요"]
+FOOTER_GAP = 60  # CTA 블록과 하단 계정명·출처 사이 최소 간격
 
 
 def draw_centered_line(draw, text, font, y, fill):
@@ -22,35 +19,14 @@ def draw_centered_line(draw, text, font, y, fill):
     draw.text(((CANVAS_WIDTH - width) / 2, y), text, font=font, fill=fill)
 
 
-def draw_watermark_card(outlet):
-    """워터마크 카드(마지막 고정 카드)를 그려서 이미지 객체로 반환한다."""
-    image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), FALLBACK_BG_COLOR)
-    draw = ImageDraw.Draw(image)
+def stacked_height(items):
+    """(텍스트, 폰트, 색, 간격) 목록을 위에서부터 쌓았을 때 총 높이를 구한다."""
+    return sum((2 if text == "divider" else font.size) + gap for text, font, _, gap in items)
 
-    account_font = ImageFont.truetype(FONT_EXTRABOLD_PATH, ACCOUNT_FONT_SIZE)
-    handle_font = ImageFont.truetype(FONT_REGULAR_PATH, HANDLE_FONT_SIZE)
-    cta_font = ImageFont.truetype(FONT_REGULAR_PATH, CTA_FONT_SIZE)
-    label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
 
-    # (텍스트, 폰트, 색, 다음 줄까지 간격) 순서로 늘어놓는다. "divider"는 구분선.
-    items = [
-        (ACCOUNT_NAME, account_font, TITLE_COLOR, 20),
-        (HANDLE_PLACEHOLDER, handle_font, MUTED_COLOR, 60),
-        ("divider", None, MUTED_COLOR, 60),
-        (CTA_LINES[0], cta_font, TITLE_COLOR, 30),
-        (CTA_LINES[1], cta_font, TITLE_COLOR, 30),
-        (CTA_LINES[2], cta_font, TITLE_COLOR, 60),
-        ("divider", None, MUTED_COLOR, 50),
-        (f"출처  {outlet}", label_font, MUTED_COLOR, 20),
-        ("AI 요약", label_font, MUTED_COLOR, 0),
-    ]
-
-    # 안전영역 안에서 전체 블록을 세로 중앙 정렬하기 위해 총 높이를 먼저 잰다
-    total_height = sum((2 if text == "divider" else font.size) + gap for text, font, _, gap in items)
-    safe_top = MARGIN_TOP
-    safe_bottom = CANVAS_HEIGHT - MARGIN_BOTTOM
-    y = safe_top + (safe_bottom - safe_top - total_height) // 2
-
+def draw_stacked_lines(draw, items, start_y):
+    """items를 start_y부터 위에서 아래로 그린다. "divider"는 구분선으로 그린다."""
+    y = start_y
     for text, font, color, gap in items:
         if text == "divider":
             draw.line((MARGIN_SIDE, y, CANVAS_WIDTH - MARGIN_SIDE, y), fill=color, width=2)
@@ -58,5 +34,39 @@ def draw_watermark_card(outlet):
         else:
             draw_centered_line(draw, text, font, y, color)
             y += font.size + gap
+
+
+def draw_watermark_card(outlet):
+    """워터마크 카드(마지막 고정 카드)를 그려서 이미지 객체로 반환한다.
+    메인 CTA를 화면 가운데쯤에 크게 두고, 계정명·출처는 하단에 작게 배치한다."""
+    image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), FALLBACK_BG_COLOR)
+    draw = ImageDraw.Draw(image)
+
+    main_font = ImageFont.truetype(FONT_EXTRABOLD_PATH, WATERMARK_MAIN_FONT_SIZE)
+    secondary_font = ImageFont.truetype(FONT_REGULAR_PATH, WATERMARK_SECONDARY_FONT_SIZE)
+    footer_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
+
+    cta_items = [
+        ("divider", None, MUTED_COLOR, 50),
+        (MAIN_CTA_TEXT, main_font, TITLE_COLOR, 30),
+        (SECONDARY_LINES[0], secondary_font, MUTED_COLOR, 12),
+        (SECONDARY_LINES[1], secondary_font, MUTED_COLOR, 50),
+        ("divider", None, MUTED_COLOR, 0),
+    ]
+    footer_items = [
+        (ACCOUNT_NAME, footer_font, MUTED_COLOR, 12),
+        (f"출처 {outlet} · AI 요약", footer_font, MUTED_COLOR, 0),
+    ]
+
+    safe_top = MARGIN_TOP
+    safe_bottom = CANVAS_HEIGHT - MARGIN_BOTTOM
+
+    # 계정명·출처는 안전영역 맨 아래에 붙이고, CTA는 그 위 남는 공간에서 가운데 정렬한다
+    footer_y = safe_bottom - stacked_height(footer_items)
+    cta_bottom_limit = footer_y - FOOTER_GAP
+    cta_y = safe_top + (cta_bottom_limit - safe_top - stacked_height(cta_items)) // 2
+
+    draw_stacked_lines(draw, cta_items, cta_y)
+    draw_stacked_lines(draw, footer_items, footer_y)
 
     return image
