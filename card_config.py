@@ -13,14 +13,37 @@ DIVIDER_COLOR = "#E5E5E5"
 TITLE_COLOR = "#FFFFFF"
 EMPHASIS_COLOR = "#E03A2F"  # 문장 내 핵심 구절 강조색 (최대 1곳)
 FALLBACK_BG_COLOR = "#16181C"  # 사진이 없을 때 hook 카드에 쓰는 배경
-HOOK_PHOTO_AREA_HEIGHT = 720  # 캔버스 세로의 약 53%. hook 카드 사진 배경 영역(나머지 630px은 고정 검정 제목 영역).
-# 인스타 탐색 탭은 정중앙 1080x1080으로 크롭되어 위아래 각 135px가 잘린다(안전영역 하단 1215px).
-# 자동 축소 로직은 "줄바꿈 결과가 3줄 이내면 큰 폰트(108px)를 그대로 쓴다" — 즉 108px로 3줄이 나오는
-# 경우가 실제 최댓값이라, 이 조합(제목 3줄@108px+날짜) 기준으로 역산해 정한 값
 
 LABEL_FONT_SIZE = 26
 FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"
 FONT_REGULAR_PATH = "fonts/Pretendard-Regular.otf"
+
+# hook 카드 사진/검정 영역 동적 분할 (제목이 짧으면 사진을 크게, 길면 검정을 크게)
+# 검정 영역 = 제목 줄 수·폰트 크기로 정해지는 실제 필요 높이(제목+날짜+여백).
+# 인스타 탐색 탭 썸네일은 정중앙 1080x1080으로 크롭돼 캔버스 하단 135px가 잘리므로
+# (CLAUDE.md), 그 여백은 항상 그대로 지킨다.
+HOOK_LINE_SPACING = 1.2
+HOOK_MAX_LINES = 3  # 제목은 최대 3줄 (CLAUDE.md 디자인 규격)
+HOOK_FONT_SIZE_STEPS = [108, 96, 84]  # 안전영역을 넘으면 이 순서로 축소
+HOOK_BLACK_MARGIN_TOP = 40  # 사진/검정 경계에서 제목 시작까지 여백
+HOOK_DATE_GAP = 16  # 제목과 날짜 사이 여백
+HOOK_SAFE_MARGIN_BOTTOM = 135  # 탐색 탭 크롭 높이와 동일한 하단 여백
+
+
+def hook_black_area_height(font_size, num_lines):
+    """제목 폰트 크기·줄 수로 실제 필요한 검정 영역 높이(제목+날짜+여백)를 계산한다."""
+    line_height = int(font_size * HOOK_LINE_SPACING)
+    title_height = line_height * num_lines
+    date_height = int(LABEL_FONT_SIZE * 1.2)
+    return HOOK_BLACK_MARGIN_TOP + title_height + HOOK_DATE_GAP + date_height + HOOK_SAFE_MARGIN_BOTTOM
+
+
+# 1줄 제목(가장 큰 108px) 기준 최소값, 3줄·108px(자동 축소가 걸리지 않는 최댓값) 기준 최댓값
+HOOK_MIN_BLACK_AREA_HEIGHT = hook_black_area_height(HOOK_FONT_SIZE_STEPS[0], 1)
+HOOK_MAX_BLACK_AREA_HEIGHT = hook_black_area_height(HOOK_FONT_SIZE_STEPS[0], HOOK_MAX_LINES)
+# 사진 영역이 가장 작아지는 경우(검정 영역 최대) 기준. photo_quality.py가 이 값으로
+# 화질을 검사해야 어떤 제목 길이가 와도 안전하다
+HOOK_MIN_PHOTO_AREA_HEIGHT = CANVAS_HEIGHT - HOOK_MAX_BLACK_AREA_HEIGHT
 
 # 워터마크 카드 CTA 크기·색 (확정)
 WATERMARK_MAIN_FONT_SIZE = 68
