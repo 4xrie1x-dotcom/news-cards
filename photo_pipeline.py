@@ -3,9 +3,14 @@ hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
 """
 
 import re
-from assembly_source import fetch_assembly_photo
 from photo_source import fetch_wikimedia_photo
 from pexels_source import fetch_pexels_photo
+
+# assembly_source.py(국회 열린국회정보 프로필 사진)는 저작권 확인 전까지 비활성화.
+# 국회 사이트 저작권 정책상 자유이용은 "공공누리 마크가 개별 부착된 저작물"에만
+# 적용되는데, 의원 프로필 사진에는 그 마크가 없어 사전 협의 없이는 자유이용
+# 대상이 아님을 확인했다(2026-08-16). CLAUDE.md의 "저작권 프리 소스에서만
+# 조달" 원칙에 어긋나므로 확인될 때까지 위키미디어를 1순위로 되돌린다.
 
 # 이름 뒤에 이 직함이 붙어 있으면 "요약에 언급된 주요 인물"로 본다.
 # 정당명은 이름 앞이나 뒤 어디든 끼어들 수 있어서(예: "이진숙 국민의힘 의원",
@@ -56,19 +61,12 @@ def extract_pexels_keywords(summary_json):
 
 
 def get_hook_background(summary_json):
-    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 국회 열린국회정보를 먼저
-    시도하고(해상도가 대체로 높음), 실패하면 위키미디어를, 그래도 실패하면
-    Pexels로 상황 사진을 찾는다. 모두 실패하면 None을 반환해서 hook_card.py가
-    텍스트 전용 fallback을 쓰게 한다."""
+    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키미디어를 먼저 시도하고,
+    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 None을 반환해서
+    hook_card.py가 텍스트 전용 fallback을 쓰게 한다."""
     person_name = extract_person_name(summary_json)
     if person_name:
         print(f"인물명 추출: {person_name}")
-        photo_path = fetch_assembly_photo(person_name)
-        if photo_path:
-            print(f"배경 사진 조달 성공(국회 열린국회정보): {photo_path}")
-            return photo_path
-        print(f"국회 열린국회정보에서 '{person_name}' 사진을 못 찾아 위키미디어로 넘어갑니다.")
-
         photo_path = fetch_wikimedia_photo(person_name)
         if photo_path:
             print(f"배경 사진 조달 성공(위키미디어): {photo_path}")
