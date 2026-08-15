@@ -7,6 +7,7 @@ CLAUDE.md의 v4 디자인 규격(2장부터 본문 카드) 중 텍스트 부분�
 import sys
 import os
 from PIL import Image, ImageDraw, ImageFont
+from text_fit import fit_body_text
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
@@ -23,31 +24,15 @@ BODY_COLOR = "#16181C"
 MUTED_COLOR = "#8B9099"
 DIVIDER_COLOR = "#E5E5E5"
 # 폰트 크기·행간, 폰트 파일 경로
-BODY_FONT_SIZE = 76
+FONT_SIZE_STEPS = [76, 68, 60]  # 안전영역을 넘으면 이 순서로 축소
 LABEL_FONT_SIZE = 26
 LINE_SPACING = 1.35
+# 본문 카드는 1~2문장이 목적이라 잡은 값. CLAUDE.md에 정해진 수치는 없음
+MAX_LINES = 4
 FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"
 FONT_REGULAR_PATH = "fonts/Pretendard-Regular.otf"
 ACCOUNT_NAME = "@placeholder"  # 계정명 미정. 정해지면 이 값만 바꾸면 된다
 OUTPUT_PATH = "output/test/card_1.png"
-
-
-def wrap_text(text, font, draw, max_width):
-    """긴 문장을 안전영역 너비에 맞게 여러 줄로 나눈다."""
-    words = text.split(" ")
-    lines = []
-    current = ""
-    for word in words:
-        candidate = f"{current} {word}".strip()
-        if draw.textlength(candidate, font=font) <= max_width:
-            current = candidate
-        else:
-            if current:
-                lines.append(current)
-            current = word
-    if current:
-        lines.append(current)
-    return lines
 
 
 def draw_body_card(text, card_number, total_cards):
@@ -55,14 +40,19 @@ def draw_body_card(text, card_number, total_cards):
     image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), BACKGROUND_COLOR)
     draw = ImageDraw.Draw(image)
 
-    body_font = ImageFont.truetype(FONT_EXTRABOLD_PATH, BODY_FONT_SIZE)
     label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
 
     safe_width = CANVAS_WIDTH - MARGIN_SIDE * 2
-    lines = wrap_text(text, body_font, draw, safe_width)
+    body_font, lines, used_size, step = fit_body_text(
+        text, draw, safe_width, MAX_LINES, FONT_SIZE_STEPS, FONT_EXTRABOLD_PATH
+    )
+    if step == 0:
+        print(f"폰트 축소 없음: {used_size}px 그대로 사용")
+    else:
+        print(f"폰트 축소 {step}단계: {FONT_SIZE_STEPS[0]}px → {used_size}px ({len(lines)}줄)")
 
     # 본문을 안전영역 안에서 세로 중앙 정렬
-    line_height = int(BODY_FONT_SIZE * LINE_SPACING)
+    line_height = int(used_size * LINE_SPACING)
     block_height = line_height * len(lines)
     safe_top = MARGIN_TOP
     safe_bottom = CANVAS_HEIGHT - MARGIN_BOTTOM
@@ -85,8 +75,12 @@ def draw_body_card(text, card_number, total_cards):
 
 
 def main():
-    """테스트 문장 하나로 카드 1장을 만들어 저장한다."""
-    test_sentence = "여야는 재검표 일정을 두고 정면 충돌했다"
+    """일부러 아주 긴 문장으로 카드 1장을 만들어, 폰트 축소가 실제로 일어나는지 확인한다."""
+    test_sentence = (
+        "국회 지방선거 투표용지 부족 사태 국정조사특별위원회 3차 청문회에서 "
+        "여야가 재검표 일정과 방식을 두고 정면으로 충돌했으며 결국 합의에 "
+        "이르지 못한 채 야당 단독으로 현안 질의가 진행됐다"
+    )
     try:
         image = draw_body_card(test_sentence, card_number=1, total_cards=6)
         os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
