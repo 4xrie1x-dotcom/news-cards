@@ -76,8 +76,10 @@ def build_body_cards(summary_json):
     return body_texts
 
 
-def render_all_cards(summary_json, source, date):
+def render_all_cards(summary_json, source, date, hook_background_path=None):
     """hook 카드 → 본문 카드 → 워터마크 카드까지 이미지 리스트로 만든다.
+    hook_background_path가 있으면 hook 카드 배경 사진으로 쓰고, 없으면
+    hook_card.py의 텍스트 전용 fallback이 대신 쓰인다.
     question은 워터마크 카드의 CTA와 역할이 겹쳐서, terms와 마찬가지로
     카드로 만들지 않고 그대로 반환한다(둘 다 나중에 caption.py에서 쓴다).
     {"images", "terms", "question"} 딕셔너리를 반환하며, 아직 파일로 저장하지는 않는다."""
@@ -86,7 +88,7 @@ def render_all_cards(summary_json, source, date):
     total_content_cards = 1 + len(body_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
     print(f"본문 {len(body_texts)}장, 전체 {total_content_cards + 1}장 (전체 목표 최대 7장)")
 
-    images = [draw_hook_card(summary_json["hook"], date_text=date)]
+    images = [draw_hook_card(summary_json["hook"], date_text=date, background_path=hook_background_path)]
     for i, text in enumerate(body_texts, start=2):
         images.append(draw_body_card(text, card_number=i, total_cards=total_content_cards))
     images.append(draw_watermark_card(outlet=source))

@@ -1,6 +1,6 @@
 """6단계: collect→extract→summarize→render→caption 파이프라인을 기사 1개로 실행하는 스크립트
 
-사진 자동 조달(위키미디어/Pexels)은 아직 없다. hook 카드는 텍스트 전용 fallback으로 만든다.
+hook 카드 배경은 photo_pipeline.py가 위키미디어→Pexels→텍스트 fallback 순으로 조달한다.
 기사 선정(후보 수집·다중 소재 건너뛰기)은 article_picker.py가 맡는다. 기사 1개만 처리한다.
 """
 
@@ -8,6 +8,7 @@ import sys, os, json, datetime
 from article_picker import find_candidate_articles, extract_first_valid_article
 from dedupe import get_outlet
 from summarize import summarize
+from photo_pipeline import get_hook_background
 from card_deck import render_all_cards
 from caption import build_caption
 
@@ -48,23 +49,34 @@ def main():
         print(f"실패(3단계 요약): {error}")
         return
 
-    print("4단계: 카드 생성 중...")
+    print("4단계: hook 배경 사진 조달 중...")
     try:
-        deck = render_all_cards(summary_json, source=outlet, date=today.strftime("%Y.%m.%d"))
-        print(f"4단계 완료: 카드 {len(deck['images'])}장")
+        background_path = get_hook_background(summary_json)
+        print(f"4단계 완료: {background_path or '텍스트 전용 fallback 사용'}")
     except Exception as error:
-        print(f"실패(4단계 카드 생성): {error}")
+        print(f"실패(4단계 배경 사진 조달): {error}")
+        background_path = None
+
+    print("5단계: 카드 생성 중...")
+    try:
+        deck = render_all_cards(
+            summary_json, source=outlet, date=today.strftime("%Y.%m.%d"),
+            hook_background_path=background_path,
+        )
+        print(f"5단계 완료: 카드 {len(deck['images'])}장")
+    except Exception as error:
+        print(f"실패(5단계 카드 생성): {error}")
         return
 
-    print("5단계: 캡션 생성 중...")
+    print("6단계: 캡션 생성 중...")
     try:
         caption_result = build_caption(summary_json, deck["terms"], deck["question"], source=outlet)
-        print(f"5단계 완료: 캡션 {len(caption_result['caption'])}자")
+        print(f"6단계 완료: 캡션 {len(caption_result['caption'])}자")
     except Exception as error:
-        print(f"실패(5단계 캡션 생성): {error}")
+        print(f"실패(6단계 캡션 생성): {error}")
         return
 
-    print("6단계: 저장 중...")
+    print("7단계: 저장 중...")
     try:
         os.makedirs(output_dir, exist_ok=True)
         for i, image in enumerate(deck["images"], start=1):
@@ -74,9 +86,9 @@ def main():
         data = {**summary_json, "source": outlet, "url": real_url, "date": today.isoformat()}
         with open(f"{output_dir}/data.json", "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
-        print(f"6단계 완료: {output_dir}에 카드 {len(deck['images'])}장, caption.txt, data.json 저장")
+        print(f"7단계 완료: {output_dir}에 카드 {len(deck['images'])}장, caption.txt, data.json 저장")
     except Exception as error:
-        print(f"실패(6단계 저장): {error}")
+        print(f"실패(7단계 저장): {error}")
         return
     print("전체 파이프라인 성공")
 

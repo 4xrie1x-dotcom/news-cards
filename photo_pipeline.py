@@ -1,0 +1,80 @@
+"""6-2-d단계: 인물명 추출 → 위키미디어 → Pexels → 텍스트 fallback까지
+hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
+"""
+
+import re
+from photo_source import fetch_wikimedia_photo
+from pexels_source import fetch_pexels_photo
+
+# 이름 뒤에 이 직함이 붙어 있으면 "요약에 언급된 주요 인물"로 본다.
+# 정당명은 이름 앞이나 뒤 어디든 끼어들 수 있어서(예: "이진숙 국민의힘 의원",
+# "국민의힘 이진숙 의원") 이름으로 착각하지 않도록 미리 지운 뒤 찾는다.
+# 직함 바로 앞 글자만 이름으로 보는 단순한 규칙이라, 중간에 다른 단어가
+# 끼면 못 잡을 수 있다
+PERSON_TITLE_MARKERS = ["의원", "대표", "장관", "대통령", "총리", "위원장", "시장", "지사", "원내대표"]
+TITLE_GROUP = "(?:" + "|".join(PERSON_TITLE_MARKERS) + ")"
+NAME_PATTERN = re.compile(rf"([가-힣]{{2,4}})\s*{TITLE_GROUP}")
+
+KNOWN_ORG_NAMES = [
+    "더불어민주당", "국민의힘", "정의당", "개혁신당", "조국혁신당", "진보당",
+    "국민의당", "새역사국민운동",
+]
+
+# 기사 맥락 단어 → Pexels 검색어. 사물·정물 위주로만 두고 인물·군중 키워드는 아예 넣지 않는다
+CONTEXT_KEYWORD_MAP = [
+    (("국회",), "Korea national assembly"),
+    (("청문회", "질의", "회의"), "microphone"),
+    (("표결", "판결", "결정", "재검표"), "gavel"),
+    (("서류", "자료", "문서", "보고서", "조사"), "documents"),
+]
+DEFAULT_KEYWORDS = ["documents", "microphone", "podium"]
+
+
+def extract_person_name(summary_json):
+    """hook/what/why에서 직함이 붙은 인물명을 하나 찾는다. 없으면 None을 반환한다.
+    정당명 등 알려진 조직명은 사람 이름으로 착각하지 않도록 미리 지운다."""
+    text = f"{summary_json.get('hook', '')} {summary_json.get('what', '')} {summary_json.get('why', '')}"
+    text = text.replace("{", "").replace("}", "")
+    for org in KNOWN_ORG_NAMES:
+        text = text.replace(org, " ")
+    for match in NAME_PATTERN.finditer(text):
+        name = match.group(1)
+        if name not in KNOWN_ORG_NAMES:
+            return name
+    return None
+
+
+def extract_pexels_keywords(summary_json):
+    """기사 맥락 단어를 보고 Pexels 검색어를 최대 3개 뽑는다. 못 찾으면 기본값을 쓴다."""
+    text = f"{summary_json.get('hook', '')} {summary_json.get('what', '')} {summary_json.get('why', '')}"
+    keywords = []
+    for triggers, keyword in CONTEXT_KEYWORD_MAP:
+        if any(trigger in text for trigger in triggers) and keyword not in keywords:
+            keywords.append(keyword)
+    return keywords[:3] if keywords else DEFAULT_KEYWORDS
+
+
+def get_hook_background(summary_json):
+    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키미디어를 먼저 시도하고,
+    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 None을 반환해서
+    hook_card.py가 텍스트 전용 fallback을 쓰게 한다."""
+    person_name = extract_person_name(summary_json)
+    if person_name:
+        print(f"인물명 추출: {person_name}")
+        photo_path = fetch_wikimedia_photo(person_name)
+        if photo_path:
+            print(f"배경 사진 조달 성공(위키미디어): {photo_path}")
+            return photo_path
+        print(f"위키미디어에서 '{person_name}' 사진을 못 찾아 Pexels로 넘어갑니다.")
+    else:
+        print("본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.")
+
+    keywords = extract_pexels_keywords(summary_json)
+    print(f"Pexels 검색 키워드: {keywords}")
+    photo_path = fetch_pexels_photo(keywords)
+    if photo_path:
+        print(f"배경 사진 조달 성공(Pexels): {photo_path}")
+        return photo_path
+
+    print("배경 사진 조달 실패. hook 카드는 텍스트 전용 fallback을 씁니다.")
+    return None
