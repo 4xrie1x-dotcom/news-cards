@@ -13,8 +13,10 @@ DIVIDER_COLOR = "#E5E5E5"
 TITLE_COLOR = "#FFFFFF"
 EMPHASIS_COLOR = "#E03A2F"  # 문장 내 핵심 구절 강조색 (최대 1곳)
 FALLBACK_BG_COLOR = "#16181C"  # 사진이 없을 때 hook 카드에 쓰는 배경
-HOOK_PHOTO_AREA_HEIGHT = 880  # 캔버스 세로의 약 65%. hook 카드 사진 배경 영역(나머지 470px은 고정 검정 제목 영역).
-# 80:20(검정 270px)과 70:30(검정 405px)은 제목 3줄+최소 폰트(84px) 조합이 안전공간을 넘어 이 비율로 조정함
+HOOK_PHOTO_AREA_HEIGHT = 720  # 캔버스 세로의 약 53%. hook 카드 사진 배경 영역(나머지 630px은 고정 검정 제목 영역).
+# 인스타 탐색 탭은 정중앙 1080x1080으로 크롭되어 위아래 각 135px가 잘린다(안전영역 하단 1215px).
+# 자동 축소 로직은 "줄바꿈 결과가 3줄 이내면 큰 폰트(108px)를 그대로 쓴다" — 즉 108px로 3줄이 나오는
+# 경우가 실제 최댓값이라, 이 조합(제목 3줄@108px+날짜) 기준으로 역산해 정한 값
 
 LABEL_FONT_SIZE = 26
 FONT_EXTRABOLD_PATH = "fonts/Pretendard-ExtraBold.otf"

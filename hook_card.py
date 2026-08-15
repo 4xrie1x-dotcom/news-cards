@@ -1,8 +1,12 @@
 """사진 배경 위에 제목이 올라가는 hook(1장) 카드를 그리는 기능
 
-캔버스를 사진 영역(위 880px, 약 65%)과 고정 검정 영역(아래 470px, 약 35%)으로
-나눈다. 제목 3줄+최소 폰트(84px) 조합이 검정 영역 안전공간을 넘지 않도록
-역산해서 정한 비율이다. 사진은 위 영역에만 비율 유지하며 맞춰 배치하고(1.5배 넘게 확대해야
+캔버스를 사진 영역(위 720px, 약 53%)과 고정 검정 영역(아래 630px, 약 47%)으로
+나눈다. CLAUDE.md 규칙상 인스타 탐색 탭 썸네일은 정중앙 1080x1080으로 크롭되어
+위아래 각 135px가 잘리므로, 실제 안전영역은 캔버스 세로 [135, 1215] 구간이다.
+자동 축소 로직(text_fit.fit_body_text)은 "줄바꿈이 3줄 이내면 큰 폰트(108px)를
+그대로 쓴다" 방식이라, 108px로 3줄이 나오는 조합(더 작은 폰트로는 축소되지 않음)이
+세로로 가장 많은 공간을 차지하는 실제 최댓값이다. 이 조합 기준으로 역산해 비율을
+정했다. 사진은 위 영역에만 비율 유지하며 맞춰 배치하고(1.5배 넘게 확대해야
 하면 photo_quality.py가 이미 걸러낸 뒤라 여기선 항상 기준 이내), 제목은
 아래 고정 검정 영역에 놓는다. 경계에는 짧은 그라데이션을 넣어 사진과 검정
 영역이 자연스럽게 이어지게 한다."""
@@ -17,7 +21,9 @@ from card_config import (
 
 BOUNDARY_GRADIENT_HEIGHT = 150  # 사진/검정 경계에 넣는 그라데이션 높이
 BLACK_AREA_MARGIN_TOP = 40  # 경계에서 제목 시작까지 여백
-BLACK_AREA_MARGIN_BOTTOM = 48  # 날짜 아래 여백
+EXPLORE_TAB_CROP = 135  # 인스타 탐색 탭 썸네일이 위아래로 잘라내는 높이 (CLAUDE.md)
+SAFE_AREA_TOP = EXPLORE_TAB_CROP  # 135px, 이보다 위는 탐색 탭에서 잘림
+SAFE_AREA_BOTTOM = CANVAS_HEIGHT - EXPLORE_TAB_CROP  # 1215px, 이보다 아래는 탐색 탭에서 잘림
 HOOK_LINE_SPACING = 1.2
 HOOK_MAX_LINES = 3  # 제목은 최대 3줄 (CLAUDE.md 디자인 규격)
 HOOK_FONT_SIZE_STEPS = [108, 96, 84]  # 안전영역을 넘으면 이 순서로 축소
@@ -43,7 +49,7 @@ def draw_hook_card(title, date_text, background_path=None):
     image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), FALLBACK_BG_COLOR)
     if background_path:
         source_image = Image.open(background_path).convert("RGB")
-        # 비율 유지한 채 사진 영역(1080x1080)을 꽉 채우도록 맞추고 중앙 기준으로 크롭한다
+        # 비율 유지한 채 사진 영역을 꽉 채우도록 맞추고 중앙 기준으로 크롭한다
         photo = ImageOps.fit(source_image, (CANVAS_WIDTH, HOOK_PHOTO_AREA_HEIGHT),
                               method=Image.LANCZOS, centering=(0.5, 0.5))
         image.paste(photo, (0, 0))
@@ -64,21 +70,22 @@ def draw_hook_card(title, date_text, background_path=None):
     label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
     draw.text((MARGIN_SIDE, 60), "LOGO", font=label_font, fill=TITLE_COLOR)
 
-    # 고정 검정 영역(1080~1350px) 안에 제목 여러 줄 + 날짜를 위에서부터 배치한다
+    # 고정 검정 영역 안에 제목 여러 줄 + 날짜를 위에서부터 배치한다
     line_height = int(used_size * HOOK_LINE_SPACING)
     title_height = line_height * len(lines)
     date_gap = 16
     date_height = int(LABEL_FONT_SIZE * 1.2)
     start_y = HOOK_PHOTO_AREA_HEIGHT + BLACK_AREA_MARGIN_TOP
-    block_height = title_height + date_gap + date_height
-    available_height = CANVAS_HEIGHT - BLACK_AREA_MARGIN_BOTTOM - start_y
-    if block_height > available_height:
-        print(f"경고: 제목+날짜 블록({block_height}px)이 검정 영역 안전공간({available_height}px)을 넘습니다.")
+    date_y = start_y + title_height + date_gap
+    block_bottom = date_y + date_height
+    if block_bottom > SAFE_AREA_BOTTOM:
+        print(f"경고: 날짜 하단({block_bottom}px)이 탐색 탭 안전영역 하단({SAFE_AREA_BOTTOM}px)을 넘어 잘릴 수 있습니다.")
+    if start_y < SAFE_AREA_TOP:
+        print(f"경고: 제목 상단({start_y}px)이 탐색 탭 안전영역 상단({SAFE_AREA_TOP}px)보다 위라 잘릴 수 있습니다.")
 
     for i, line in enumerate(lines):
         draw.text((MARGIN_SIDE, start_y + i * line_height), line, font=title_font, fill=TITLE_COLOR)
 
-    date_y = start_y + title_height + date_gap
     draw.text((MARGIN_SIDE, date_y), date_text, font=label_font, fill=MUTED_COLOR)
 
     return image
