@@ -5,11 +5,11 @@ from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
     TITLE_COLOR, MUTED_COLOR, FALLBACK_BG_COLOR, LABEL_FONT_SIZE,
     FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_NAME,
-    WATERMARK_MAIN_FONT_SIZE, WATERMARK_SECONDARY_FONT_SIZE,
+    WATERMARK_MAIN_FONT_SIZE, WATERMARK_SECONDARY_FONT_SIZE, WATERMARK_SECONDARY_COLOR,
 )
 
 MAIN_CTA_TEXT = "이 사안, 어떻게 보세요?"
-SECONDARY_LINES = ["저장해두세요", "팔로우해주세요"]
+SECONDARY_LINES = ["저장", "팔로우"]
 FOOTER_GAP = 60  # CTA 블록과 하단 계정명·출처 사이 최소 간격
 
 
@@ -47,11 +47,9 @@ def draw_watermark_card(outlet):
     footer_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
 
     cta_items = [
-        ("divider", None, MUTED_COLOR, 50),
         (MAIN_CTA_TEXT, main_font, TITLE_COLOR, 30),
-        (SECONDARY_LINES[0], secondary_font, MUTED_COLOR, 12),
-        (SECONDARY_LINES[1], secondary_font, MUTED_COLOR, 50),
-        ("divider", None, MUTED_COLOR, 0),
+        (SECONDARY_LINES[0], secondary_font, WATERMARK_SECONDARY_COLOR, 12),
+        (SECONDARY_LINES[1], secondary_font, WATERMARK_SECONDARY_COLOR, 0),
     ]
     footer_items = [
         (ACCOUNT_NAME, footer_font, MUTED_COLOR, 12),
