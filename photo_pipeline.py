@@ -3,6 +3,7 @@ hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
 """
 
 import re
+from assembly_source import fetch_assembly_photo
 from photo_source import fetch_wikimedia_photo
 from pexels_source import fetch_pexels_photo
 
@@ -55,12 +56,19 @@ def extract_pexels_keywords(summary_json):
 
 
 def get_hook_background(summary_json):
-    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키미디어를 먼저 시도하고,
-    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 None을 반환해서
-    hook_card.py가 텍스트 전용 fallback을 쓰게 한다."""
+    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 국회 열린국회정보를 먼저
+    시도하고(해상도가 대체로 높음), 실패하면 위키미디어를, 그래도 실패하면
+    Pexels로 상황 사진을 찾는다. 모두 실패하면 None을 반환해서 hook_card.py가
+    텍스트 전용 fallback을 쓰게 한다."""
     person_name = extract_person_name(summary_json)
     if person_name:
         print(f"인물명 추출: {person_name}")
+        photo_path = fetch_assembly_photo(person_name)
+        if photo_path:
+            print(f"배경 사진 조달 성공(국회 열린국회정보): {photo_path}")
+            return photo_path
+        print(f"국회 열린국회정보에서 '{person_name}' 사진을 못 찾아 위키미디어로 넘어갑니다.")
+
         photo_path = fetch_wikimedia_photo(person_name)
         if photo_path:
             print(f"배경 사진 조달 성공(위키미디어): {photo_path}")

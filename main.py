@@ -1,6 +1,6 @@
 """6단계: collect→extract→summarize→render→caption 파이프라인을 기사 1개로 실행하는 스크립트
 
-hook 카드 배경은 photo_pipeline.py가 위키미디어→Pexels→텍스트 fallback 순으로 조달한다.
+hook 카드 배경은 photo_pipeline.py가 국회 열린국회정보→위키미디어→Pexels→텍스트 fallback 순으로 조달한다.
 기사 선정(후보 수집·다중 소재 건너뛰기)은 article_picker.py가 맡는다. 기사 1개만 처리한다.
 """
 
