@@ -30,6 +30,24 @@ def is_photo_multimedia(title, link):
     return "사진" in title and "멀티미디어" in title
 
 
+# 방송 리포트 특유의 화자 표시. 여러 번 나오면 앵커-기자 문답이 오간 것으로 본다
+BROADCAST_SPEAKER_TAGS = ["[앵커]", "[기자]"]
+MIN_SPEAKER_TAG_COUNT = 4  # 문답이 최소 두 번은 오가야 확실한 신호로 본다
+
+# 화제를 다음 소식으로 넘기는 표현
+TOPIC_TRANSITION_PHRASES = ["다음 소식입니다", "다음은", "이어서 살펴보겠습니다", "화제를 돌려"]
+
+
+def is_multi_topic_broadcast(body):
+    """본문 추출 후(제목이 아니라 본문 대상) 쓰는 필터다. 앵커-기자 문답 형식이나
+    화제 전환 표현이 여러 번 나오면, 서로 무관한 소주제를 묶은 방송 리포트로 보고
+    True를 반환한다."""
+    tag_count = sum(body.count(tag) for tag in BROADCAST_SPEAKER_TAGS)
+    if tag_count >= MIN_SPEAKER_TAG_COUNT:
+        return True
+    return any(phrase in body for phrase in TOPIC_TRANSITION_PHRASES)
+
+
 def filter_entries(entries):
     """기사를 종류별로 걸러내고, 남긴 목록·종류별 제외 건수·제외된 (기사, 사유) 목록을 반환한다.
     한 기사는 먼저 걸리는 필터 하나에만 속해서, 건수가 서로 겹치지 않게 한다."""
