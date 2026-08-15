@@ -1,6 +1,6 @@
 """사진 배경 위에 제목이 올라가는 hook(1장) 카드를 그리는 기능"""
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 from text_fit import fit_body_text
 from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_BOTTOM,
@@ -31,7 +31,9 @@ def draw_hook_card(title, date_text, background_path=None):
     """hook 카드(1장)를 그려서 이미지 객체로 반환한다.
     배경 이미지가 없으면 CLAUDE.md의 텍스트 전용 fallback(#16181C)을 쓴다."""
     if background_path:
-        image = Image.open(background_path).convert("RGB").resize((CANVAS_WIDTH, CANVAS_HEIGHT))
+        # 비율을 유지한 채 캔버스를 꽉 채우도록 확대 후 중앙 기준으로 크롭한다 (늘리기 금지)
+        source_image = Image.open(background_path).convert("RGB")
+        image = ImageOps.fit(source_image, (CANVAS_WIDTH, CANVAS_HEIGHT), method=Image.LANCZOS, centering=(0.5, 0.5))
         image = apply_bottom_gradient(image)
     else:
         image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), FALLBACK_BG_COLOR)
