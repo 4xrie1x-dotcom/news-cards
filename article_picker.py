@@ -1,4 +1,5 @@
-"""main.py가 처리할 기사 후보를 모으고, 조건을 만족하는 첫 기사를 고르는 기능"""
+"""main.py가 처리할 사건 그룹 후보를 모으고, 그룹 안에서 조건을 만족하는
+첫 기사를 고르는 기능"""
 
 from functools import cmp_to_key
 from collect import KEYWORDS, build_search_url, fetch_feed
@@ -46,13 +47,13 @@ def rerank_top_groups(groups, top_n):
     return head + groups[top_n:]
 
 
-def find_candidate_articles():
+def find_candidate_event_groups():
     """키워드 순서대로 기사를 모아 필터(제목 기준)를 통과한 후보를 모은다.
     같은 사건을 여러 언론사가 다뤘는지로 사건 그룹을 나누고, 언론사 수가
     많은 그룹부터 앞에 오도록 정렬한 뒤 상위 그룹끼리는 갈등 신호로 한 번
-    더 조정한다(rerank_top_groups) — 일방적 발표가 언론사 수만으로 갈등
-    있는 기사를 이기지 않게 하기 위해서다. 필터 제외 건수·사건 그룹 상위
-    목록을 로그에 남겨 "왜 이게 뽑혔는지" 추적할 수 있게 한다."""
+    더 조정한다(rerank_top_groups). 그룹 목록을 그대로 반환해서, 하루
+    여러 건을 처리할 때 main.py가 그룹 단위로(사건이 안 섞이게) 순회할
+    수 있게 한다. 필터 제외 건수·사건 그룹 상위 목록을 로그에 남긴다."""
     candidates = []
     total_counts = {"의견": 0, "지역 홍보": 0, "사진/멀티미디어": 0}
     for keyword in KEYWORDS:
@@ -75,7 +76,7 @@ def find_candidate_articles():
         tag = " [갈등 신호]" if has_conflict_signal(group) else ""
         print(f"  {i}. ({len(group['entries'])}곳{tag}) {headline} - {first_outlet}")
 
-    return [entry for group in groups for entry in group["entries"]]
+    return groups
 
 
 def extract_first_valid_article(candidates):
