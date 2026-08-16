@@ -1,7 +1,7 @@
-"""4-5단계: hook → 본문 여러 장 → 워터마크까지 카드셋 전체를 만드는지 확인하는 스크립트
+"""4-5단계: hook → 본문 여러 장까지 카드셋을 만드는지 확인하는 스크립트
 
-각 카드 종류는 hook_card.py, body_card.py, watermark_card.py에서 그리고,
-card_deck.py의 render_all_cards()가 이들을 순서대로 묶는다.
+각 카드 종류는 hook_card.py, body_card.py에서 그리고, card_deck.py의
+render_all_cards()가 이들을 순서대로 묶는다. 워터마크 카드는 만들지 않는다.
 """
 
 import sys
@@ -40,7 +40,7 @@ TEST_SUMMARY = {
 def main():
     """카드셋 전체를 만들어 output/test/에 순서대로 저장하고, 장수·카드번호를 확인한다."""
     try:
-        result = render_all_cards(TEST_SUMMARY, source="한국경제", date="2026.08.13")
+        result = render_all_cards(TEST_SUMMARY, date="2026.08.13")
         images = result["images"]
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         for i, image in enumerate(images, start=1):

@@ -1,16 +1,18 @@
-"""summarize.py가 만든 JSON으로 hook→본문→워터마크까지 카드셋을 만드는 기능"""
+"""summarize.py가 만든 JSON으로 hook→본문 카드셋을 만드는 기능
+
+워터마크 카드는 만들지 않는다(AI요약·출처·CTA는 caption.py가 담당).
+watermark_card.py는 나중을 위해 지우지 않고 남겨뒀다."""
 
 import re
 from body_card import draw_body_card
 from hook_card import draw_hook_card
-from watermark_card import draw_watermark_card
 
 MAX_SENTENCES_PER_CARD = 2  # 한 카드당 문장 1개가 기본, 짧으면 2개까지 허용
-WHAT_MAX_SECTION_CARDS = 3  # what 상한. "무슨 일인가"에 치우치지 않게 낮춰뒀다
+WHAT_MAX_SECTION_CARDS = 4  # what 상한. 워터마크 카드가 빠지며 생긴 여유 1장을 what에 준다("what 우선")
 WHY_MIN_SECTION_CARDS = 2  # why 최소 보장. "왜 이게 뉴스인가"가 밀려나지 않게 한다
 WHY_MAX_SECTION_CARDS = 3  # why 상한. 지면이 남으면 여기까지 늘어난다
-# 전체 카드 상한 7장(hook 1 + 본문 + 워터마크 1) 기준 본문 상한
-MAX_BODY_CARDS_TOTAL = 5
+# 전체 카드 상한 7장(hook 1 + 본문) 기준 본문 상한. 워터마크가 빠지며 5장→6장으로 늘었다
+MAX_BODY_CARDS_TOTAL = 6
 
 # 본문 76px ExtraBold, 안전폭 900px에서 실측한 평균 글자폭(약 56px)으로
 # 줄당 16자, 최대 4줄(body_card.py의 BODY_MAX_LINES) 기준 편안한 상한을 잡았다
@@ -76,22 +78,19 @@ def build_body_cards(summary_json):
     return body_texts
 
 
-def render_all_cards(summary_json, source, date, hook_background_path=None):
-    """hook 카드 → 본문 카드 → 워터마크 카드까지 이미지 리스트로 만든다.
-    hook_background_path가 있으면 hook 카드 배경 사진으로 쓰고, 없으면
-    hook_card.py의 텍스트 전용 fallback이 대신 쓰인다.
-    question은 워터마크 카드의 CTA와 역할이 겹쳐서, terms와 마찬가지로
-    카드로 만들지 않고 그대로 반환한다(둘 다 나중에 caption.py에서 쓴다).
-    {"images", "terms", "question"} 딕셔너리를 반환하며, 아직 파일로 저장하지는 않는다."""
+def render_all_cards(summary_json, date, hook_background_path=None):
+    """hook 카드 → 본문 카드까지 이미지 리스트로 만든다. 워터마크 카드는 안 만든다.
+    hook_background_path가 있으면 배경 사진으로 쓰고, 없으면 텍스트 전용 fallback이
+    쓰인다. question은 caption.py의 CTA와 겹쳐 카드로 만들지 않고 그대로 반환한다.
+    {"images", "terms", "question"}을 반환하며 아직 파일로 저장하지는 않는다."""
     body_texts = build_body_cards(summary_json)
 
-    total_content_cards = 1 + len(body_texts)  # hook 포함, 워터마크는 카운트에서 뺀다
-    print(f"본문 {len(body_texts)}장, 전체 {total_content_cards + 1}장 (전체 목표 최대 7장)")
+    total_content_cards = 1 + len(body_texts)  # hook 포함, 이게 곧 전체 장수다
+    print(f"본문 {len(body_texts)}장, 전체 {total_content_cards}장 (전체 목표 최대 7장)")
 
     images = [draw_hook_card(summary_json["hook"], date_text=date, background_path=hook_background_path)]
     for i, text in enumerate(body_texts, start=2):
         images.append(draw_body_card(text, card_number=i, total_cards=total_content_cards))
-    images.append(draw_watermark_card(outlet=source))
 
     return {
         "images": images,
