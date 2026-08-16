@@ -11,19 +11,19 @@ from summarize import summarize
 from photo_pipeline import get_hook_background
 from card_deck import render_all_cards
 from caption import build_caption
-from output_writer import save_output
+from output_writer import save_output, next_article_number
 from pipeline_log import start_logging, stop_logging
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
 
-ARTICLE_NUMBER = "01"  # 기사 1개만 처리하므로 고정값
-
-
 def main():
     """기사 1개를 끝까지 처리해서 카드와 캡션을 만들고 저장한다."""
     today = datetime.date.today()
-    output_dir = f"output/{today.isoformat()}/{ARTICLE_NUMBER}"
+    date_dir = f"output/{today.isoformat()}"
+    article_number = next_article_number(date_dir)
+    output_dir = f"{date_dir}/{article_number}"
+    print(f"이번 실행 번호: {article_number}")
 
     print("1단계: 기사 후보 수집 중...")
     candidates = find_candidate_articles()
