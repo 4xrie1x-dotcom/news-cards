@@ -1,7 +1,12 @@
 """필터링된 기사 중 같은 사건을 보도한 것끼리 묶는 기능"""
 
-# 핵심 단어로 치지 않을 흔한 단어들
-STOPWORDS = {"관련", "위한", "대한", "오늘", "이번", "한다", "했다", "됐다", "등", "및", "그리고"}
+# 핵심 단어로 치지 않을 흔한 단어들. 어느 정치 기사에나 나올 법한 범용
+# 단어(국무회의, 국회 등)까지 포함해서, 이런 단어만으로 서로 다른 사건이
+# 잘못 하나로 묶이는 걸 막는다
+STOPWORDS = {
+    "관련", "위한", "대한", "오늘", "이번", "한다", "했다", "됐다", "등", "및", "그리고",
+    "국무회의", "국회", "발표", "개최", "의결", "주재", "진행", "예정",
+}
 
 # 단어를 나눌 때 무시할 문장부호
 PUNCTUATION = '…"\'“”‘’·『』「」[]()-,.?!:'
@@ -59,11 +64,17 @@ def group_duplicates(entries):
 
 def group_entries_by_event(entries):
     """entry 객체를 유지한 채로 제목 핵심 단어가 겹치는 기사끼리 묶는다.
-    group_duplicates()와 같은 기준(MIN_SHARED_KEYWORDS)을 쓰지만, 화면
-    출력용 (headline, outlet) 대신 실제 entry를 보존해서 이후 단계(본문
-    추출 등)에 바로 쓸 수 있게 한다. 언론사 수가 많은 그룹부터 정렬해서
-    반환한다 — article_picker.py가 "여러 언론사가 다룬 사건 우선" 순서를
-    만드는 데 쓴다."""
+    group_duplicates()와 같은 매칭 기준(MIN_SHARED_KEYWORDS)을 쓰지만,
+    화면 출력용 (headline, outlet) 대신 실제 entry를 보존해서 이후 단계
+    (본문 추출 등)에 바로 쓸 수 있게 한다. 언론사 수가 많은 그룹부터
+    정렬해서 반환한다 — article_picker.py가 "여러 언론사가 다룬 사건
+    우선" 순서를 만드는 데 쓴다.
+
+    그룹 대표 키워드는 첫 기사 것으로 고정하지 않고, 기사가 합류할 때마다
+    "그 기사의 키워드와의 교집합"으로 갱신한다. 헤드라인 표현이 매체마다
+    조금씩 달라도(조사·어순 차이) 그룹 전체가 공유하는 핵심 단어만 남아서,
+    그룹이 커질수록 대표 키워드가 무한정 넓어지는 대신 사건을 실제로
+    구분 짓는 단어로 점점 좁혀진다."""
     groups = []
     for entry in entries:
         outlet = get_outlet(entry)
@@ -78,6 +89,7 @@ def group_entries_by_event(entries):
 
         if target:
             target["entries"].append(entry)
+            target["keywords"] &= keywords  # 교집합 유지 — 공통 핵심어로 점점 좁혀짐
         else:
             groups.append({"keywords": keywords, "entries": [entry]})
 
