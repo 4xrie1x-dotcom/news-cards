@@ -1,11 +1,10 @@
 """본문 카드(2장부터)를 그리는 기능"""
 
-import re
 from PIL import Image, ImageDraw, ImageFont
 from text_fit import fit_body_text
 from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
-    BACKGROUND_COLOR, BODY_COLOR, MUTED_COLOR, DIVIDER_COLOR, EMPHASIS_COLOR,
+    BACKGROUND_COLOR, BODY_COLOR, MUTED_COLOR, DIVIDER_COLOR,
     LABEL_FONT_SIZE, FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_HANDLE,
 )
 
@@ -15,38 +14,15 @@ BODY_LINE_SPACING = 1.35
 BODY_MAX_LINES = 4
 
 
-def parse_emphasis(text):
-    """{}로 감싼 구절을 찾아 뜻대로 떼어내고, 중괄호를 뺀 순수 텍스트와
-    강조할 구절 목록을 함께 반환한다."""
-    phrases = re.findall(r"\{([^{}]*)\}", text)
-    plain_text = re.sub(r"[{}]", "", text)
-    return plain_text, phrases
-
-
-def draw_line_with_emphasis(draw, line, x, y, font, phrases):
-    """한 줄을 그리되, 줄 안에 강조 구절이 있으면 그 부분만 강조색으로 그린다.
-    왼쪽 정렬은 그대로 유지한다."""
-    for phrase in phrases:
-        if phrase and phrase in line:
-            before, after = line.split(phrase, 1)
-            cursor_x = x
-            draw.text((cursor_x, y), before, font=font, fill=BODY_COLOR)
-            cursor_x += draw.textlength(before, font=font)
-            draw.text((cursor_x, y), phrase, font=font, fill=EMPHASIS_COLOR)
-            cursor_x += draw.textlength(phrase, font=font)
-            draw.text((cursor_x, y), after, font=font, fill=BODY_COLOR)
-            return
-    draw.text((x, y), line, font=font, fill=BODY_COLOR)
-
-
 def draw_body_card(text, card_number, total_cards):
-    """본문 카드 1장을 그려서 이미지 객체로 반환한다. 텍스트의 {}로 감싼 구절은
-    강조색으로 렌더링되고, 중괄호 자체는 화면에 나오지 않는다."""
+    """본문 카드 1장을 그려서 이미지 객체로 반환한다. 강조 마크업은 쓰지 않고
+    본문 전체를 같은 색(#16181C)으로 그린다. 혹시 텍스트에 {}가 섞여 있으면
+    화면에 그대로 노출되지 않도록 제거만 한다."""
     image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), BACKGROUND_COLOR)
     draw = ImageDraw.Draw(image)
     label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
 
-    plain_text, phrases = parse_emphasis(text)
+    plain_text = text.replace("{", "").replace("}", "")
     safe_width = CANVAS_WIDTH - MARGIN_SIDE * 2
     body_font, lines, used_size, step = fit_body_text(
         plain_text, draw, safe_width, BODY_MAX_LINES, BODY_FONT_SIZE_STEPS, FONT_EXTRABOLD_PATH
@@ -64,7 +40,7 @@ def draw_body_card(text, card_number, total_cards):
     start_y = safe_top + (safe_bottom - safe_top - block_height) // 2
 
     for i, line in enumerate(lines):
-        draw_line_with_emphasis(draw, line, MARGIN_SIDE, start_y + i * line_height, body_font, phrases)
+        draw.text((MARGIN_SIDE, start_y + i * line_height), line, font=body_font, fill=BODY_COLOR)
 
     # 카드번호: 우상단
     card_label = f"{card_number}/{total_cards}"

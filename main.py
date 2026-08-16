@@ -62,7 +62,8 @@ def main():
     print("5단계: 카드 생성 중...")
     try:
         deck = render_all_cards(
-            summary_json, date=today.strftime("%Y.%m.%d"), hook_background_path=background_path,
+            summary_json, source=outlet, date=today.strftime("%Y.%m.%d"),
+            hook_background_path=background_path,
         )
         print(f"5단계 완료: 카드 {len(deck['images'])}장")
     except Exception as error:
@@ -71,7 +72,9 @@ def main():
 
     print("6단계: 캡션 생성 중...")
     try:
-        caption_result = build_caption(summary_json, source=outlet, photo_credit=photo_credit)
+        caption_result = build_caption(
+            summary_json, deck["terms"], deck["question"], source=outlet, photo_credit=photo_credit
+        )
         print(f"6단계 완료: 캡션 {len(caption_result['caption'])}자")
     except Exception as error:
         print(f"실패(6단계 캡션 생성): {error}")
