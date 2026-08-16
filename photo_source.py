@@ -74,5 +74,19 @@ def fetch_wikimedia_photos(person_name):
     return saved_paths
 
 
+def get_wikimedia_credit(photo_path):
+    """캐시된 사진 경로(예: assets/people/이름/01.png)와 짝지어 저장된
+    json에서 저작자·라이선스 정보를 읽어 캡션용 한 줄로 만든다.
+    파일이 없으면 None을 반환한다."""
+    json_path = photo_path.rsplit(".", 1)[0] + ".json"
+    if not os.path.exists(json_path):
+        return None
+    with open(json_path, "r", encoding="utf-8") as f:
+        meta = json.load(f)
+    artist = meta.get("artist") or "저작자 정보 없음"
+    license_name = meta.get("license") or "라이선스 정보 없음"
+    return f"{artist}, {license_name}"
+
+
 if __name__ == "__main__":
     fetch_wikimedia_photos("한동훈")

@@ -4,7 +4,7 @@ hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
 
 import re
 import random
-from photo_source import fetch_wikimedia_photos
+from photo_source import fetch_wikimedia_photos, get_wikimedia_credit
 from pexels_source import fetch_pexels_photo
 
 # assembly_source.py(국회 열린국회정보 프로필 사진)는 저작권 확인 전까지 비활성화.
@@ -63,8 +63,10 @@ def extract_pexels_keywords(summary_json):
 
 def get_hook_background(summary_json):
     """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키미디어를 먼저 시도하고,
-    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 None을 반환해서
-    hook_card.py가 텍스트 전용 fallback을 쓰게 한다."""
+    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 (None, None)을
+    반환해서 hook_card.py가 텍스트 전용 fallback을 쓰게 한다.
+    (사진 경로, 캡션에 넣을 출처 표시) 튜플을 반환한다 — 텍스트 fallback이면
+    출처가 없으니 두 번째 값도 None이다."""
     person_name = extract_person_name(summary_json)
     if person_name:
         print(f"인물명 추출: {person_name}")
@@ -72,17 +74,17 @@ def get_hook_background(summary_json):
         if photo_paths:
             photo_path = random.choice(photo_paths)
             print(f"배경 사진 조달 성공(위키미디어, {len(photo_paths)}장 중 무작위 선택): {photo_path}")
-            return photo_path
+            return photo_path, get_wikimedia_credit(photo_path)
         print(f"위키미디어에서 '{person_name}' 사진을 못 찾아 Pexels로 넘어갑니다.")
     else:
         print("본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.")
 
     keywords = extract_pexels_keywords(summary_json)
     print(f"Pexels 검색 키워드: {keywords}")
-    photo_path = fetch_pexels_photo(keywords)
+    photo_path, photographer = fetch_pexels_photo(keywords)
     if photo_path:
         print(f"배경 사진 조달 성공(Pexels): {photo_path}")
-        return photo_path
+        return photo_path, f"Pexels ({photographer})"
 
     print("배경 사진 조달 실패. hook 카드는 텍스트 전용 fallback을 씁니다.")
-    return None
+    return None, None

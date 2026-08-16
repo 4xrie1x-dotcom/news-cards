@@ -53,11 +53,11 @@ def main():
 
     print("4단계: hook 배경 사진 조달 중...")
     try:
-        background_path = get_hook_background(summary_json)
+        background_path, photo_credit = get_hook_background(summary_json)
         print(f"4단계 완료: {background_path or '텍스트 전용 fallback 사용'}")
     except Exception as error:
         print(f"실패(4단계 배경 사진 조달): {error}")
-        background_path = None
+        background_path, photo_credit = None, None
 
     print("5단계: 카드 생성 중...")
     try:
@@ -72,7 +72,9 @@ def main():
 
     print("6단계: 캡션 생성 중...")
     try:
-        caption_result = build_caption(summary_json, deck["terms"], deck["question"], source=outlet)
+        caption_result = build_caption(
+            summary_json, deck["terms"], deck["question"], source=outlet, photo_credit=photo_credit
+        )
         print(f"6단계 완료: 캡션 {len(caption_result['caption'])}자")
     except Exception as error:
         print(f"실패(6단계 캡션 생성): {error}")

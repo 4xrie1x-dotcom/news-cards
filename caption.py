@@ -20,10 +20,12 @@ def has_batchim(word):
     return False
 
 
-def build_caption(summary_json, terms, question, source):
+def build_caption(summary_json, terms, question, source, photo_credit=None):
     """CLAUDE.md 캡션 규격대로 캡션 텍스트를 만든다.
     question은 워터마크 카드 CTA와 겹쳐서 카드와 마찬가지로 캡션에도 넣지 않되,
-    반환값에는 그대로 남겨서 나중에 다른 용도로 쓸 수 있게 한다."""
+    반환값에는 그대로 남겨서 나중에 다른 용도로 쓸 수 있게 한다.
+    photo_credit은 hook 배경으로 실제 사진(위키미디어 인물 사진 또는 Pexels
+    상황 사진)을 썼을 때만 넘어온다 — 텍스트 전용 fallback이면 None."""
     hook = summary_json["hook"]
     # what+why를 문장 연결어 정도만 다듬어 그대로 이어붙인다 (새로 창작하지 않음)
     paragraph = f"{ensure_period(summary_json['what'])} {ensure_period(summary_json['why'])}"
@@ -37,6 +39,8 @@ def build_caption(summary_json, terms, question, source):
 
     lines.append(f"출처  {source}")
     lines.append("AI 요약")
+    if photo_credit:
+        lines.append(f"사진  {photo_credit}")
     lines.append("")
     account_tag = ACCOUNT_NAME.lstrip("@")
     lines.append(f"{HASHTAGS} #{account_tag}")
