@@ -1,7 +1,8 @@
-"""4-5단계: hook → 본문 여러 장 → 워터마크까지 카드셋 전체를 만드는지 확인하는 스크립트
+"""4단계: hook 카드 1장을 만드는지 확인하는 스크립트
 
-각 카드 종류는 hook_card.py, body_card.py, watermark_card.py에서 그리고,
-card_deck.py의 render_all_cards()가 이들을 순서대로 묶는다.
+카드 구조가 hook 1장으로 단순화되어 card_deck.py의 render_all_cards()는
+hook_card.py 하나만 그린다. TEST_SUMMARY는 caption.py의 자체 테스트에서도
+그대로 재사용한다.
 """
 
 import sys
@@ -38,9 +39,9 @@ TEST_SUMMARY = {
 
 
 def main():
-    """카드셋 전체를 만들어 output/test/에 순서대로 저장하고, 장수·카드번호를 확인한다."""
+    """hook 카드 1장을 만들어 output/test/에 저장한다."""
     try:
-        result = render_all_cards(TEST_SUMMARY, source="한국경제", date="2026.08.13")
+        result = render_all_cards(TEST_SUMMARY, date="2026.08.13")
         images = result["images"]
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         for i, image in enumerate(images, start=1):
@@ -48,9 +49,6 @@ def main():
             image.save(path)
             print(f"저장: {path}")
         print(f"카드 총 {len(images)}장 생성 완료")
-        print(f"카드로 만들지 않고 반환된 값 (caption.py용):")
-        print(f"  terms: {result['terms']}")
-        print(f"  question: {result['question']}")
     except Exception as error:
         print(f"카드셋 생성 실패: {error}")
 
