@@ -55,3 +55,31 @@ def group_duplicates(entries):
 
     groups.sort(key=lambda group: len(group["items"]), reverse=True)
     return groups
+
+
+def group_entries_by_event(entries):
+    """entry 객체를 유지한 채로 제목 핵심 단어가 겹치는 기사끼리 묶는다.
+    group_duplicates()와 같은 기준(MIN_SHARED_KEYWORDS)을 쓰지만, 화면
+    출력용 (headline, outlet) 대신 실제 entry를 보존해서 이후 단계(본문
+    추출 등)에 바로 쓸 수 있게 한다. 언론사 수가 많은 그룹부터 정렬해서
+    반환한다 — article_picker.py가 "여러 언론사가 다룬 사건 우선" 순서를
+    만드는 데 쓴다."""
+    groups = []
+    for entry in entries:
+        outlet = get_outlet(entry)
+        headline = get_headline(entry, outlet)
+        keywords = extract_keywords(headline)
+
+        target = None
+        for group in groups:
+            if len(keywords & group["keywords"]) >= MIN_SHARED_KEYWORDS:
+                target = group
+                break
+
+        if target:
+            target["entries"].append(entry)
+        else:
+            groups.append({"keywords": keywords, "entries": [entry]})
+
+    groups.sort(key=lambda group: len(group["entries"]), reverse=True)
+    return groups

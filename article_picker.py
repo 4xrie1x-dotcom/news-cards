@@ -2,13 +2,19 @@
 
 from collect import KEYWORDS, build_search_url, fetch_feed
 from filters import filter_entries, is_multi_topic_broadcast
-from dedupe import get_outlet
+from dedupe import get_outlet, get_headline, group_entries_by_event
 from extract import resolve_real_url, get_article_text
+
+LOG_TOP_GROUPS = 10  # 사건 그룹을 로그에 몇 개까지 남길지
 
 
 def find_candidate_articles():
-    """키워드 순서대로 기사를 모아 필터(제목 기준)를 통과한 후보 목록을 돌려준다.
-    필터별로 몇 건씩 걸렀는지 합산해서 화면에 출력한다."""
+    """키워드 순서대로 기사를 모아 필터(제목 기준)를 통과한 후보를 모은다.
+    같은 사건을 여러 언론사가 다뤘는지(제목 핵심 단어 겹침)로 사건 그룹을
+    나누고, 언론사 수가 많은 그룹부터 앞에 오도록 정렬해서 돌려준다 —
+    여러 곳이 다룬 사건일수록 먼저 시도된다. 필터별 제외 건수와 사건
+    그룹 상위 목록을 로그에 남겨서 "왜 이게 뽑혔는지" 나중에 추적할 수
+    있게 한다."""
     candidates = []
     total_counts = {"의견": 0, "지역 홍보": 0, "사진/멀티미디어": 0}
     for keyword in KEYWORDS:
@@ -20,7 +26,15 @@ def find_candidate_articles():
         for key, value in counts.items():
             total_counts[key] += value
     print(f"필터 제외 건수: {total_counts}")
-    return candidates
+
+    groups = group_entries_by_event(candidates)
+    print(f"사건 그룹 {len(groups)}개로 정리, 언론사 수 순 상위 {min(LOG_TOP_GROUPS, len(groups))}개:")
+    for i, group in enumerate(groups[:LOG_TOP_GROUPS], start=1):
+        first_outlet = get_outlet(group["entries"][0])
+        headline = get_headline(group["entries"][0], first_outlet)
+        print(f"  {i}. ({len(group['entries'])}곳) {headline} - {first_outlet}")
+
+    return [entry for group in groups for entry in group["entries"]]
 
 
 def extract_first_valid_article(candidates):
