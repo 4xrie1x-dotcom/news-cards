@@ -6,7 +6,7 @@ from text_fit import fit_body_text
 from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
     BACKGROUND_COLOR, BODY_COLOR, MUTED_COLOR, DIVIDER_COLOR, EMPHASIS_COLOR,
-    LABEL_FONT_SIZE, FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_NAME,
+    LABEL_FONT_SIZE, FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_HANDLE,
 )
 
 BODY_FONT_SIZE_STEPS = [76, 68, 60]  # 안전영역을 넘으면 이 순서로 축소
@@ -74,6 +74,6 @@ def draw_body_card(text, card_number, total_cards):
     # 구분선과 핸들: 하단
     divider_y = CANVAS_HEIGHT - 70
     draw.line((MARGIN_SIDE, divider_y, CANVAS_WIDTH - MARGIN_SIDE, divider_y), fill=DIVIDER_COLOR, width=2)
-    draw.text((MARGIN_SIDE, divider_y + 15), ACCOUNT_NAME, font=label_font, fill=MUTED_COLOR)
+    draw.text((MARGIN_SIDE, divider_y + 15), ACCOUNT_HANDLE, font=label_font, fill=MUTED_COLOR)
 
     return image

@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 from card_config import (
     CANVAS_WIDTH, CANVAS_HEIGHT, MARGIN_SIDE, MARGIN_TOP, MARGIN_BOTTOM,
     TITLE_COLOR, MUTED_COLOR, FALLBACK_BG_COLOR,
-    FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_NAME,
+    FONT_EXTRABOLD_PATH, FONT_REGULAR_PATH, ACCOUNT_HANDLE,
     WATERMARK_MAIN_FONT_SIZE, WATERMARK_SECONDARY_FONT_SIZE, WATERMARK_SECONDARY_COLOR,
     WATERMARK_ACCOUNT_FONT_SIZE, WATERMARK_SOURCE_FONT_SIZE,
 )
@@ -53,7 +53,7 @@ def draw_watermark_card(outlet):
         (SECONDARY_LINE, secondary_font, WATERMARK_SECONDARY_COLOR, 0),
     ]
     footer_items = [
-        (ACCOUNT_NAME, account_font, MUTED_COLOR, 12),
+        (ACCOUNT_HANDLE, account_font, MUTED_COLOR, 12),
         (f"출처 {outlet} · AI 요약", source_font, MUTED_COLOR, 0),
     ]
 

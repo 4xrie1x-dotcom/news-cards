@@ -52,4 +52,5 @@ WATERMARK_SECONDARY_COLOR = "#C7CBD1"  # MUTED_COLOR보다 밝게 해서 잘 보
 WATERMARK_ACCOUNT_FONT_SIZE = 34  # 계정명. 출처보다 살짝 크게
 WATERMARK_SOURCE_FONT_SIZE = 30  # 출처·AI 요약. 보조 요소라 이전 크기 유지
 
-ACCOUNT_NAME = "@placeholder"  # 계정명 미정. 정해지면 이 값만 바꾸면 된다
+ACCOUNT_NAME = "데일리정치"  # 표시 이름. 캡션 해시태그 등 이름 형태로 쓰는 자리
+ACCOUNT_HANDLE = "@dailypolitics_kr"  # 핸들. 카드 이미지 위 계정 표시(팔로우 유도) 자리
