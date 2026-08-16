@@ -22,6 +22,8 @@ from card_config import (
 )
 
 BOUNDARY_GRADIENT_HEIGHT = 150  # 사진/검정 경계에 넣는 그라데이션 높이
+LOGO_PATH = "assets/logo_card_white.png"  # 사진 배경 위라 어두운 톤이 많아 흰색 버전 사용
+LOGO_HEIGHT = 48  # 좌상단 로고 세로 크기 (40~60px 범위)
 
 
 def apply_boundary_gradient(image, photo_area_height):
@@ -68,9 +70,12 @@ def draw_hook_card(title, date_text, background_path=None):
         image.paste(photo, (0, 0))
         image = apply_boundary_gradient(image, photo_area_height)
 
-    # 좌상단 로고 텍스트마크 자리 (디자인 미확정, 임시 텍스트)
+    # 좌상단 로고 (흰 텍스트 + 투명 배경 PNG를 세로 48px로 맞춰 얹는다)
     label_font = ImageFont.truetype(FONT_REGULAR_PATH, LABEL_FONT_SIZE)
-    draw.text((MARGIN_SIDE, 60), "LOGO", font=label_font, fill=TITLE_COLOR)
+    logo = Image.open(LOGO_PATH).convert("RGBA")
+    logo_width = int(logo.width * LOGO_HEIGHT / logo.height)
+    logo = logo.resize((logo_width, LOGO_HEIGHT), Image.LANCZOS)
+    image.paste(logo, (MARGIN_SIDE, 60), logo)
 
     # 검정 영역 안에 제목 여러 줄 + 날짜를 위에서부터 배치한다
     line_height = int(used_size * HOOK_LINE_SPACING)
