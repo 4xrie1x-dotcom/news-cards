@@ -11,9 +11,12 @@ requests(→urllib3)가 임포트 단계에서 깨진다(실제로 재현해서 
 
 import sys
 import os
-import datetime
+from datetime import datetime, timezone, timedelta
 
 LOG_DIR = "logs"
+# Actions 러너 시스템 시간대는 UTC라 명시적으로 KST로 변환한다(main.py의 날짜와
+# 어긋나지 않게 하기 위해 — output/{날짜}/와 logs/{날짜}.log가 같은 기준을 써야 함)
+KST = timezone(timedelta(hours=9))
 
 
 class Tee:
@@ -37,10 +40,10 @@ def start_logging():
     """오늘 날짜 로그 파일을 열고(이미 있으면 이어쓰기) 표준출력을 화면+파일
     동시 기록으로 바꾼다. 로그 파일 핸들과 시작 시각을 돌려준다."""
     os.makedirs(LOG_DIR, exist_ok=True)
-    today = datetime.date.today().isoformat()
+    today = datetime.now(KST).date().isoformat()
     log_path = f"{LOG_DIR}/{today}.log"
     log_file = open(log_path, "a", encoding="utf-8")
-    start_time = datetime.datetime.now()
+    start_time = datetime.now(KST)
 
     sys.stdout = Tee(sys.__stdout__, log_file)
     print(f"\n{'=' * 60}")
@@ -51,7 +54,7 @@ def start_logging():
 
 def stop_logging(log_file, start_time):
     """종료 시각과 총 소요 시간을 기록하고 표준출력을 원래대로 되돌린다."""
-    end_time = datetime.datetime.now()
+    end_time = datetime.now(KST)
     duration = end_time - start_time
     print(f"실행 종료: {end_time.strftime('%Y-%m-%d %H:%M:%S')} (소요 시간: {duration})")
     print(f"{'=' * 60}\n")

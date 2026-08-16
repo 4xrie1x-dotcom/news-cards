@@ -4,7 +4,8 @@ hook 카드 배경은 photo_pipeline.py가 위키미디어→Pexels→텍스트 
 기사 선정(후보 수집·다중 소재 건너뛰기)은 article_picker.py가 맡는다. 기사 1개만 처리한다.
 """
 
-import sys, datetime
+import sys
+from datetime import datetime, timezone, timedelta
 from article_picker import find_candidate_articles, extract_first_valid_article
 from dedupe import get_outlet
 from summarize import summarize
@@ -17,9 +18,13 @@ from pipeline_log import start_logging, stop_logging
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
 
+# Actions 러너 시스템 시간대는 UTC라 명시적으로 KST로 변환한다(안 그러면 자정 근처 실행 시 날짜가 밀림)
+KST = timezone(timedelta(hours=9))
+
+
 def main():
     """기사 1개를 끝까지 처리해서 카드와 캡션을 만들고 저장한다."""
-    today = datetime.date.today()
+    today = datetime.now(KST).date()
     date_dir = f"output/{today.isoformat()}"
     article_number = next_article_number(date_dir)
     output_dir = f"{date_dir}/{article_number}"
