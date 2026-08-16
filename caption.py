@@ -11,6 +11,14 @@ from render import TEST_SUMMARY
 sys.stdout.reconfigure(encoding="utf-8")
 
 HASHTAGS = "#뉴스요약 #시사상식 #고등학생 #카드뉴스"
+MAX_TERM_LENGTH = 15  # 이보다 길면 term 자리에 뜻풀이 문장이 통째로 들어간 스키마 오류로 본다
+
+
+def is_valid_term(term_obj):
+    """term·definition이 둘 다 채워져 있고 term이 비정상적으로 길지 않아야
+    (뜻풀이 문장이 term 자리에 통째로 들어간 스키마 오류가 아니어야) 정상으로 본다."""
+    term, definition = term_obj.get("term", ""), term_obj.get("definition", "")
+    return bool(term) and bool(definition) and len(term) <= MAX_TERM_LENGTH
 
 
 def has_batchim(word):
@@ -28,7 +36,10 @@ def build_caption(summary_json, source, photo_credit=None):
     photo_credit은 hook 배경으로 실제 사진(위키미디어 인물 사진 또는 Pexels
     상황 사진)을 썼을 때만 넘어온다 — 텍스트 전용 fallback이면 None."""
     hook = summary_json["hook"]
-    terms = summary_json.get("terms", [])
+    terms = [t for t in summary_json.get("terms", []) if is_valid_term(t)]
+    skipped = len(summary_json.get("terms", [])) - len(terms)
+    if skipped:
+        print(f"용어 형식 오류로 {skipped}개 건너뜀: {summary_json.get('terms', [])}")
     question = ensure_period(summary_json["question"])
     # what+why를 문장 연결어 정도만 다듬어 그대로 이어붙인다 (새로 창작하지 않음)
     paragraph = f"{ensure_period(summary_json['what'])} {ensure_period(summary_json['why'])}"
