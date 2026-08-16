@@ -46,6 +46,9 @@ def draw_hook_card(title, date_text, background_path=None):
     image = Image.new("RGB", (CANVAS_WIDTH, CANVAS_HEIGHT), FALLBACK_BG_COLOR)
     draw = ImageDraw.Draw(image)
     safe_width = CANVAS_WIDTH - MARGIN_SIDE * 2
+    # hook 카드는 강조색 렌더링을 지원하지 않아 {}가 그대로 노출된다.
+    # 프롬프트에서 hook에 중괄호를 쓰지 말라고 지시하지만, 방어적으로 한 번 더 제거
+    title = title.replace("{", "").replace("}", "")
 
     # 사진을 배치하기 전에 제목이 몇 줄·몇 px로 나올지 먼저 계산해야 검정 영역
     # 크기(=사진 영역 크기)를 정할 수 있다
