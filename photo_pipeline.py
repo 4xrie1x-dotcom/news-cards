@@ -1,9 +1,10 @@
-"""6-2-d단계: 인물명 추출 → 위키미디어 → Pexels → 텍스트 fallback까지
-hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
+"""6-2-d단계: 인물명 추출 → 위키백과 인포박스 → 위키미디어 커먼즈 → Pexels →
+텍스트 fallback까지 hook 카드 배경 사진 조달 순서를 하나로 묶는 기능
 """
 
 import re
 import random
+from wikipedia_infobox import fetch_wikipedia_infobox_photo
 from photo_source import fetch_wikimedia_photos, get_wikimedia_credit
 from pexels_source import fetch_pexels_photo
 
@@ -62,20 +63,28 @@ def extract_pexels_keywords(summary_json):
 
 
 def get_hook_background(summary_json):
-    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키미디어를 먼저 시도하고,
-    실패하면 Pexels로 상황 사진을 찾는다. 둘 다 실패하면 (None, None)을
-    반환해서 hook_card.py가 텍스트 전용 fallback을 쓰게 한다.
+    """hook 카드 배경 사진을 조달한다. 인물명이 있으면 위키백과 인포박스를
+    먼저 시도하고, 실패하면 위키미디어 커먼즈 검색을, 그래도 실패하면
+    Pexels로 상황 사진을 찾는다. 모두 실패하면 (None, None)을 반환해서
+    hook_card.py가 텍스트 전용 fallback을 쓰게 한다.
     (사진 경로, 캡션에 넣을 출처 표시) 튜플을 반환한다 — 텍스트 fallback이면
     출처가 없으니 두 번째 값도 None이다."""
     person_name = extract_person_name(summary_json)
     if person_name:
         print(f"인물명 추출: {person_name}")
+
+        infobox_path = fetch_wikipedia_infobox_photo(person_name)
+        if infobox_path:
+            print(f"배경 사진 조달 성공(위키백과 인포박스): {infobox_path}")
+            return infobox_path, get_wikimedia_credit(infobox_path)
+        print(f"위키백과 인포박스에서 '{person_name}' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.")
+
         photo_paths = fetch_wikimedia_photos(person_name)
         if photo_paths:
             photo_path = random.choice(photo_paths)
-            print(f"배경 사진 조달 성공(위키미디어, {len(photo_paths)}장 중 무작위 선택): {photo_path}")
+            print(f"배경 사진 조달 성공(위키미디어 커먼즈, {len(photo_paths)}장 중 무작위 선택): {photo_path}")
             return photo_path, get_wikimedia_credit(photo_path)
-        print(f"위키미디어에서 '{person_name}' 사진을 못 찾아 Pexels로 넘어갑니다.")
+        print(f"위키미디어 커먼즈에서 '{person_name}' 사진을 못 찾아 Pexels로 넘어갑니다.")
     else:
         print("본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.")
 
