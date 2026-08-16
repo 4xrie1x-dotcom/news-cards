@@ -4,13 +4,15 @@ hook 카드 배경은 photo_pipeline.py가 위키미디어→Pexels→텍스트 
 기사 선정(후보 수집·다중 소재 건너뛰기)은 article_picker.py가 맡는다. 기사 1개만 처리한다.
 """
 
-import sys, os, json, datetime
+import sys, datetime
 from article_picker import find_candidate_articles, extract_first_valid_article
 from dedupe import get_outlet
 from summarize import summarize
 from photo_pipeline import get_hook_background
 from card_deck import render_all_cards
 from caption import build_caption
+from output_writer import save_output
+from pipeline_log import start_logging, stop_logging
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
@@ -36,7 +38,7 @@ def main():
         print("실패(2단계 추출): 조건을 만족하는 기사를 찾지 못했습니다.")
         return
     outlet = get_outlet(entry)
-    print(f"2단계 완료: [{outlet}] {entry.title}, 본문 {len(body)}자")
+    print(f"2단계 완료: [{outlet}] {entry.title}, 본문 {len(body)}자, 주소: {real_url}")
 
     print("3단계: Gemini 요약 중...")
     try:
@@ -78,14 +80,7 @@ def main():
 
     print("7단계: 저장 중...")
     try:
-        os.makedirs(output_dir, exist_ok=True)
-        for i, image in enumerate(deck["images"], start=1):
-            image.save(f"{output_dir}/card_{i}.png")
-        with open(f"{output_dir}/caption.txt", "w", encoding="utf-8") as f:
-            f.write(caption_result["caption"])
-        data = {**summary_json, "source": outlet, "url": real_url, "date": today.isoformat()}
-        with open(f"{output_dir}/data.json", "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        save_output(output_dir, deck, caption_result, summary_json, outlet, real_url, today.isoformat())
         print(f"7단계 완료: {output_dir}에 카드 {len(deck['images'])}장, caption.txt, data.json 저장")
     except Exception as error:
         print(f"실패(7단계 저장): {error}")
@@ -94,4 +89,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    log_file, start_time = start_logging()
+    try:
+        main()
+    finally:
+        stop_logging(log_file, start_time)

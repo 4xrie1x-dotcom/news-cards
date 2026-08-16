@@ -2,9 +2,12 @@
 
 import sys
 from urllib.parse import quote
+import requests
 import feedparser
 from filters import filter_entries
 from dedupe import group_duplicates
+
+FEED_TIMEOUT = 10  # 구글뉴스 RSS 응답 대기 시간(초). feedparser 자체엔 타임아웃 인자가 없어 requests로 먼저 받는다
 
 # 윈도우 콘솔 기본 인코딩이 UTF-8이 아니라 한글이 깨져 보이는 문제를 방지
 sys.stdout.reconfigure(encoding="utf-8")
@@ -23,17 +26,24 @@ def build_search_url(keyword):
 
 
 def fetch_feed(url):
-    """RSS 주소에서 피드 데이터를 가져온다. 실패하면 None을 반환한다."""
+    """RSS 주소에서 피드 데이터를 가져온다. 실패하거나 응답이 없으면 None을 반환한다."""
     try:
-        feed = feedparser.parse(url)
-        # feedparser는 네트워크 오류가 나도 예외를 안 던질 때가 있어서
-        # bozo 플래그로 파싱 실패 여부를 따로 확인한다
-        if feed.bozo:
-            raise feed.bozo_exception
-        return feed
+        response = requests.get(url, timeout=FEED_TIMEOUT)
+        response.raise_for_status()
+    except requests.exceptions.Timeout:
+        print(f"구글뉴스 응답 없음, 건너뜀 ({FEED_TIMEOUT}초 초과): {url}")
+        return None
     except Exception as error:
         print(f"RSS를 가져오는 데 실패했습니다: {error}")
         return None
+
+    feed = feedparser.parse(response.content)
+    # feedparser는 네트워크 오류가 나도 예외를 안 던질 때가 있어서
+    # bozo 플래그로 파싱 실패 여부를 따로 확인한다
+    if feed.bozo:
+        print(f"RSS 파싱에 실패했습니다: {feed.bozo_exception}")
+        return None
+    return feed
 
 
 def print_grouped_articles(keyword, feed):

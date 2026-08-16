@@ -1,0 +1,41 @@
+
+============================================================
+실행 시작: 2026-08-16 15:16:42
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 4, '지역 홍보': 6, '사진/멀티미디어': 1}
+1단계 완료: 후보 491건
+2단계: 본문 추출·다중 소재 검사 중...
+정리 전 648자 → 정리 후 648자
+2단계 완료: [khan.co.kr] “동료라 하기도 부끄러워”···민주당, ‘5·18 토론회 강행’ 이진숙 제명 촉구 결의안 제출 - khan.co.kr, 본문 648자, 주소: https://www.khan.co.kr/article/202608141519001
+3단계: Gemini 요약 중...
+3단계 완료: "국회의원 자격 없다"···5·18 토론회 강행에 제명 촉구 나선 야당
+4단계: hook 배경 사진 조달 중...
+인물명 추출: 국회
+'국회' 후보 1 해상도: 1620x1080 (사진 영역 확대 배율 0.69배)
+다운로드 완료: assets/people/국회/01.png (라이선스: CC BY-SA 4.0)
+'File:Member of Parliament of Thailand.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Member_of_Parliament_of_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Member of Parliament of Thailand 6.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Member_of_Parliament_of_Thailand_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Member of Parliament of Thailand 7.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a6/Member_of_Parliament_of_Thailand_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Member of Parliament of Thailand 23.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/2/26/Member_of_Parliament_of_Thailand_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+배경 사진 조달 성공(위키미디어, 1장 중 무작위 선택): assets/people/국회/01.png
+4단계 완료: assets/people/국회/01.png
+5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+5단계 완료: 카드 7장
+6단계: 캡션 생성 중...
+6단계 완료: 캡션 424자
+7단계: 저장 중...
+7단계 완료: output/2026-08-16/01에 카드 7장, caption.txt, data.json 저장
+전체 파이프라인 성공
+실행 종료: 2026-08-16 15:16:58 (소요 시간: 0:00:16.001625)
+============================================================
+

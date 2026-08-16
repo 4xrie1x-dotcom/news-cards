@@ -7,14 +7,19 @@ from extract import resolve_real_url, get_article_text
 
 
 def find_candidate_articles():
-    """키워드 순서대로 기사를 모아 필터(제목 기준)를 통과한 후보 목록을 돌려준다."""
+    """키워드 순서대로 기사를 모아 필터(제목 기준)를 통과한 후보 목록을 돌려준다.
+    필터별로 몇 건씩 걸렀는지 합산해서 화면에 출력한다."""
     candidates = []
+    total_counts = {"의견": 0, "지역 홍보": 0, "사진/멀티미디어": 0}
     for keyword in KEYWORDS:
         feed = fetch_feed(build_search_url(keyword))
         if not feed or not feed.entries:
             continue
-        filtered_entries, _, _ = filter_entries(feed.entries)
+        filtered_entries, counts, _ = filter_entries(feed.entries)
         candidates.extend(filtered_entries)
+        for key, value in counts.items():
+            total_counts[key] += value
+    print(f"필터 제외 건수: {total_counts}")
     return candidates
 
 
