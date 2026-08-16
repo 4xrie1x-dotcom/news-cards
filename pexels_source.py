@@ -12,6 +12,7 @@ API로 프로그램에서 받아오면 "Pexels로 눈에 띄게 연결되는 표
 """
 
 import os
+import random
 import requests
 from PIL import Image
 from io import BytesIO
@@ -22,16 +23,19 @@ load_dotenv()
 
 PEXELS_API = "https://api.pexels.com/v1/search"
 TEMP_DIR = "tmp/pexels"
+SEARCH_POOL_SIZE = 10  # 상위 몇 개 결과 중에서 무작위로 고를지
 
 
 def search_pexels_photo(keyword, api_key):
-    """키워드 하나로 Pexels를 검색해서 첫 번째 사진 정보를 돌려준다."""
+    """키워드 하나로 Pexels를 검색해서 상위 SEARCH_POOL_SIZE개 중 무작위로
+    하나를 돌려준다. 매번 1위만 쓰면 같은 키워드가 항상 같은 사진으로
+    고정되는 문제(2026-08-17 확인)를 막기 위함이다."""
     headers = {"Authorization": api_key}
-    params = {"query": keyword, "per_page": 1}
+    params = {"query": keyword, "per_page": SEARCH_POOL_SIZE}
     response = requests.get(PEXELS_API, headers=headers, params=params, timeout=10)
     response.raise_for_status()
     photos = response.json().get("photos", [])
-    return photos[0] if photos else None
+    return random.choice(photos) if photos else None
 
 
 def fetch_pexels_photo(keywords):
