@@ -231,3 +231,124 @@ what 4장, why 2장 사용 (본문 합계 6장)
 실행 종료: 2026-08-17 03:20:56 (소요 시간: 0:00:25.326616)
 ============================================================
 
+
+============================================================
+실행 시작: 2026-08-17 22:39:59
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 6, '지역 홍보': 5, '사진/멀티미디어': 0}
+사건 그룹 216개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (15곳 [갈등 신호]) 여야, 20일 본회의 ‘부동산 관련 법안’ 충돌 - 기호일보
+  2. (15곳 [갈등 신호]) 클래리티 법안 불발 버틴 비트코인…"하반기 우상향 기대" - 뉴시스
+  3. (11곳 [갈등 신호]) 국회, 20일 본회의서 패트 단축 ‘국회법 개정안’ 처리…부동산 법안 등은 신경전 - 경기신문
+  4. (7곳 [갈등 신호]) 20일 8월 임시국회 본회의…여야, 부동산·재검표 놓고 정면충돌 - dtoday.co.kr
+  5. (15곳) 박찬대 인천시장 “국회와 소통… 지방정부 미래 성장 이끌것” - 경인일보
+  6. (12곳) 원희룡 2차 소환…국토부 해명자료 '대통령실 개입' 추궁 - v.daum.net
+  7. (11곳) 李대통령 "임기 내 세종 집무실…마지막 국무회의도 세종에서" - 연합뉴스
+  8. (10곳) 경주시, 여야 정치권과 ‘원팀’…2027년 국·도비 확보 총력전 - kyongbuk.co.kr
+  9. (9곳) ‘검찰 수사권 폐지’ 형소법 개정안 국무회의 통과 - 한겨레
+  10. (7곳) 안도걸 의원 “5·18 역사왜곡에 국회 문 열어준 이진숙 의원‧국민의 힘 강력 규탄” - 산경일보
+1단계 완료: 사건 그룹 216개 확보
+=== [07] 처리 시작 (15곳이 다룬 사건) ===
+[07] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1129자 → 정리 후 1129자
+[07] 2단계 완료: [기호일보] 여야, 20일 본회의 ‘부동산 관련 법안’ 충돌 - 기호일보, 본문 1129자, 주소: https://www.kihoilbo.co.kr/news/articleView.html?idxno=3031778
+[07] 3단계: Gemini 요약 중...
+[07] 3단계 완료: 8월 임시국회 본회의, 부동산 법안 두고 여야 충돌 예고
+[07] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 야당은
+'야당은' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Stand_in_opposition_city_hall_boston.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '야당은' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 3대 25회 10차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dc/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_3%EB%8C%80_25%ED%9A%8C_10%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 418회 17차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/e0/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_17%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 3대 25회 6차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/e4/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_3%EB%8C%80_25%ED%9A%8C_6%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'야당은' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '야당은' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Korea national assembly', 'microphone']
+'Korea national assembly' Pexels 사진 해상도: 2835x3780 (사진 영역 확대 배율 0.38배)
+'Korea national assembly'로 사진을 찾았습니다: tmp/pexels/pexels_12057526.png (촬영자: speedwagwon)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_12057526.png
+[07] 4단계 완료: tmp/pexels/pexels_12057526.png
+[07] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[07] 5단계 완료: 카드 5장
+[07] 6단계: 캡션 생성 중...
+[07] 6단계 완료: 캡션 490자
+[07] 7단계: 저장 중...
+[07] 7단계 완료: output/2026-08-17/07에 카드 5장, caption.txt, data.json 저장
+=== [07] 완료 ===
+=== [08] 처리 시작 (15곳이 다룬 사건) ===
+[08] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1196자 → 정리 후 1134자
+[08] 2단계 완료: [뉴시스] 클래리티 법안 불발 버틴 비트코인…"하반기 우상향 기대" - 뉴시스, 본문 1134자, 주소: https://www.newsis.com/view/NISX20260814_0003748816
+[08] 3단계: Gemini 요약 중...
+[08] 3단계 완료: 9월로 밀린 클래리티법, 비트코인은 하반기 우상향할까
+[08] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 가상자산
+'가상자산' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&titles=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0&prop=pageimages&piprop=name&format=json
+위키백과 인포박스에서 '가상자산' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'가상자산' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '가상자산' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 5184x2920 (사진 영역 확대 배율 0.25배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_7054502.png (촬영자: Kindel Media)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_7054502.png
+[08] 4단계 완료: tmp/pexels/pexels_7054502.png
+[08] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[08] 5단계 완료: 카드 7장
+[08] 6단계: 캡션 생성 중...
+[08] 6단계 완료: 캡션 578자
+[08] 7단계: 저장 중...
+[08] 7단계 완료: output/2026-08-17/08에 카드 7장, caption.txt, data.json 저장
+=== [08] 완료 ===
+=== [09] 처리 시작 (11곳이 다룬 사건) ===
+[09] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1266자 → 정리 후 1266자
+[09] 2단계 완료: [경기신문] 국회, 20일 본회의서 패트 단축 ‘국회법 개정안’ 처리…부동산 법안 등은 신경전 - 경기신문, 본문 1266자, 주소: https://www.kgnews.co.kr/mobile/article.html?no=907976
+[09] 3단계: Gemini 요약 중...
+[09] 3단계 완료: 20일 본회의 앞두고 패스트트랙 단축법안 처리 둔 여야 신경전
+[09] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Korea national assembly', 'microphone']
+'Korea national assembly' Pexels 사진 해상도: 5616x3744 (사진 영역 확대 배율 0.20배)
+'Korea national assembly'로 사진을 찾았습니다: tmp/pexels/pexels_6427161.png (촬영자: 대정 김)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_6427161.png
+[09] 4단계 완료: tmp/pexels/pexels_6427161.png
+[09] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[09] 5단계 완료: 카드 5장
+[09] 6단계: 캡션 생성 중...
+[09] 6단계 완료: 캡션 445자
+[09] 7단계: 저장 중...
+[09] 7단계 완료: output/2026-08-17/09에 카드 5장, caption.txt, data.json 저장
+=== [09] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-17 22:40:26 (소요 시간: 0:00:27.663925)
+============================================================
+
