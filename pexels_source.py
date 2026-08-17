@@ -25,17 +25,33 @@ PEXELS_API = "https://api.pexels.com/v1/search"
 TEMP_DIR = "tmp/pexels"
 SEARCH_POOL_SIZE = 10  # 상위 몇 개 결과 중에서 무작위로 고를지
 
+# 검색어를 아무리 구체적으로 써도 Pexels가 궁궐·전통 건축 사진을 섞어서
+# 돌려주는 경우가 있어서(예: "Korea national assembly"가 경복궁 사진과
+# 오매칭됨, 2026-08-17 확인) alt 텍스트로 한 번 더 걸러낸다.
+LANDMARK_MISMATCH_WORDS = ["palace", "gyeongbokgung", "gwanghwamun", "temple", "traditional"]
+
+
+def is_landmark_mismatch(photo):
+    """사진의 alt 텍스트에 궁궐·전통 건축 관련 단어가 있으면 오매칭으로 본다."""
+    alt = photo.get("alt") or ""
+    alt = alt.lower()
+    return any(word in alt for word in LANDMARK_MISMATCH_WORDS)
+
 
 def search_pexels_photo(keyword, api_key):
-    """키워드 하나로 Pexels를 검색해서 상위 SEARCH_POOL_SIZE개 중 무작위로
-    하나를 돌려준다. 매번 1위만 쓰면 같은 키워드가 항상 같은 사진으로
-    고정되는 문제(2026-08-17 확인)를 막기 위함이다."""
+    """키워드 하나로 Pexels를 검색해서, 궁궐·전통 건축 오매칭을 alt 텍스트로
+    걸러낸 뒤 남은 결과 중 무작위로 하나를 돌려준다. 매번 1위만 쓰면 같은
+    키워드가 항상 같은 사진으로 고정되는 문제(2026-08-17 확인)를 막기
+    위해 상위 SEARCH_POOL_SIZE개 중에서 고른다."""
     headers = {"Authorization": api_key}
     params = {"query": keyword, "per_page": SEARCH_POOL_SIZE}
     response = requests.get(PEXELS_API, headers=headers, params=params, timeout=10)
     response.raise_for_status()
     photos = response.json().get("photos", [])
-    return random.choice(photos) if photos else None
+    valid_photos = [p for p in photos if not is_landmark_mismatch(p)]
+    if not valid_photos:
+        return None
+    return random.choice(valid_photos)
 
 
 def fetch_pexels_photo(keywords):
@@ -78,4 +94,4 @@ def fetch_pexels_photo(keywords):
 
 
 if __name__ == "__main__":
-    fetch_pexels_photo(["Korea national assembly", "gavel", "documents"])
+    fetch_pexels_photo(["Yeouido national assembly building", "gavel", "documents"])

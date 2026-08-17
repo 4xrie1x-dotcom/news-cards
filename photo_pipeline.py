@@ -30,7 +30,9 @@ KNOWN_ORG_NAMES = [
 
 # 기사 맥락 단어 → Pexels 검색어. 사물·정물 위주로만 두고 인물·군중 키워드는 아예 넣지 않는다
 CONTEXT_KEYWORD_MAP = [
-    (("국회",), "Korea national assembly"),
+    # "Korea national assembly"는 경복궁·광화문 사진과 오매칭됐다(2026-08-17
+    # 확인, [07][09] 실행에서 재현). 여의도·실제 건물명을 넣어 궁궐과 구분한다.
+    (("국회",), "Yeouido national assembly building"),
     (("청문회", "질의", "회의"), "microphone"),
     (("표결", "판결", "결정", "재검표"), "gavel"),
     (("서류", "자료", "문서", "보고서", "조사"), "documents"),
