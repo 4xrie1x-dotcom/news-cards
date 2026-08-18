@@ -1,0 +1,129 @@
+
+============================================================
+실행 시작: 2026-08-18 22:43:04
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 3, '지역 홍보': 7, '사진/멀티미디어': 0}
+사건 그룹 193개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (22곳 [갈등 신호]) 닥공 속도전…與 '용산공원특별법' 20일 국회 처리 추진 - 한국경제
+  2. (21곳) 국무회의 간 오세훈 "용산공원 개발 반대…재개발·재건축 규제부터 풀어야" - JTBC
+  3. (20곳) 정성호 "형소법 통과돼 역할 크지 않아…국회서 할일 더 많을 것" - 연합뉴스
+  4. (18곳) 조의장 "DJ 통합과 실용 정신, 국회가 이어갈 것" - 뉴스1
+  5. (12곳) 추모사 마친 조정식 국회의장 - newsis.com
+  6. (11곳) 태릉골프장, 그린벨트 해제 총량규제 예외 인정…국무회의 의결 - 연합뉴스
+  7. (10곳) 종합특검, 김건희·윤한홍 기소..."관저 이전 부당 개입" - YTN
+  8. (9곳) 경주시, 여야 정치권과 ‘원팀’…2027년 국·도비 확보 총력전 - kyongbuk.co.kr
+  9. (9곳) 여야 지도부, 거제 수해 현장 방문 - knn.co.kr
+  10. (8곳) 김대중평화센터, DJ 서거 17주기 추모식…국회의장·여야대표 참석 - newsis.com
+1단계 완료: 사건 그룹 193개 확보
+=== [01] 처리 시작 (22곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 4280자 → 정리 후 4280자
+[01] 2단계 완료: [한국경제] 닥공 속도전…與 '용산공원특별법' 20일 국회 처리 추진 - 한국경제, 본문 4280자, 주소: https://www.hankyung.com/article/2026081879581
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 117개 법안 처리 속도전, 여야 용산공원특별법 공방
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 오세훈
+'오세훈' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/2/2f/Oh_Se-hoon_%282023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '오세훈' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Oh Se-Hoon.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/1/15/Oh_Se-Hoon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon 2023.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/da/Oh_Se-hoon_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-Hoon from acrofan.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/92/Oh_Se-Hoon_from_acrofan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon in June 2020.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Oh_Se-hoon_in_June_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon in 2011 (cropped).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Oh_Se-hoon_in_2011_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'오세훈' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '오세훈' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone']
+'microphone' Pexels 사진 해상도: 2610x2189 (사진 영역 확대 배율 0.41배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_586416.png (촬영자: Bryan Geraldo)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_586416.png
+[01] 4단계 완료: tmp/pexels/pexels_586416.png
+[01] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 567자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-18/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (21곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+제목과 본문이 일치하지 않음
+건너뜀: [JTBC] 본문 추출 실패 - 국무회의 간 오세훈 "용산공원 개발 반대…재개발·재건축 규제부터 풀어야" - JTBC
+정리 전 2594자 → 정리 후 2594자
+[02] 2단계 완료: [한국경제] 오세훈, 국무회의서 李 대통령에 "용산공원 아파트 반대" - 한국경제, 본문 2594자, 주소: https://www.hankyung.com/article/202608186987i
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 용산공원 아파트 반대, 오세훈 시장이 국무회의서 제동을 걸었다
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 오세훈
+'오세훈' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&titles=%EC%98%A4%EC%84%B8%ED%9B%88&prop=pageimages&piprop=name&format=json
+위키백과 인포박스에서 '오세훈' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'오세훈' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%98%A4%EC%84%B8%ED%9B%88+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '오세훈' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone']
+'microphone' Pexels 사진 해상도: 6016x4000 (사진 영역 확대 배율 0.19배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_164928.png (촬영자: Pixabay)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_164928.png
+[02] 4단계 완료: tmp/pexels/pexels_164928.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 6장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 516자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-18/02에 카드 6장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (20곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1230자 → 정리 후 1149자
+[03] 2단계 완료: [연합뉴스] 정성호 "형소법 통과돼 역할 크지 않아…국회서 할일 더 많을 것" - 연합뉴스, 본문 1149자, 주소: https://www.yna.co.kr/view/AKR20260818160700004
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 정성호 법무부 장관 사직서 제출, 배경과 향후 거취는
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 법무부
+'법무부' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EB%B2%95%EB%AC%B4%EB%B6%80&srlimit=1&format=json
+위키백과 인포박스에서 '법무부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'법무부' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EB%B2%95%EB%AC%B4%EB%B6%80+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '법무부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6592x4395 (사진 영역 확대 배율 0.17배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_8470057.png (촬영자: Thirdman)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8470057.png
+[03] 4단계 완료: tmp/pexels/pexels_8470057.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+[03] 5단계 완료: 카드 6장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 497자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-18/03에 카드 6장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-18 22:43:32 (소요 시간: 0:00:28.233780)
+============================================================
+
