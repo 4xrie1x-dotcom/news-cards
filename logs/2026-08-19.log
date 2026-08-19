@@ -1,0 +1,122 @@
+
+============================================================
+실행 시작: 2026-08-19 22:45:12
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 1, '지역 홍보': 4, '사진/멀티미디어': 0}
+사건 그룹 209개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (21곳 [갈등 신호]) 국회 토론회 참석한 오세훈 "용산공원 반드시 지킬 것" [TF사진관] - v.daum.net
+  2. (18곳 [갈등 신호]) “이진숙 사퇴”·“조희대 퇴진”…여야, 국회 상임위 곳곳서 ‘충돌’ - v.daum.net
+  3. (12곳 [갈등 신호]) 여야 용산공원 공방…"盧 뜻이자 李대통령 공약"·"다른 얘기" - 연합뉴스
+  4. (11곳 [갈등 신호]) 국회 과방위, 이진숙 5·18 토론회 공방 격화에 결국 산회 - 연합뉴스TV
+  5. (8곳 [갈등 신호]) 與, 조희대 국회 법사위로 부른다… ‘대법관 후보 제청 과정’ 이유 - 조선비즈 - biz.chosun.com
+  6. (10곳) '국회 위증' 조태용 전 국정원장, 2심 징역 2년 6개월 - YTN
+  7. (10곳) 강민국 의원 "비수도권 세제 개편 법안 조속 처리…지역 경제 살리기 절실" - 뉴스핌
+  8. (8곳) 닥공 속도전…與 '용산공원특별법' 20일 국회 처리 추진 - 한국경제
+  9. (8곳) 젤렌스키 또 시험대…'드론전 영웅' 반기·대통령실 부패 수사(종합) - 연합뉴스
+  10. (8곳) 이 대통령 "전작권 임기 내 환수 차질없이 추진해야" - 여성신문
+1단계 완료: 사건 그룹 209개 확보
+=== [01] 처리 시작 (21곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1292자 → 정리 후 1238자
+[01] 2단계 완료: [v.daum.net] 국회 토론회 참석한 오세훈 "용산공원 반드시 지킬 것" [TF사진관] - v.daum.net, 본문 1238자, 주소: https://v.daum.net/v/20260819120251528
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 서울의 마지막 녹지, 용산공원 아파트 공급 강행 우려
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 오세훈
+'오세훈' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/2/2f/Oh_Se-hoon_%282023%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '오세훈' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Oh Se-Hoon.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/1/15/Oh_Se-Hoon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon 2023.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/da/Oh_Se-hoon_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-Hoon from acrofan.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/92/Oh_Se-Hoon_from_acrofan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon in 2011 (cropped).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Oh_Se-hoon_in_2011_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Oh Se-hoon in 2011.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/4/40/Oh_Se-hoon_in_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'오세훈' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '오세훈' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 3992x5999 (사진 영역 확대 배율 0.27배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_20110145.png (촬영자: Junsu Park)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_20110145.png
+[01] 4단계 완료: tmp/pexels/pexels_20110145.png
+[01] 5단계: 카드 생성 중...
+what 2장, why 3장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 6장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 536자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-19/01에 카드 6장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (18곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1686자 → 정리 후 1648자
+[02] 2단계 완료: [v.daum.net] “이진숙 사퇴”·“조희대 퇴진”…여야, 국회 상임위 곳곳서 ‘충돌’ - v.daum.net, 본문 1648자, 주소: https://v.daum.net/v/20260819193413701
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 상임위 곳곳서 충돌, 이진숙 사퇴·조희대 퇴진 공방
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&titles=%EC%9D%B4%EC%A7%84%EC%88%99+%281961%EB%85%84%29&prop=pageimages&piprop=name&format=json
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이진숙' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%A7%84%EC%88%99+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6960x4640 (사진 영역 확대 배율 0.16배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_32201000.png (촬영자: Joachim Schnürle)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_32201000.png
+[02] 4단계 완료: tmp/pexels/pexels_32201000.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 6장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 544자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-19/02에 카드 6장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (12곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1575자 → 정리 후 1336자
+[03] 2단계 완료: [연합뉴스] 여야 용산공원 공방…"盧 뜻이자 李대통령 공약"·"다른 얘기" - 연합뉴스, 본문 1336자, 주소: https://www.yna.co.kr/view/AKR20260819138900001
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 찬성 7대 반대 14, 용산공원 주택공급 공방
+[03] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 5464x3070 (사진 영역 확대 배율 0.24배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_8573207.png (촬영자: Анна Шаталова)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8573207.png
+[03] 4단계 완료: tmp/pexels/pexels_8573207.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 6장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 472자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-19/03에 카드 6장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-19 22:45:44 (소요 시간: 0:00:32.191169)
+============================================================
+
