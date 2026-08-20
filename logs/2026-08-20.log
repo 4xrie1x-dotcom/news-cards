@@ -1,0 +1,129 @@
+
+============================================================
+실행 시작: 2026-08-20 22:48:35
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 2, '사진/멀티미디어': 0}
+사건 그룹 157개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (37곳 [갈등 신호]) 햇빛소득마을, 전력망 우선 접속법 국회 본회의 통과 - 기후에너지데이터뱅크
+  2. (25곳) 국회, 패스트트랙 심사 단축법안 가결‥최장 330일→90일 - MBC 뉴스
+  3. (10곳 [갈등 신호]) 패스트트랙 단축법, 與주도 국회 통과…심사기한 330일→90일로(종합) - 연합뉴스
+  4. (10곳 [갈등 신호]) 대법관 임명 제청 둘러싼 여야 공방…국회 법사위서 대립 - 데일리굿뉴스
+  5. (22곳) 오세훈, 국무회의 참석…“용산공원 훼손은 안 돼” [지금뉴스] - KBS 뉴스
+  6. (21곳) 패트법 우여곡절 처리, 민생은 속도전…여야 '분리 대응' 첫발 - 매일일보
+  7. (13곳) “공급 속도 높인다”…‘9·7 대책’ 후속 법안 6건 국회 통과 - KBS 뉴스
+  8. (12곳) 국회, 최길수·강지식·최용훈 변호사 특별감찰관 후보 추천 의결 - KBS 뉴스
+  9. (12곳) 여야, '용산특별법' 다음주 처리키로..."서울시·국토부 논의 반영" - 머니투데이 - 머니투데이
+  10. (9곳) 푸틴, '연쇄 타격' 물류망 복구 지시...우크라 대통령실 또 수사 - YTN
+1단계 완료: 사건 그룹 157개 확보
+=== [01] 처리 시작 (37곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1303자 → 정리 후 1303자
+[01] 2단계 완료: [기후에너지데이터뱅크] 햇빛소득마을, 전력망 우선 접속법 국회 본회의 통과 - 기후에너지데이터뱅크, 본문 1303자, 주소: https://edata.ekn.kr/article/view/ekn202608200011
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 700곳 목표 '햇빛소득마을', 전력망 우선 접속법 국회 통과
+[01] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 3992x5999 (사진 영역 확대 배율 0.27배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_20110145.png (촬영자: Junsu Park)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_20110145.png
+[01] 4단계 완료: tmp/pexels/pexels_20110145.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 6장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 568자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-20/01에 카드 6장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (25곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1226자 → 정리 후 1226자
+[02] 2단계 완료: [MBC 뉴스] 국회, 패스트트랙 심사 단축법안 가결‥최장 330일→90일 - MBC 뉴스, 본문 1226자, 주소: https://imnews.imbc.com/news/2026/politics/article/6846095_36911.html
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 최장 330일에서 90일로, 패스트트랙 심사 단축법안 가결
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 재석
+'재석' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '재석' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206205 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b5/2206205_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 19대 320회 2차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/d4/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_19%EB%8C%80_320%ED%9A%8C_2%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나7 경찰청장(조지호) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b2/2024%ED%97%8C%EB%82%987_%EA%B2%BD%EC%B0%B0%EC%B2%AD%EC%9E%A5%28%EC%A1%B0%EC%A7%80%ED%98%B8%29_%ED%83%84%ED%95%B5.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'재석' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '재석' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 3992x5999 (사진 영역 확대 배율 0.27배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_20110145.png (촬영자: Junsu Park)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_20110145.png
+[02] 4단계 완료: tmp/pexels/pexels_20110145.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 508자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-20/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1532자 → 정리 후 1451자
+[03] 2단계 완료: [연합뉴스] 패스트트랙 단축법, 與주도 국회 통과…심사기한 330일→90일로(종합) - 연합뉴스, 본문 1451자, 주소: https://www.yna.co.kr/view/AKR20260820140451001
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 심사기한 330일에서 90일로 단축, 패스트트랙 개정안 국회 통과
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 재석
+'재석' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '재석' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206205 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b5/2206205_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 19대 320회 2차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/d4/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_19%EB%8C%80_320%ED%9A%8C_2%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나7 경찰청장(조지호) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b2/2024%ED%97%8C%EB%82%987_%EA%B2%BD%EC%B0%B0%EC%B2%AD%EC%9E%A5%28%EC%A1%B0%EC%A7%80%ED%98%B8%29_%ED%83%84%ED%95%B5.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'재석' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '재석' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 6720x4480 (사진 영역 확대 배율 0.17배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28709869.png (촬영자: 정규송 Nui MALAMA)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28709869.png
+[03] 4단계 완료: tmp/pexels/pexels_28709869.png
+[03] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 7장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 570자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-20/03에 카드 7장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-20 22:49:13 (소요 시간: 0:00:38.079388)
+============================================================
+
