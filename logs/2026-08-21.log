@@ -1,0 +1,129 @@
+
+============================================================
+실행 시작: 2026-08-21 22:46:31
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 3, '지역 홍보': 2, '사진/멀티미디어': 0}
+사건 그룹 188개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (24곳 [갈등 신호]) 간호법 개정안 국회 본회의 통과, 간호사 1인당 환자 수 법제화 外 - 의약뉴스
+  2. (18곳 [갈등 신호]) 조인철 국회의원 대표 발의 법안 6건 국회 통과 - BBS불교방송
+  3. (14곳 [갈등 신호]) 오세훈 "용산공원에 아파트? 절대 반대"…국무회의서 쓴소리 - v.daum.net
+  4. (12곳 [갈등 신호]) 여야, 법무부 장관 국회 불출석 놓고 공방 - v.daum.net
+  5. (9곳 [갈등 신호]) “마음에 안 들어도 국회로”…홍준표, 이 대통령에 대법관 제청 수용 촉구 - v.daum.net
+  6. (20곳) 조정식 국회의장, 미셸 스틸 주한 미국 대사 접견 - 뉴시스
+  7. (15곳) [속보] 여야, 오늘 본회의서 70개 법안 처리 합의 - 연합뉴스TV
+  8. (13곳) 李 대통령 “부패 청산엔 여야나 내 편, 네 편 없다” - 문화일보
+  9. (12곳) 오세훈, 국무회의 참석…“용산공원 훼손은 안 돼” [지금뉴스] - KBS 뉴스
+  10. (11곳) 이재명 대통령, 정성호 법무에 “후속 인사 때까지 역할 다해달라” 당부 - 법률신문
+1단계 완료: 사건 그룹 188개 확보
+=== [01] 처리 시작 (24곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 10635자 → 정리 후 10635자
+[01] 2단계 완료: [의약뉴스] 간호법 개정안 국회 본회의 통과, 간호사 1인당 환자 수 법제화 外 - 의약뉴스, 본문 10635자, 주소: http://www.newsmp.com/news/articleView.html?idxno=257633
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 간호사 1인당 환자 수 법제화, 간호법 개정안 국회 본회의 통과
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이수진
+'이수진' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '이수진' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:국회의원 이수진(동작을).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/bd/%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%EC%9D%B4%EC%88%98%EC%A7%84%28%EB%8F%99%EC%9E%91%EC%9D%84%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Lee Soo-Jin.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Lee_Soo-Jin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:이수진의원.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/5/53/%EC%9D%B4%EC%88%98%EC%A7%84%EC%9D%98%EC%9B%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:BA7X8783 crop.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/f8/BA7X8783_crop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:위클리 이수진.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/6/6b/%EC%9C%84%ED%81%B4%EB%A6%AC_%EC%9D%B4%EC%88%98%EC%A7%84.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'이수진' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '이수진' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 3840x2560 (사진 영역 확대 배율 0.29배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_38043604.png (촬영자: Rüveyda Akkaya)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_38043604.png
+[01] 4단계 완료: tmp/pexels/pexels_38043604.png
+[01] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 629자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-21/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (18곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 395자 → 정리 후 395자
+[02] 2단계 완료: [BBS불교방송] 조인철 국회의원 대표 발의 법안 6건 국회 통과 - BBS불교방송, 본문 395자, 주소: https://news.bbsi.co.kr/news/articleView.html?idxno=4101995
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 법안 6건 국회 통과, 연구자 규제 완화와 보이스피싱 대응 강화
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 조인철
+'조인철' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '조인철' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'조인철' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%A1%B0%EC%9D%B8%EC%B2%A0+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '조인철' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 3024x4032 (사진 영역 확대 배율 0.36배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_35427330.png (촬영자: Md Nadim  Mahmud)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_35427330.png
+[02] 4단계 완료: tmp/pexels/pexels_35427330.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 606자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-21/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (14곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1526자 → 정리 후 1478자
+[03] 2단계 완료: [v.daum.net] 오세훈 "용산공원에 아파트? 절대 반대"…국무회의서 쓴소리 - v.daum.net, 본문 1478자, 주소: https://v.daum.net/v/uIQmNc3GsV
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 용산공원 10% 주택 공급, 오세훈 시장의 반대
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 오세훈
+'오세훈' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EC%98%A4%EC%84%B8%ED%9B%88&srlimit=1&format=json
+위키백과 인포박스에서 '오세훈' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'오세훈' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%98%A4%EC%84%B8%ED%9B%88+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '오세훈' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone']
+'microphone' Pexels 사진 해상도: 5631x3746 (사진 영역 확대 배율 0.20배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_12561477.png (촬영자: César Guillotel)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_12561477.png
+[03] 4단계 완료: tmp/pexels/pexels_12561477.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 7장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 558자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-21/03에 카드 7장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-21 22:47:02 (소요 시간: 0:00:30.750314)
+============================================================
+
