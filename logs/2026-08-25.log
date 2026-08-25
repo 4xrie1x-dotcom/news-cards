@@ -1,0 +1,129 @@
+
+============================================================
+실행 시작: 2026-08-25 22:51:42
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 8, '지역 홍보': 1, '사진/멀티미디어': 0}
+사건 그룹 216개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (26곳 [갈등 신호]) 국회 운영위, ‘이진숙 제명촉구결의안’ 여당 주도 처리…국힘 불참 - JTBC
+  2. (23곳 [갈등 신호]) 여야 대표, 첫 만남부터 ‘신경전’… 쉽지 않은 ‘협치’ - 시사위크
+  3. (10곳 [갈등 신호]) 전력망 확충 속도 높이고 환경성 강화…전력 분야 법안 국회 통과 - 환경포커스
+  4. (10곳 [갈등 신호]) 국회 예결위서 부동산 공방…여야, 서로 "네 탓" - cpbc News
+  5. (15곳) 경기도의회, 국회에 지방의회법 제정 촉구 건의문 전달 - 기호일보
+  6. (12곳) 이 대통령 “경찰, 국가 기구 중 가장 큰 권력 행사에 국민 우려 커…경찰개혁 기구 고민해 달라” - 기호일보
+  7. (12곳) 이재명 대통령 "미래 재원, 생산적 분야 투입…수치 관리에 매몰 안돼" - 매일타임즈
+  8. (9곳) 국회 26일 본회의 열고 주택공급 관련 주요 비쟁점 법안 처리 전망 - 매일신문
+  9. (8곳) 중앙행정기관 이전 25일 국무회의 심의…공공기관 2차 이전 발표 초읽기 - 강원일보
+  10. (7곳) [포토] 국힘, 與 향해 "빠른 시일 내 여야 실무협의체 구성하자" - 아시아경제
+1단계 완료: 사건 그룹 216개 확보
+=== [01] 처리 시작 (26곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+제목과 본문이 일치하지 않음
+건너뜀: [JTBC] 본문 추출 실패 - 국회 운영위, ‘이진숙 제명촉구결의안’ 여당 주도 처리…국힘 불참 - JTBC
+정리 전 322자 → 정리 후 322자
+[01] 2단계 완료: [한겨레] ‘5·18 폄훼’ 이진숙 제명 촉구 결의안, 국회 운영위 통과…국힘은 불참 - 한겨레, 본문 322자, 주소: https://www.hani.co.kr/arti/politics/politics_general/1274475.html
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 17표 전원 찬성, 이진숙 제명 촉구 결의안 국회 운영위 통과
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Lee Jin-sook.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Lee Jin-sook's portrait (2025.07).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/90/Lee_Jin-sook%27s_portrait_%282025.07%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2026년 5월 10일 이진숙 대구 달성군 국회의원 후보 선거사무소 개소식.webm' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fe/2026%EB%85%84_5%EC%9B%94_10%EC%9D%BC_%EC%9D%B4%EC%A7%84%EC%88%99_%EB%8C%80%EA%B5%AC_%EB%8B%AC%EC%84%B1%EA%B5%B0_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%ED%9B%84%EB%B3%B4_%EC%84%A0%EA%B1%B0%EC%82%AC%EB%AC%B4%EC%86%8C_%EA%B0%9C%EC%86%8C%EC%8B%9D.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나1 방송통신위원회 위원장(이진숙) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/94/2024%ED%97%8C%EB%82%981_%EB%B0%A9%EC%86%A1%ED%86%B5%EC%8B%A0%EC%9C%84%EC%9B%90%ED%9A%8C_%EC%9C%84%EC%9B%90%EC%9E%A5%28%EC%9D%B4%EC%A7%84%EC%88%99%29_%ED%83%84%ED%95%B5.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'이진숙' 후보 4개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone', 'gavel']
+'Yeouido national assembly building' Pexels 사진 해상도: 6720x4480 (사진 영역 확대 배율 0.17배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28709869.png (촬영자: 정규송 Nui MALAMA)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28709869.png
+[01] 4단계 완료: tmp/pexels/pexels_28709869.png
+[01] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 5장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 449자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-25/01에 카드 5장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (23곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 2541자 → 정리 후 2541자
+[02] 2단계 완료: [시사위크] 여야 대표, 첫 만남부터 ‘신경전’… 쉽지 않은 ‘협치’ - 시사위크, 본문 2541자, 주소: https://www.sisaweek.com/news/articleView.html?idxno=237456
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 취임 일주일 만의 첫 만남, 김민석-장동혁 회동서 엇갈린 '협치'
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 김민석
+'김민석' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '김민석' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:김민석 더불어민주당 국회의원.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/6/65/%EA%B9%80%EB%AF%BC%EC%84%9D_%EB%8D%94%EB%B6%88%EC%96%B4%EB%AF%BC%EC%A3%BC%EB%8B%B9_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 418회 17차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/e0/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_17%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 418회 16차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/85/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_16%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 419회 4차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/c/c9/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_419%ED%9A%8C_4%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'김민석' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '김민석' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 4000x6000 (사진 영역 확대 배율 0.27배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_3927131.png (촬영자: Md Jawadur Rahman)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_3927131.png
+[02] 4단계 완료: tmp/pexels/pexels_3927131.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 573자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-25/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1567자 → 정리 후 1567자
+[03] 2단계 완료: [환경포커스] 전력망 확충 속도 높이고 환경성 강화…전력 분야 법안 국회 통과 - 환경포커스, 본문 1567자, 주소: https://www.ecofocus.co.kr/news/article.html?no=73653
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 전력망 3법 국회 통과, 민간 참여로 AI 전력 수요 대응한다
+[03] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 5464x3070 (사진 영역 확대 배율 0.24배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_8573207.png (촬영자: Анна Шаталова)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8573207.png
+[03] 4단계 완료: tmp/pexels/pexels_8573207.png
+[03] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 7장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 627자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-25/03에 카드 7장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-25 22:55:04 (소요 시간: 0:03:22.207869)
+============================================================
+
