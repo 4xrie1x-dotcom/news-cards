@@ -1,0 +1,97 @@
+
+============================================================
+실행 시작: 2026-08-28 07:51:12
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 4, '사진/멀티미디어': 0}
+사건 그룹 182개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (25곳) '국회 봉쇄' 김현태 前 707단장 징역 12년…"용납 불가한 범행" - v.daum.net
+  2. (13곳) 오세현 아산시장, 이재명 대통령 만나 “기초정부에 과감한 권한이양” 건의 - 코리아플러스
+  3. (12곳) ‘이진숙 제명 촉구 결의안’ 국회 본회의 통과…5·18 왜곡 국회의원 직무정지법 추진 - 경향신문
+  4. (7곳) 이상휘 의원, 해수욕장 안전·환경 관리에 국비 투입…관련 법안 발의 - 이로운넷
+  5. (6곳) "尹 대통령실에 김건희 집무실 있었다"…특검, 진술 확보 - 연합뉴스TV
+  6. (6곳) 용산 대통령실 이전 의혹, 미궁에 빠졌다 - OhmyNews
+  7. (6곳) 국토장관 "2차 공공기관 이전, 공론화 거쳐 10~11월 확정" - 조선일보
+  8. (6곳) STO 핵심 '비금전 신탁수익증권' 법안, 내달 1일 정무위 소위 상정 주목 - 뉴시스
+  9. (6곳) 공소취소 발 빼는 與…“국민적 공감대 덜 얻는 법안 처리 불가” - 서울경제
+  10. (6곳) 여야, 비쟁점법안 40여건 처리키로…與"이진숙 제명결의안 상정" - 연합뉴스
+1단계 완료: 사건 그룹 182개 확보
+=== [01] 처리 시작 (25곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1362자 → 정리 후 1298자
+[01] 2단계 완료: [v.daum.net] '국회 봉쇄' 김현태 前 707단장 징역 12년…"용납 불가한 범행" - v.daum.net, 본문 1298자, 주소: https://v.daum.net/v/PMAvatnQtG
+[01] 3단계: Gemini 요약 중...
+Gemini API 요청 실패: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+[01] 실패(3단계 요약): 요약 결과를 받지 못했습니다.
+=== [01] 건너뜀 ===
+=== [01] 처리 시작 (13곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1493자 → 정리 후 1493자
+[01] 2단계 완료: [코리아플러스] 오세현 아산시장, 이재명 대통령 만나 “기초정부에 과감한 권한이양” 건의 - 코리아플러스, 본문 1493자, 주소: https://www.kplus.kr/news/articleView.html?idxno=584495
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 10개월을 3개월로 줄였다, 오세현 아산시장 기초정부 권한 이양 건의
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이재명
+'이재명' 위키백과 인포박스 사진 해상도: 731x975 (사진 영역 확대 배율 1.48배)
+다운로드 완료: assets/people/이재명/infobox.png (라이선스: CC BY-SA 4.0)
+배경 사진 조달 성공(위키백과 인포박스): assets/people/이재명/infobox.png
+[01] 4단계 완료: assets/people/이재명/infobox.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 662자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-28/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (12곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1443자 → 정리 후 1443자
+[02] 2단계 완료: [경향신문] ‘이진숙 제명 촉구 결의안’ 국회 본회의 통과…5·18 왜곡 국회의원 직무정지법 추진 - 경향신문, 본문 1443자, 주소: https://www.khan.co.kr/article/202608261722001
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 헌정사상 처음, 5·18 왜곡 논란 이진숙 의원 제명 촉구 결의안 국회 본회의 통과
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Lee Jin-sook.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Lee Jin-sook's portrait (2025.07).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/90/Lee_Jin-sook%27s_portrait_%282025.07%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2026년 5월 10일 이진숙 대구 달성군 국회의원 후보 선거사무소 개소식.webm' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fe/2026%EB%85%84_5%EC%9B%94_10%EC%9D%BC_%EC%9D%B4%EC%A7%84%EC%88%99_%EB%8C%80%EA%B5%AC_%EB%8B%AC%EC%84%B1%EA%B5%B0_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%ED%9B%84%EB%B3%B4_%EC%84%A0%EA%B1%B0%EC%82%AC%EB%AC%B4%EC%86%8C_%EA%B0%9C%EC%86%8C%EC%8B%9D.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나1 방송통신위원회 위원장(이진숙) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2024%ED%97%8C%EB%82%981+%EB%B0%A9%EC%86%A1%ED%86%B5%EC%8B%A0%EC%9C%84%EC%9B%90%ED%9A%8C+%EC%9C%84%EC%9B%90%EC%9E%A5%28%EC%9D%B4%EC%A7%84%EC%88%99%29+%ED%83%84%ED%95%B5.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'이진숙' 후보 4개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone', 'gavel']
+'Yeouido national assembly building' Pexels 사진 해상도: 6720x4480 (사진 영역 확대 배율 0.17배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28709869.png (촬영자: 정규송 Nui MALAMA)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28709869.png
+[02] 4단계 완료: tmp/pexels/pexels_28709869.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 734자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-28/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+전체 파이프라인 종료: 2/3건 성공
+실행 종료: 2026-08-28 07:52:34 (소요 시간: 0:01:21.750211)
+============================================================
+
