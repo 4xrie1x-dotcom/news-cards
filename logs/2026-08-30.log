@@ -1,0 +1,117 @@
+
+============================================================
+실행 시작: 2026-08-30 02:01:13
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 3, '지역 홍보': 5, '사진/멀티미디어': 0}
+사건 그룹 217개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (26곳 [갈등 신호]) 정기국회 앞두고 전열 정비한 여야…“대도약 골든타임”·“정부 실정 파헤칠 것” - KBS 뉴스
+  2. (10곳 [갈등 신호]) 여야, 오늘부터 1박2일 워크숍·연찬회···박근혜, 국힘 연찬회 참석 예정 - 경향신문
+  3. (8곳 [갈등 신호]) 제주 달려간 여야...한목소리 질타 속 해법 제각각 - YTN
+  4. (14곳) ‘국회 침투’ 김현태 전 707단장 징역 12년…“국헌문란 목적” - v.daum.net
+  5. (9곳) 세종 집무실 관련 이규연 홍보소통수석 브리핑 - 대한민국 정책브리핑
+  6. (8곳) 여야, 비쟁점법안 40여건 처리키로…與"이진숙 제명결의안 상정" - 연합뉴스
+  7. (8곳) 中, ‘민간기술 전시동원 강화’ 국방동원법 대폭 손질… 대만, 드론에 ‘6년간 10조원 투입’ 법안 통과 - 세계일보
+  8. (8곳) 이주희 의원, 모든 국민 미디어교육 권리 보장 법안 발의 - 지디넷코리아
+  9. (8곳) 국회, 오후 본회의 개최…쟁점 법안 막판 조율 주목 - 연합뉴스TV
+  10. (7곳) ‘5·18 폄훼 논란’ 이진숙 제명 촉구 결의안 국회 본회의 통과 - JTBC
+1단계 완료: 사건 그룹 217개 확보
+=== [01] 처리 시작 (26곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 2295자 → 정리 후 2130자
+[01] 2단계 완료: [KBS 뉴스] 정기국회 앞두고 전열 정비한 여야…“대도약 골든타임”·“정부 실정 파헤칠 것” - KBS 뉴스, 본문 2130자, 주소: https://news.kbs.co.kr/news/view.do?ncd=8649075
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 나흘 앞으로 다가온 100일간의 정기국회, 여야 전략은?
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 교섭단체
+'교섭단체' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/0/02/%D0%A4%D1%80%D0%B0%D0%BA%D1%86%D0%B8%D1%8F_%D0%95%D0%A0_%D0%92_%D0%97%D0%B0%D0%BB%D0%B5_%D0%9F%D0%BB%D0%B5%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D1%85_%D0%97%D0%B0%D1%81%D0%B5%D0%B4%D0%B0%D0%BD%D0%B8%D0%B9_%D0%93%D0%94.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '교섭단체' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:국회회의록 4대 35회 13차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b9/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_4%EB%8C%80_35%ED%9A%8C_13%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206205 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b5/2206205_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 3대 22회 79차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/72/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_3%EB%8C%80_22%ED%9A%8C_79%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 16대 246회 2차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/f1/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_16%EB%8C%80_246%ED%9A%8C_2%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 418회 17차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/e0/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_17%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'교섭단체' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '교섭단체' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 3840x2560 (사진 영역 확대 배율 0.29배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_38043604.png (촬영자: Rüveyda Akkaya)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_38043604.png
+[01] 4단계 완료: tmp/pexels/pexels_38043604.png
+[01] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 5장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 477자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-08-30/01에 카드 5장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (10곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 587자 → 정리 후 587자
+[02] 2단계 완료: [경향신문] 여야, 오늘부터 1박2일 워크숍·연찬회···박근혜, 국힘 연찬회 참석 예정 - 경향신문, 본문 587자, 주소: https://www.khan.co.kr/article/202608270723001
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 1박 2일 워크숍 돌입, 박근혜 전 대통령 국민의힘 연찬회 참석
+[02] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 2428x3643 (사진 영역 확대 배율 0.44배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_38043598.png (촬영자: Rüveyda Akkaya)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_38043598.png
+[02] 4단계 완료: tmp/pexels/pexels_38043598.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 618자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-08-30/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (8곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 2507자 → 정리 후 1321자
+[03] 2단계 완료: [YTN] 제주 달려간 여야...한목소리 질타 속 해법 제각각 - YTN, 본문 1321자, 주소: https://www.ytn.co.kr/_ln/0101_202608290115308929
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 실종 104일 만의 발인, 여야가 제주로 달려간 이유는
+[03] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 4496x3000 (사진 영역 확대 배율 0.25배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_15239931.png (촬영자: 성두 홍)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_15239931.png
+[03] 4단계 완료: tmp/pexels/pexels_15239931.png
+[03] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 5장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 438자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-08-30/03에 카드 5장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-08-30 02:01:38 (소요 시간: 0:00:25.008601)
+============================================================
+
