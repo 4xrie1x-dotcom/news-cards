@@ -1,0 +1,123 @@
+
+============================================================
+실행 시작: 2026-09-01 04:25:52
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 11, '지역 홍보': 4, '사진/멀티미디어': 0}
+사건 그룹 231개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (23곳 [갈등 신호]) 9월 정기국회…개각·예산 등 여야 격돌 - 신아일보
+  2. (12곳 [갈등 신호]) 정치권 개각 후폭풍...'조희대 불출석' 여야 공방 - YTN
+  3. (10곳 [갈등 신호]) "진보 연대 강화" vs "민심 역주행"…극명하게 갈린 여야[노컷브이] - 노컷뉴스
+  4. (11곳) 국회 "이진숙 '5·18 폄훼 토론회' 방지 위해 국회도서관 사용 규정 강화" - MBC 뉴스
+  5. (11곳) 李대통령 "임기 내 세종 집무실…마지막 국무회의도 세종에서" - 연합뉴스
+  6. (8곳) 조희대 대법원장 부친상…국회 ‘서면 제청’ 질의 못 간다 [지금뉴스] - KBS 뉴스
+  7. (8곳) 정기국회 ‘100일 대장정’ 돌입…‘국가책임농정’ 구현 점검 - 농민신문
+  8. (7곳) 6개 부처 개각에 정기국회 '청문회 정국'⋯여야 격돌 예고 - 아이뉴스24
+  9. (7곳) ’성평등위 법안 발의 없다’ 지적에…용혜인 “실질 법안 다수 발의“ - 연합뉴스TV
+  10. (6곳) 보건복지부, 건전한 약국 판매 환경 조성 위한 약사법 개정안 국회 본회의 통과 - 대한민국교육신문
+1단계 완료: 사건 그룹 231개 확보
+=== [01] 처리 시작 (23곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1459자 → 정리 후 1459자
+[01] 2단계 완료: [신아일보] 9월 정기국회…개각·예산 등 여야 격돌 - 신아일보, 본문 1459자, 주소: https://www.shinailbo.co.kr/news/articleView.html?idxno=5056826
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 100일간의 9월 정기국회, 여야 예산·개각 격돌
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 일부
+'일부' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '일부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:신동욱 국민의힘 국회의원.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/6/6c/%EC%8B%A0%EB%8F%99%EC%9A%B1_%EA%B5%AD%EB%AF%BC%EC%9D%98%ED%9E%98_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:김장겸 국민의힘 국회의원.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/4/46/%EA%B9%80%EC%9E%A5%EA%B2%B8_%EA%B5%AD%EB%AF%BC%EC%9D%98%ED%9E%98_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:CNTS-00115233527 自由新聞 1952-02-23.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a0/CNTS-00115233527_%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E_1952-02-23.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:CNTS-00115239803 自由新聞 1950-03-17.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/82/CNTS-00115239803_%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E_1950-03-17.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:CNTS-00115209877 自由新聞 1949-09-10.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/70/CNTS-00115209877_%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E_1949-09-10.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'일부' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '일부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone', 'gavel']
+'Yeouido national assembly building' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_2977464.png (촬영자: Hugo Heimendinger)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_2977464.png
+[01] 4단계 완료: tmp/pexels/pexels_2977464.png
+[01] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 1단계: 76px → 68px (4줄)
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 690자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-01/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (12곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 3637자 → 정리 후 1865자
+건너뜀: [YTN] 다중 소재 방송 리포트로 판단 - 정치권 개각 후폭풍...'조희대 불출석' 여야 공방 - YTN
+정리 전 1580자 → 정리 후 1552자
+[02] 2단계 완료: [v.daum.net] 여야, 이재명 정부 6개 부처 개각 놓고 정면충돌 - v.daum.net, 본문 1552자, 주소: https://v.daum.net/v/20260901003433909
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 6개 부처 개각 단행, 여야 사법 방탄용 인사 공방
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 부처
+'부처' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Dharma_Wheel_%282%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '부처' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:국회회의록 3대 19회 90차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D+3%EB%8C%80+19%ED%9A%8C+90%EC%B0%A8+%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98+%28%ED%95%9C%EA%B8%80+%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'부처' 후보 1개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '부처' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 4032x2268 (사진 영역 확대 배율 0.33배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_1764956.png (촬영자: Sam J)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_1764956.png
+[02] 4단계 완료: tmp/pexels/pexels_1764956.png
+[02] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 5장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 473자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-01/02에 카드 5장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 274자 → 정리 후 274자
+[03] 2단계 완료: [노컷뉴스] "진보 연대 강화" vs "민심 역주행"…극명하게 갈린 여야[노컷브이] - 노컷뉴스, 본문 274자, 주소: https://www.nocutnews.co.kr/news/6570951
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 이재명 정부 2기 개각, 민심 역주행인가 진보 연대 강화인가
+[03] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28181117.png (촬영자: Andy Lee)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28181117.png
+[03] 4단계 완료: tmp/pexels/pexels_28181117.png
+[03] 5단계: 카드 생성 중...
+what 2장, why 1장 사용 (본문 합계 3장)
+본문 3장, 전체 4장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 4장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 439자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-01/03에 카드 4장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-01 04:26:32 (소요 시간: 0:00:39.972289)
+============================================================
+
