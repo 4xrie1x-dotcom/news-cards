@@ -1,0 +1,125 @@
+
+============================================================
+실행 시작: 2026-09-02 02:12:18
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 3, '지역 홍보': 3, '사진/멀티미디어': 0}
+사건 그룹 194개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (26곳 [갈등 신호]) 막오른 정기국회…여야 곳곳서 격돌 - 국제신문
+  2. (15곳 [갈등 신호]) 정기국회 개막…7~8일 대표연설·9일부터 대정부질문 - v.daum.net
+  3. (10곳 [갈등 신호]) [브리핑ON] 대한민국 민생 국정 도약, 정기국회 협치·추석물가안정 - electimes.com
+  4. (24곳) 여야 정책위 첫 회동…지선 공통공약부터 입법 '맞손' - 전자신문
+  5. (9곳 [갈등 신호]) 野 “김승원, 지명철회”… 정기국회 ‘100일 전쟁’ 포문 - 문화일보
+  6. (8곳 [갈등 신호]) 100일간 정기국회 대장정…개각 인선 공방 계속 - yonhapnewstv.co.kr
+  7. (10곳) 김성수 대법관 후보자 임명동의안 국회 제출…재산 5억여원 신고(종합) - yna.co.kr
+  8. (10곳) 이재명 대통령 "내년 예산, 초격차 선도국가 도약 디딤돌…국민 삶 변화 마중물" - 매일타임즈
+  9. (10곳) 서천호 의원, 농어업 세제 혜택 5년 연장 법안 발의 - 농민신문
+  10. (8곳) 막 오른 정기국회…조정식 “AI·반도체 입법, 국회가 견인차 돼야” - 전자신문
+1단계 완료: 사건 그룹 194개 확보
+=== [01] 처리 시작 (26곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1089자 → 정리 후 1089자
+[01] 2단계 완료: [국제신문] 막오른 정기국회…여야 곳곳서 격돌 - 국제신문, 본문 1089자, 주소: https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=00&key=20260902.22005000289
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 100일간의 정기국회 개막, 821조 원 예산안 심사 돌입
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 따른
+'면적순 나라 목록' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '따른' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Defense Counterintelligence Command Martial law plan document.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Defense_Counterintelligence_Command_Martial_law_plan_document.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:20240410 총선 민주당 공약.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a4/20240410_%EC%B4%9D%EC%84%A0_%EB%AF%BC%EC%A3%BC%EB%8B%B9_%EA%B3%B5%EC%95%BD.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 제헌 1회 폐회식 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/73/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_%EC%A0%9C%ED%97%8C_1%ED%9A%8C_%ED%8F%90%ED%9A%8C%EC%8B%9D_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'따른' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '따른' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 5464x3070 (사진 영역 확대 배율 0.24배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_8573207.png (촬영자: Анна Шаталова)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8573207.png
+[01] 4단계 완료: tmp/pexels/pexels_8573207.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 585자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-02/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (15곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1326자 → 정리 후 1282자
+[02] 2단계 완료: [v.daum.net] 정기국회 개막…7~8일 대표연설·9일부터 대정부질문 - v.daum.net, 본문 1282자, 주소: https://v.daum.net/v/20260901152950188
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 100일간의 정기국회 개막, 여야 대치 예고
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 교섭단체
+'교섭단체' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%D0%A4%D1%80%D0%B0%D0%BA%D1%86%D0%B8%D1%8F_%D0%95%D0%A0_%D0%92_%D0%97%D0%B0%D0%BB%D0%B5_%D0%9F%D0%BB%D0%B5%D0%BD%D0%B0%D1%80%D0%BD%D1%8B%D1%85_%D0%97%D0%B0%D1%81%D0%B5%D0%B4%D0%B0%D0%BD%D0%B8%D0%B9_%D0%93%D0%94.JPG&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+위키백과 인포박스에서 '교섭단체' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'교섭단체' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EA%B5%90%EC%84%AD%EB%8B%A8%EC%B2%B4+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '교섭단체' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 3840x2560 (사진 영역 확대 배율 0.29배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_38043604.png (촬영자: Rüveyda Akkaya)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_38043604.png
+[02] 4단계 완료: tmp/pexels/pexels_38043604.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 480px / 사진 영역 870px (제목 2줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 577자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-02/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 334자 → 정리 후 272자
+[03] 2단계 완료: [electimes.com] [브리핑ON] 대한민국 민생 국정 도약, 정기국회 협치·추석물가안정 - electimes.com, 본문 272자, 주소: https://www.electimes.com/news/articleView.html?idxno=371954
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 추석 물가 안정과 3대 메가프로젝트, 국무회의가 정기국회 과제를 밝혔다
+[03] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 5464x3070 (사진 영역 확대 배율 0.24배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_8573207.png (촬영자: Анна Шаталова)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8573207.png
+[03] 4단계 완료: tmp/pexels/pexels_8573207.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 7장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 611자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-02/03에 카드 7장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-02 02:12:56 (소요 시간: 0:00:37.756098)
+============================================================
+
