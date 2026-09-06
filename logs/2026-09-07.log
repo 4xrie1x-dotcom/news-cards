@@ -1,0 +1,129 @@
+
+============================================================
+실행 시작: 2026-09-07 01:00:55
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 1, '지역 홍보': 2, '사진/멀티미디어': 0}
+사건 그룹 223개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (19곳 [갈등 신호]) 대정부질문에 인사청문회까지…정기국회 초반 여야 '강대강' - 더팩트
+  2. (12곳 [갈등 신호]) 확산하는 '김승원·용혜인 논란'에 여야 연일 격돌 - YTN
+  3. (10곳 [갈등 신호]) 인사청문 소용돌이 속 금주 대정부질문…달아오르는 정기국회 - 연합뉴스
+  4. (12곳) 여야, "협치" 외치며 기념사진...'이태원참사특별법' 등 17건 법률안 처리 - 조세일보
+  5. (11곳) ‘대통령실 관저 의혹’ 공사비 부족하자…“까라면 까지 무슨 말이 많냐” - KBS 뉴스
+  6. (10곳) 기념촬영 기다리는 여야 대표 - 연합뉴스
+  7. (8곳) 호르무즈 파병 이뤄질까…국회 동의 등 거쳐야 할 절차는? - BBC
+  8. (8곳) 이재명 대통령, ‘민생·안전·공정 개혁 박차’ - 중부매일
+  9. (7곳) 李대통령 "임기 내 세종 집무실…마지막 국무회의도 세종에서" - 연합뉴스
+  10. (7곳) "美 '클래리티 법안' 마침내 상원 통과 60표 확보 임박" - 글로벌이코노믹
+1단계 완료: 사건 그룹 223개 확보
+=== [01] 처리 시작 (19곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1433자 → 정리 후 1433자
+[01] 2단계 완료: [더팩트] 대정부질문에 인사청문회까지…정기국회 초반 여야 '강대강' - 더팩트, 본문 1433자, 주소: https://news.tf.co.kr/read/ptoday/2362463.htm
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 8·30 개각과 대정부질문, 정기국회 초반 여야 공방
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 일부터는
+'일부터는' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/e/ee/Flag_of_the_Provisional_People%27s_Committee_for_North_Korea.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '일부터는' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:국회회의록 3대 25회 10차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dc/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_3%EB%8C%80_25%ED%9A%8C_10%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'일부터는' 후보 1개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '일부터는' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28181117.png (촬영자: Andy Lee)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28181117.png
+[01] 4단계 완료: tmp/pexels/pexels_28181117.png
+[01] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 576자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-07/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (12곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 23196자 → 정리 후 11552자
+건너뜀: [YTN] 다중 소재 방송 리포트로 판단 - 확산하는 '김승원·용혜인 논란'에 여야 연일 격돌 - YTN
+정리 전 1240자 → 정리 후 1240자
+[02] 2단계 완료: [경상일보] 여야, 김승원·용혜인 후보자 두고 전면전 - 경상일보, 본문 1240자, 주소: https://www.ksilbo.co.kr/news/articleView.html?idxno=1066483
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 김승원 후보자 신약 청탁 의혹, 여야 전면전
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 법무부
+'법무부' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/3/36/Government_Complex_Gwacheon_5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '법무부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:이양호(李暘浩).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/f7/%EC%9D%B4%EC%96%91%ED%98%B8%28%E6%9D%8E%E6%9A%98%E6%B5%A9%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:CNTS-00115196844 自由新聞 1948-11-26.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3ACNTS-00115196844+%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E+1948-11-26.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2024%ED%97%8C%EB%82%988+%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29+%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90+%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'File:2024헌나6 법무부장관(박성재) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2024%ED%97%8C%EB%82%986+%EB%B2%95%EB%AC%B4%EB%B6%80%EC%9E%A5%EA%B4%80%28%EB%B0%95%EC%84%B1%EC%9E%AC%29+%ED%83%84%ED%95%B5.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'File:2023헌나3.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2023%ED%97%8C%EB%82%983.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'법무부' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '법무부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_6326287.png (촬영자: Vanessa Garcia)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_6326287.png
+[02] 4단계 완료: tmp/pexels/pexels_6326287.png
+[02] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 5장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 417자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-07/02에 카드 5장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 3007자 → 정리 후 2946자
+[03] 2단계 완료: [연합뉴스] 인사청문 소용돌이 속 금주 대정부질문…달아오르는 정기국회 - 연합뉴스, 본문 2946자, 주소: https://www.yna.co.kr/view/AKR20260905039100001
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 9일부터 대정부질문, 14일부터 청문회 슈퍼위크…여야 격돌
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 일부터는
+'일부터는' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%BC%EB%B6%80%ED%84%B0%EB%8A%94&srlimit=1&format=json
+위키백과 인포박스에서 '일부터는' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'일부터는' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%BC%EB%B6%80%ED%84%B0%EB%8A%94+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '일부터는' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone']
+'microphone' Pexels 사진 해상도: 5631x3746 (사진 영역 확대 배율 0.20배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_12561477.png (촬영자: César Guillotel)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_12561477.png
+[03] 4단계 완료: tmp/pexels/pexels_12561477.png
+[03] 5단계: 카드 생성 중...
+what 4장, why 1장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 6장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 526자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-07/03에 카드 6장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-07 01:01:30 (소요 시간: 0:00:35.627474)
+============================================================
+
