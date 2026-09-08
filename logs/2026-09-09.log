@@ -1,0 +1,122 @@
+
+============================================================
+실행 시작: 2026-09-09 02:06:17
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 9, '사진/멀티미디어': 0}
+사건 그룹 235개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (14곳 [갈등 신호]) 경찰 개혁 전담기구 출범 앞두고 여야 ‘셀프개혁’ 공방 - 일간투데이
+  2. (11곳 [갈등 신호]) 과방위 파행 20일 만에 재개…여야, 정기국회 진행 박차 - 아주경제
+  3. (8곳 [갈등 신호]) 국회 과방위, 이진숙 표결 회피 결의안 민주 단독 통과 - 진일보
+  4. (14곳) 국무회의 참석하는 권오을 장관 - 뉴시스
+  5. (9곳) 대통령실, ‘국가 녹색 실험실’ 플랫폼 참여자들에게 감사 표해 : 한인동포신문(몽골) - newsk.net
+  6. (9곳) 한성숙 "행정·공공기관 지방이전, 반드시 해야 할 시대적 과제" - v.daum.net
+  7. (8곳) 한복 입은 베트남 국회의장 부인...서울서 한·베 ‘문화외교’ - dongponews.net
+  8. (8곳) ‘대통령실 관저 의혹’ 공사비 부족하자…“까라면 까지 무슨 말이 많냐” - KBS 뉴스
+  9. (7곳) 이시바 시게루 전 일본총리 접견하는 조정식 국회의장 - 뉴시스
+  10. (7곳) 여야, 형소법 개정 후속입법 처리 방식 합의…법사소위 14일로 연기 - v.daum.net
+1단계 완료: 사건 그룹 235개 확보
+=== [01] 처리 시작 (14곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1516자 → 정리 후 1516자
+[01] 2단계 완료: [일간투데이] 경찰 개혁 전담기구 출범 앞두고 여야 ‘셀프개혁’ 공방 - 일간투데이, 본문 1516자, 주소: https://www.dtoday.co.kr/news/articleView.html?idxno=790278
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 경찰 개혁 전담기구 출범, 여야 '셀프 개혁' 공방
+[01] 4단계: hook 배경 사진 조달 중...
+본문에서 직함이 붙은 인물명을 찾지 못해 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_6326287.png (촬영자: Vanessa Garcia)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_6326287.png
+[01] 4단계 완료: tmp/pexels/pexels_6326287.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 6장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 490자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-09/01에 카드 6장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (11곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1937자 → 정리 후 1925자
+[02] 2단계 완료: [아주경제] 과방위 파행 20일 만에 재개…여야, 정기국회 진행 박차 - 아주경제, 본문 1925자, 주소: https://www.ajunews.com/view/20260908171552428
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 파행 20일 만에 열린 과방위, 86개 법안 두고 여야 충돌
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Lee Jin-sook.jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Lee_Jin-sook.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:Lee Jin-sook's portrait (2025.07).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/90/Lee_Jin-sook%27s_portrait_%282025.07%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2026년 5월 10일 이진숙 대구 달성군 국회의원 후보 선거사무소 개소식.webm' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fe/2026%EB%85%84_5%EC%9B%94_10%EC%9D%BC_%EC%9D%B4%EC%A7%84%EC%88%99_%EB%8C%80%EA%B5%AC_%EB%8B%AC%EC%84%B1%EA%B5%B0_%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90_%ED%9B%84%EB%B3%B4_%EC%84%A0%EA%B1%B0%EC%82%AC%EB%AC%B4%EC%86%8C_%EA%B0%9C%EC%86%8C%EC%8B%9D.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나1 방송통신위원회 위원장(이진숙) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/94/2024%ED%97%8C%EB%82%981_%EB%B0%A9%EC%86%A1%ED%86%B5%EC%8B%A0%EC%9C%84%EC%9B%90%ED%9A%8C_%EC%9C%84%EC%9B%90%EC%9E%A5%28%EC%9D%B4%EC%A7%84%EC%88%99%29_%ED%83%84%ED%95%B5.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'이진숙' 후보 4개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 6720x4480 (사진 영역 확대 배율 0.17배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28709869.png (촬영자: 정규송 Nui MALAMA)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28709869.png
+[02] 4단계 완료: tmp/pexels/pexels_28709869.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 6장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 447자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-09/02에 카드 6장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (8곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 734자 → 정리 후 734자
+[03] 2단계 완료: [진일보] 국회 과방위, 이진숙 표결 회피 결의안 민주 단독 통과 - 진일보, 본문 734자, 주소: https://www.jnilbo.com/news/articleView.html?idxno=90000063655
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 이진숙 표결 회피 결의안, 과방위 단독 통과
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3ALee_Jin-sook.jpg&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이진숙' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%A7%84%EC%88%99+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'gavel']
+'Yeouido national assembly building' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_2977464.png (촬영자: Hugo Heimendinger)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_2977464.png
+[03] 4단계 완료: tmp/pexels/pexels_2977464.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 7장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 507자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-09/03에 카드 7장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-09 02:07:04 (소요 시간: 0:00:46.292422)
+============================================================
+
