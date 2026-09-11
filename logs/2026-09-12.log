@@ -1,0 +1,125 @@
+
+============================================================
+실행 시작: 2026-09-12 01:56:23
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 1, '사진/멀티미디어': 1}
+사건 그룹 235개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (10곳 [갈등 신호]) 국회 복지위, 김승원 의혹 공방‥與 "오늘은 법안만" vs 野 "식약처 현안질의" - MBC 뉴스
+  2. (10곳 [갈등 신호]) 여야 대정부질문 이틀째 격돌…"파병 신중"·"골다공증 군대" - yna.co.kr
+  3. (9곳 [갈등 신호]) 국회사무처 “이진숙 주최 행사, 5·18 왜곡 유감” - v.daum.net
+  4. (9곳 [갈등 신호]) 대통령실 전화 개입 밝힌 ‘관저 이전’ 감사…김건희만 남았다 - KBS 뉴스
+  5. (7곳 [갈등 신호]) 이진숙 국회 집회 뜬 ‘李 영정사진’…與 “후안무치, 이대로 안둘 것” - 중앙일보
+  6. (7곳 [갈등 신호]) [LIVE] 국회, 오늘 경제 분야 대정부질문…부동산·확장재정 등 격돌 예고 - v.daum.net
+  7. (13곳) 안민석, 여야 대표 만나 "교육재정 축소 막아달라" - 한국경제
+  8. (9곳) [영상] 예측시장이 클래리티 법안 통과 가능성을 낮게 보는 이유 - 디지털애셋
+  9. (7곳) 안민석 교육감, 여야 대표 만나 경기교육 현안 국회 협조 요청 - 인천일보
+  10. (7곳) 오세훈, 국무회의 참석해 "용산공원 아파트 반대"…부동산 정책 재검토 요청 - yonhapnewstv.co.kr
+1단계 완료: 사건 그룹 235개 확보
+=== [01] 처리 시작 (10곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1812자 → 정리 후 1812자
+[01] 2단계 완료: [MBC 뉴스] 국회 복지위, 김승원 의혹 공방‥與 "오늘은 법안만" vs 野 "식약처 현안질의" - MBC 뉴스, 본문 1812자, 주소: https://imnews.imbc.com/news/2026/politics/article/6851187_36911.html
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 법안 심사 첫날부터 폭발, 김승원 의혹 식약처 공방
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 법무부
+'법무부' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/9/92/Ministry_of_Justice_of_the_Republic_of_Korea_Logo_%28vertical%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+위키백과 인포박스에서 '법무부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:이양호(李暘浩).jpg' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/f7/%EC%9D%B4%EC%96%91%ED%98%B8%28%E6%9D%8E%E6%9A%98%E6%B5%A9%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:CNTS-00115196844 自由新聞 1948-11-26.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/75/CNTS-00115196844_%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E_1948-11-26.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나6 법무부장관(박성재) 탄핵.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/8/8d/2024%ED%97%8C%EB%82%986_%EB%B2%95%EB%AC%B4%EB%B6%80%EC%9E%A5%EA%B4%80%28%EB%B0%95%EC%84%B1%EC%9E%AC%29_%ED%83%84%ED%95%B5.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2023헌나3.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/7b/2023%ED%97%8C%EB%82%983.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'법무부' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '법무부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_28181117.png (촬영자: Andy Lee)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_28181117.png
+[01] 4단계 완료: tmp/pexels/pexels_28181117.png
+[01] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 5장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 510자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-12/01에 카드 5장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (10곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 2987자 → 정리 후 2926자
+[02] 2단계 완료: [yna.co.kr] 여야 대정부질문 이틀째 격돌…"파병 신중"·"골다공증 군대" - yna.co.kr, 본문 2926자, 주소: https://www.yna.co.kr/view/AKR20260910155500001
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 호르무즈 파병과 사관학교 통합, 여야 외교·안보 대정부질문 격돌
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이재명
+'이재명' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&titles=%EC%9D%B4%EC%9E%AC%EB%AA%85&prop=pageimages&piprop=name&format=json
+위키백과 인포박스에서 '이재명' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이재명' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%9E%AC%EB%AA%85+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이재명' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 4284x5712 (사진 영역 확대 배율 0.25배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_37442715.png (촬영자: Emın Alper)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_37442715.png
+[02] 4단계 완료: tmp/pexels/pexels_37442715.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 2단계: 108px → 84px (3줄)
+검정 영역 522px / 사진 영역 828px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 6장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 504자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-12/02에 카드 6장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (9곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1201자 → 정리 후 1170자
+[03] 2단계 완료: [v.daum.net] 국회사무처 “이진숙 주최 행사, 5·18 왜곡 유감” - v.daum.net, 본문 1170자, 주소: https://v.daum.net/v/20260911133446419
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 국회서 5·18 왜곡 주장 나와, 국회사무처 깊은 유감 표명
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이진숙
+'이진숙' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%A7%84%EC%88%99&srlimit=1&format=json
+위키백과 인포박스에서 '이진숙' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이진숙' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%A7%84%EC%88%99+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이진숙' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 3992x5999 (사진 영역 확대 배율 0.27배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_20110145.png (촬영자: Junsu Park)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_20110145.png
+[03] 4단계 완료: tmp/pexels/pexels_20110145.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 6장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 520자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-12/03에 카드 6장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-12 01:57:00 (소요 시간: 0:00:36.948295)
+============================================================
+
