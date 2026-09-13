@@ -1,0 +1,126 @@
+
+============================================================
+실행 시작: 2026-09-14 01:52:05
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 4, '사진/멀티미디어': 1}
+사건 그룹 219개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (14곳 [갈등 신호]) 용혜인 자진사퇴…김승원 생환여부 주목 - 경상일보
+  2. (10곳 [갈등 신호]) 대통령실 전화 개입 밝힌 ‘관저 이전’ 감사…김건희만 남았다 - KBS 뉴스
+  3. (20곳) 용혜인 후보자, 오늘 국회서 기자회견…'거취 표명' 여부 주목 - 연합뉴스
+  4. (8곳 [갈등 신호]) 여야, 김민석 수첩 공방‥"사법부 겁박" "억지 호들갑" - imnews.imbc.com
+  5. (7곳 [갈등 신호]) 대통령 지지율 또 최저치...여야, 인사 청문 공방 - YTN
+  6. (15곳) 조정식 국회의장 취임 100일…민생·개혁법안 177건 처리 - v.daum.net
+  7. (13곳) 국회 대정부질문 사흘째…여야, '부동산·세제 개편' 격돌 전망 - 연합뉴스
+  8. (7곳) [포토] ‘국회 경제대도약위원회 출범’ 참석한 최태원 - 알티케이뉴스
+  9. (7곳) 안민석 경기교육감, 여야 대표 만나 경기교육 현안 국회 협조 요청 - 산경일보
+  10. (7곳) 강원 여야 ‘인사청문 슈퍼위크’ 추석 민심 선점전 - 강원도민일보
+1단계 완료: 사건 그룹 219개 확보
+=== [01] 처리 시작 (14곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1392자 → 정리 후 1392자
+건너뜀: [경상일보] 다중 소재 방송 리포트로 판단 - 용혜인 자진사퇴…김승원 생환여부 주목 - 경상일보
+정리 전 1722자 → 정리 후 1722자
+건너뜀: [강원도민일보] 다중 소재 방송 리포트로 판단 - 용혜인 사퇴 청문정국 요동…여야, 김승원 놓고 격돌 예고 - 강원도민일보
+정리 전 1423자 → 정리 후 1423자
+[01] 2단계 완료: [일간투데이] 민주당, 용혜인 사퇴 권유 확인…김승원 후보자 방어 총력 - 일간투데이, 본문 1423자, 주소: https://www.dtoday.co.kr/news/articleView.html?idxno=791545
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 부적합 43% 여론에 자진사퇴, 민주당은 김승원 방어 총력
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 김민석
+'김민석' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '김민석' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'김민석' 후보 1 해상도: 723x800 (사진 영역 확대 배율 1.49배)
+다운로드 완료: assets/people/김민석/01.png (라이선스: CC BY 3.0)
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: cannot identify image file <_io.BytesIO object at 0x7f196b5ee930>
+'File:국회회의록 22대 418회 17차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too many requests (f061ab2) for url: https://upload.wikimedia.org/wikipedia/commons/e/e0/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_17%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 418회 16차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too many requests (f061ab2) for url: https://upload.wikimedia.org/wikipedia/commons/8/85/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_418%ED%9A%8C_16%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 22대 419회 4차 국회본회의.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too many requests (f061ab2) for url: https://upload.wikimedia.org/wikipedia/commons/c/c9/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_22%EB%8C%80_419%ED%9A%8C_4%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+배경 사진 조달 성공(위키미디어 커먼즈, 1장 중 무작위 선택): assets/people/김민석/01.png
+[01] 4단계 완료: assets/people/김민석/01.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 7장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 524자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-14/01에 카드 7장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (10곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 2285자 → 정리 후 2130자
+[02] 2단계 완료: [KBS 뉴스] 대통령실 전화 개입 밝힌 ‘관저 이전’ 감사…김건희만 남았다 - KBS 뉴스, 본문 2130자, 주소: https://news.kbs.co.kr/news/view.do?ncd=8616277
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 현직 감사위원 최초 구속, 관저 이전 감사 무마 의혹
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 위원이
+'위원이' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3APresidents_of_the_Republic_Of_Korea_%284261836786%29_Choi.jpg&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+위키백과 인포박스에서 '위원이' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'위원이' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9C%84%EC%9B%90%EC%9D%B4+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '위원이' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6000x4000 (사진 영역 확대 배율 0.19배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_6326287.png (촬영자: Vanessa Garcia)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_6326287.png
+[02] 4단계 완료: tmp/pexels/pexels_6326287.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 6장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 527자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-14/02에 카드 6장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (20곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 661자 → 정리 후 600자
+[03] 2단계 완료: [연합뉴스] 용혜인 후보자, 오늘 국회서 기자회견…'거취 표명' 여부 주목 - 연합뉴스, 본문 600자, 주소: https://www.yna.co.kr/view/AKR20260913022100001
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 11시 30분 기자회견, 용혜인 후보자 거취 표명 주목
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 등가족부
+'등가족부' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EB%93%B1%EA%B0%80%EC%A1%B1%EB%B6%80&srlimit=1&format=json
+위키백과 인포박스에서 '등가족부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'등가족부' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EB%93%B1%EA%B0%80%EC%A1%B1%EB%B6%80+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '등가족부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building']
+'Yeouido national assembly building' Pexels 사진 해상도: 2428x3643 (사진 영역 확대 배율 0.44배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_38043598.png (촬영자: Rüveyda Akkaya)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_38043598.png
+[03] 4단계 완료: tmp/pexels/pexels_38043598.png
+[03] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 5장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 465자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-14/03에 카드 5장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-14 01:52:38 (소요 시간: 0:00:32.617703)
+============================================================
+
