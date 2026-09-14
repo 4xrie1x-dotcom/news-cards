@@ -1,0 +1,127 @@
+
+============================================================
+실행 시작: 2026-09-15 03:23:50
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 4, '지역 홍보': 2, '사진/멀티미디어': 1}
+사건 그룹 225개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (16곳 [갈등 신호]) 한동훈 독주에 여야 모두 불편…연일 김승원 저격하며 존재감 - 국제신문
+  2. (11곳 [갈등 신호]) 여야, 김성수 청문회서 제청권·대통령 재판 공방 - YTN
+  3. (10곳 [갈등 신호]) [국회 현장] 김성수 대법관 후보 청문회… 與野, ‘처남 찬스’ 탈세 사과 속 사법 현안 정면충돌 - 한양경제
+  4. (10곳 [갈등 신호]) 대통령실 전화 개입 밝힌 ‘관저 이전’ 감사…김건희만 남았다 - KBS 뉴스
+  5. (8곳 [갈등 신호]) 국회도서관 광주관 놓고 남구 내부 이견…정진욱 "옛 보훈병원이 최적" - v.daum.net
+  6. (8곳 [갈등 신호]) “무늬만 DeFi 전면 등록하라”…美 상원, 클래리티 법안 630쪽 수정안 전격 공개 - 글로벌이코노믹
+  7. (11곳) 대구시-경북도 "'TK행정통합특별법' 연내 국회 반드시 통과" 배수진 - 뉴스핌
+  8. (10곳) 대구·경북 ‘행정통합 특별법’ 9월 국회 통과에 명운 건다 - 스트레이트뉴스
+  9. (10곳) 박찬대 인천시장, 7조 국비에도 939억 추가 확보 총력 - v.daum.net
+  10. (7곳) 대구·경북, 행정 통합 법안의 정기국회 통과 위해 공동 대응 나서 - 대구MBC
+1단계 완료: 사건 그룹 225개 확보
+=== [01] 처리 시작 (16곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1519자 → 정리 후 1519자
+[01] 2단계 완료: [국제신문] 한동훈 독주에 여야 모두 불편…연일 김승원 저격하며 존재감 - 국제신문, 본문 1519자, 주소: https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0100&key=20260914.22005004197
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: "5000개도 쓰겠다", 한동훈 독주에 여야 모두 불편한 이유
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 한동훈
+'한동훈' 위키백과 인포박스 사진 해상도: 405x540 (사진 영역 확대 배율 2.67배)
+'한동훈' 위키백과 인포박스 사진 저화질로 판단(확대 배율 2.67배 > 최대 1.6배). 사용하지 않습니다.
+위키백과 인포박스에서 '한동훈' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/f/fb/2206448_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2024헌나8 대통령(윤석열) 탄핵심판 결정문.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/a/a2/2024%ED%97%8C%EB%82%988_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%8B%AC%ED%8C%90_%EA%B2%B0%EC%A0%95%EB%AC%B8.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2023헌나3.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/7/7b/2023%ED%97%8C%EB%82%983.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206205 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/b/b5/2206205_%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206961 국무총리(한덕수) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests (015d12c) for url: https://upload.wikimedia.org/wikipedia/commons/1/13/2206961_%EA%B5%AD%EB%AC%B4%EC%B4%9D%EB%A6%AC%28%ED%95%9C%EB%8D%95%EC%88%98%29_%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'한동훈' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '한동훈' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 6016x4016 (사진 영역 확대 배율 0.18배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_8815849.png (촬영자: Kampus Production)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8815849.png
+[01] 4단계 완료: tmp/pexels/pexels_8815849.png
+[01] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 5장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 509자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-15/01에 카드 5장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (11곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1091자 → 정리 후 528자
+[02] 2단계 완료: [YTN] 여야, 김성수 청문회서 제청권·대통령 재판 공방 - YTN, 본문 528자, 주소: https://www.ytn.co.kr/_ln/0101_202609150159041496
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 대법관 제청권·재판 중지 두고 여야 정면충돌
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이재명
+'이재명' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&titles=%EC%9D%B4%EC%9E%AC%EB%AA%85&prop=pageimages&piprop=name&format=json
+위키백과 인포박스에서 '이재명' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이재명' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%9E%AC%EB%AA%85+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이재명' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone']
+'microphone' Pexels 사진 해상도: 3384x6016 (사진 영역 확대 배율 0.32배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_13984365.png (촬영자: Faisal  Baig)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_13984365.png
+[02] 4단계 완료: tmp/pexels/pexels_13984365.png
+[02] 5단계: 카드 생성 중...
+what 3장, why 3장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 609px / 사진 영역 741px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 576자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-15/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (10곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1420자 → 정리 후 1420자
+[03] 2단계 완료: [한양경제] [국회 현장] 김성수 대법관 후보 청문회… 與野, ‘처남 찬스’ 탈세 사과 속 사법 현안 정면충돌 - 한양경제, 본문 1420자, 주소: https://www.hanyangeconomy.com/news/articleView.html?idxno=10086
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 처남 찬스 사과에도 여야 정면충돌, 김성수 대법관 후보 청문회
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 이재명
+'이재명' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%9E%AC%EB%AA%85&srlimit=1&format=json
+위키백과 인포박스에서 '이재명' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'이재명' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%9D%B4%EC%9E%AC%EB%AA%85+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '이재명' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 4496x3000 (사진 영역 확대 배율 0.25배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_15239931.png (촬영자: 성두 홍)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_15239931.png
+[03] 4단계 완료: tmp/pexels/pexels_15239931.png
+[03] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 6장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 530자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-15/03에 카드 6장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-15 03:24:24 (소요 시간: 0:00:33.914225)
+============================================================
+
