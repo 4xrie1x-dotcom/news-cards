@@ -1,0 +1,132 @@
+
+============================================================
+실행 시작: 2026-09-30 03:29:23
+============================================================
+1단계: 기사 후보 수집 중...
+필터 제외 건수: {'의견': 2, '지역 홍보': 8, '사진/멀티미디어': 0}
+사건 그룹 218개로 정리, 언론사 수 순 상위 10개 (상위 10개는 갈등 신호로 재정렬):
+  1. (16곳 [갈등 신호]) 국회 교육위, 유웨이 대표·일타강사 조정식 등 국감 증인 채택 - MBC 뉴스
+  2. (14곳 [갈등 신호]) 국회, '지뢰 사고' 현안질의...여야, 규탄 속 신경전 - YTN
+  3. (11곳 [갈등 신호]) 여야, 국방위서 ‘북 규탄’ 한목소리…군 발표엔 “의혹 해소” “늑장 조사” - 한겨레
+  4. (9곳 [갈등 신호]) 오세훈, 농지 전수조사 비판…"李대통령 실거주 이어 실경작 집착" - v.daum.net
+  5. (8곳 [갈등 신호]) 여야, '암살자(들)' 국정감사 증인 공방...박진영은 채택 의결 - YTN
+  6. (16곳) ‘핵잠 도입·운영 특별법’ 국무회의 통과…정부, 국회 제출 예정 - KBS 뉴스
+  7. (11곳) 남종섭 의장 “조직·예산·인력 제약 해소할 실질적 제도, 법안에 담아야” - 매일일보
+  8. (10곳) 6/23(화) 이재명 대통령, 주한외교단 만찬 인사 말씀 및 건배제의 | 연설문 | 대통령 - 대한민국 청와대
+  9. (9곳) 안민석 교육감, 국회서 ‘청소년 SNS 3대 개혁’ 선언 - 인천일보
+  10. (8곳) 조정식 국회의장, 제22대 국회 후반기 한-EU 의회외교포럼 위촉식 개최 - 뉴시스
+1단계 완료: 사건 그룹 218개 확보
+=== [01] 처리 시작 (16곳이 다룬 사건) ===
+[01] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 345자 → 정리 후 345자
+[01] 2단계 완료: [MBC 뉴스] 국회 교육위, 유웨이 대표·일타강사 조정식 등 국감 증인 채택 - MBC 뉴스, 본문 345자, 주소: https://imnews.imbc.com/news/2026/politics/article/6854763_36911.html
+[01] 3단계: Gemini 요약 중...
+[01] 3단계 완료: 입시 사태 부른 유웨이 대표 등, 교육위 국감 증인 채택
+[01] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 유웨이
+'유웨이중앙교육' 문서에 대표 이미지가 없습니다.
+위키백과 인포박스에서 '유웨이' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+위키미디어에서 '유웨이' 사진을 찾지 못했습니다.
+위키미디어 커먼즈에서 '유웨이' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['Yeouido national assembly building', 'microphone']
+'Yeouido national assembly building' Pexels 사진 해상도: 4000x2248 (사진 영역 확대 배율 0.33배)
+'Yeouido national assembly building'로 사진을 찾았습니다: tmp/pexels/pexels_696627.png (촬영자: yong gil)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_696627.png
+[01] 4단계 완료: tmp/pexels/pexels_696627.png
+[01] 5단계: 카드 생성 중...
+what 3장, why 2장 사용 (본문 합계 5장)
+본문 5장, 전체 6장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[01] 5단계 완료: 카드 6장
+[01] 6단계: 캡션 생성 중...
+[01] 6단계 완료: 캡션 533자
+[01] 7단계: 저장 중...
+[01] 7단계 완료: output/2026-09-30/01에 카드 6장, caption.txt, data.json 저장
+=== [01] 완료 ===
+=== [02] 처리 시작 (14곳이 다룬 사건) ===
+[02] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 3762자 → 정리 후 1951자
+건너뜀: [YTN] 다중 소재 방송 리포트로 판단 - 국회, '지뢰 사고' 현안질의...여야, 규탄 속 신경전 - YTN
+제목과 본문이 일치하지 않음
+건너뜀: [JTBC] 본문 추출 실패 - "안보에 여야 없다" 대통령, 지뢰 사고 ‘조치’ 시사…음모론도 겨냥 - JTBC
+정리 전 4639자 → 정리 후 4639자
+건너뜀: [연합뉴스TV] 다중 소재 방송 리포트로 판단 - 여야, ’DMZ 사고’ 격돌…“정쟁 유감“vs“안보 참사“ - 연합뉴스TV
+정리 전 4278자 → 정리 후 4278자
+[02] 2단계 완료: [MBC 뉴스] '지뢰 사고' 여야 공방‥"윤석열 정부 책임" "늑장 대응, 대북 확성기 재설치" - MBC 뉴스, 본문 4278자, 주소: https://imnews.imbc.com/replay/2026/nwdesk/article/6854817_37004.html
+[02] 3단계: Gemini 요약 중...
+[02] 3단계 완료: 북한 지뢰 사고 책임 공방, 여야가 맞섰다
+[02] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 국방부
+'국방부' 위키백과 인포박스 사진을 가져오는 중 오류: cannot identify image file <_io.BytesIO object at 0x7ff500c17790>
+위키백과 인포박스에서 '국방부' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'File:Defense Counterintelligence Command Martial law plan document.pdf' 후보를 가져오는 중 오류: cannot identify image file <_io.BytesIO object at 0x7ff50244af70>
+'File:CNTS-00115239803 自由新聞 1950-03-17.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too many requests (f061ab2) for url: https://upload.wikimedia.org/wikipedia/commons/8/82/CNTS-00115239803_%E8%87%AA%E7%94%B1%E6%96%B0%E8%81%9E_1950-03-17.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:국회회의록 3대 22회 80차 국회본회의 (한글 텍스트화).pdf' 후보를 가져오는 중 오류: 429 Client Error: Too many requests (f061ab2) for url: https://upload.wikimedia.org/wikipedia/commons/d/d4/%EA%B5%AD%ED%9A%8C%ED%9A%8C%EC%9D%98%EB%A1%9D_3%EB%8C%80_22%ED%9A%8C_80%EC%B0%A8_%EA%B5%AD%ED%9A%8C%EB%B3%B8%ED%9A%8C%EC%9D%98_%28%ED%95%9C%EA%B8%80_%ED%85%8D%EC%8A%A4%ED%8A%B8%ED%99%94%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original
+'File:2206448 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2206448+%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29+%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'File:2206205 대통령(윤석열) 탄핵소추안.pdf' 후보를 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A2206205+%EB%8C%80%ED%86%B5%EB%A0%B9%28%EC%9C%A4%EC%84%9D%EC%97%B4%29+%ED%83%84%ED%95%B5%EC%86%8C%EC%B6%94%EC%95%88.pdf&prop=imageinfo&iiprop=url%7Cextmetadata&format=json
+'국방부' 후보 5개 중 화질 기준을 통과한 사진이 없습니다.
+위키미디어 커먼즈에서 '국방부' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['documents', 'microphone', 'podium']
+'documents' Pexels 사진 해상도: 4000x6000 (사진 영역 확대 배율 0.27배)
+'documents'로 사진을 찾았습니다: tmp/pexels/pexels_8297030.png (촬영자: Mikhail Nilov)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_8297030.png
+[02] 4단계 완료: tmp/pexels/pexels_8297030.png
+[02] 5단계: 카드 생성 중...
+what 4장, why 2장 사용 (본문 합계 6장)
+본문 6장, 전체 7장 (전체 목표 최대 7장)
+제목 폰트 축소 없음: 108px 그대로 사용
+검정 영역 480px / 사진 영역 870px (제목 2줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 없음: 76px 그대로 사용
+[02] 5단계 완료: 카드 7장
+[02] 6단계: 캡션 생성 중...
+[02] 6단계 완료: 캡션 563자
+[02] 7단계: 저장 중...
+[02] 7단계 완료: output/2026-09-30/02에 카드 7장, caption.txt, data.json 저장
+=== [02] 완료 ===
+=== [03] 처리 시작 (11곳이 다룬 사건) ===
+[03] 2단계: 본문 추출·다중 소재 검사 중...
+정리 전 1095자 → 정리 후 1095자
+[03] 2단계 완료: [한겨레] 여야, 국방위서 ‘북 규탄’ 한목소리…군 발표엔 “의혹 해소” “늑장 조사” - 한겨레, 본문 1095자, 주소: https://www.hani.co.kr/arti/politics/politics_general/1280065.html
+[03] 3단계: Gemini 요약 중...
+[03] 3단계 완료: 지뢰 폭발 사고 국방위, 여야 북한 규탄 속 군 조사 둔 공방
+[03] 4단계: hook 배경 사진 조달 중...
+인물명 추출: 조사와
+'조사와' 위키백과 인포박스 사진을 가져오는 중 오류: 429 Client Error: Too Many Requests for url: https://ko.wikipedia.org/w/api.php?action=query&list=search&srsearch=%EC%A1%B0%EC%82%AC%EC%99%80&srlimit=1&format=json
+위키백과 인포박스에서 '조사와' 사진을 못 찾아 위키미디어 커먼즈 검색으로 넘어갑니다.
+'조사와' 검색 중 오류: 429 Client Error: Too Many Requests for url: https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=%EC%A1%B0%EC%82%AC%EC%99%80+%EA%B5%AD%ED%9A%8C%EC%9D%98%EC%9B%90&srnamespace=6&srlimit=5&format=json
+위키미디어 커먼즈에서 '조사와' 사진을 못 찾아 Pexels로 넘어갑니다.
+Pexels 검색 키워드: ['microphone', 'documents']
+'microphone' Pexels 사진 해상도: 5631x3746 (사진 영역 확대 배율 0.20배)
+'microphone'로 사진을 찾았습니다: tmp/pexels/pexels_12561477.png (촬영자: César Guillotel)
+배경 사진 조달 성공(Pexels): tmp/pexels/pexels_12561477.png
+[03] 4단계 완료: tmp/pexels/pexels_12561477.png
+[03] 5단계: 카드 생성 중...
+what 2장, why 2장 사용 (본문 합계 4장)
+본문 4장, 전체 5장 (전체 목표 최대 7장)
+제목 폰트 축소 1단계: 108px → 96px (3줄)
+검정 영역 567px / 사진 영역 783px (제목 3줄 기준 동적 계산)
+폰트 축소 없음: 76px 그대로 사용
+폰트 축소 1단계: 76px → 68px (4줄)
+폰트 축소 2단계: 76px → 60px (4줄)
+폰트 축소 없음: 76px 그대로 사용
+[03] 5단계 완료: 카드 5장
+[03] 6단계: 캡션 생성 중...
+[03] 6단계 완료: 캡션 485자
+[03] 7단계: 저장 중...
+[03] 7단계 완료: output/2026-09-30/03에 카드 5장, caption.txt, data.json 저장
+=== [03] 완료 ===
+전체 파이프라인 종료: 3/3건 성공
+실행 종료: 2026-09-30 03:30:03 (소요 시간: 0:00:39.878966)
+============================================================
+
